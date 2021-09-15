@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EEDC9010-9D54-4588-9615-B9D48F868F00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Online_Food_Order_Software</RootNamespace>
+    <AssemblyName>Online_Food_Order_Software</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.2.7.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignColors.1.2.7\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=3.2.0.1979, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialDesignThemes.3.2.0\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.extensibility.core.2.4.1\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.4.1.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>packages\xunit.extensibility.execution.2.4.1\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Address.xaml.cs">
+      <DependentUpon>Address.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CardWindow.xaml.cs">
+      <DependentUpon>CardWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="cus_feedback.xaml.cs">
+      <DependentUpon>cus_feedback.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DatabaseReposi.cs" />
+    <Compile Include="Drink.xaml.cs">
+      <DependentUpon>Drink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drink1.xaml.cs">
+      <DependentUpon>Drink1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drink2.xaml.cs">
+      <DependentUpon>Drink2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Drink3.xaml.cs">
+      <DependentUpon>Drink3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrinkWindow.xaml.cs">
+      <DependentUpon>DrinkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FinalWindow.xaml.cs">
+      <DependentUpon>FinalWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Food.xaml.cs">
+      <DependentUpon>Food.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Food1.xaml.cs">
+      <DependentUpon>Food1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Food2.xaml.cs">
+      <DependentUpon>Food2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Food3.xaml.cs">
+      <DependentUpon>Food3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FoodWindow.xaml.cs">
+      <DependentUpon>FoodWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102122041266_latest.cs" />
+    <Compile Include="Migrations\202102122041266_latest.designer.cs">
+      <DependentUpon>202102122041266_latest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271008083_feed_promo.cs" />
+    <Compile Include="Migrations\202102271008083_feed_promo.designer.cs">
+      <DependentUpon>202102271008083_feed_promo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271058004_feed.cs" />
+    <Compile Include="Migrations\202102271058004_feed.designer.cs">
+      <DependentUpon>202102271058004_feed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271126345_final.cs" />
+    <Compile Include="Migrations\202102271126345_final.designer.cs">
+      <DependentUpon>202102271126345_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271345239_final1.cs" />
+    <Compile Include="Migrations\202102271345239_final1.designer.cs">
+      <DependentUpon>202102271345239_final1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271357165_final2.cs" />
+    <Compile Include="Migrations\202102271357165_final2.designer.cs">
+      <DependentUpon>202102271357165_final2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271359038_final3.cs" />
+    <Compile Include="Migrations\202102271359038_final3.designer.cs">
+      <DependentUpon>202102271359038_final3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102271421591_final4.cs" />
+    <Compile Include="Migrations\202102271421591_final4.designer.cs">
+      <DependentUpon>202102271421591_final4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Delivery1.cs" />
+    <Compile Include="Models\Feedback.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\promo.cs" />
+    <Compile Include="Models\Suplier.cs" />
+    <Compile Include="Promotion.xaml.cs">
+      <DependentUpon>Promotion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.xaml.cs">
+      <DependentUpon>Signup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sucess.xaml.cs">
+      <DependentUpon>Sucess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Term_conditon.xaml.cs">
+      <DependentUpon>Term_conditon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="thanks.xaml.cs">
+      <DependentUpon>thanks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="welcome.xaml.cs">
+      <DependentUpon>welcome.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Address.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CardWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="cus_feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drink1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drink2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Drink3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DrinkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FinalWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Food.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Food1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Food2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Food3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FoodWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Promotion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Signup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Sucess.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Term_conditon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="thanks.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202102122041266_latest.resx">
+      <DependentUpon>202102122041266_latest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271008083_feed_promo.resx">
+      <DependentUpon>202102271008083_feed_promo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271058004_feed.resx">
+      <DependentUpon>202102271058004_feed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271126345_final.resx">
+      <DependentUpon>202102271126345_final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271345239_final1.resx">
+      <DependentUpon>202102271345239_final1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271357165_final2.resx">
+      <DependentUpon>202102271357165_final2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271359038_final3.resx">
+      <DependentUpon>202102271359038_final3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102271421591_final4.resx">
+      <DependentUpon>202102271421591_final4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\googleplus.png" />
+    <Resource Include="Images\instagram.jpg" />
+    <Resource Include="Images\Linkedin.png" />
+    <Resource Include="Images\pinterest.jpg" />
+    <Resource Include="Images\twitter.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner2.jpg" />
+    <Resource Include="Images\banner3.jpg" />
+    <Resource Include="Images\banner4.jpg" />
+    <Resource Include="Images\banner5.jpg" />
+    <Resource Include="Images\bun1.jpg" />
+    <Resource Include="Images\homepage.png" />
+    <Resource Include="Images\Login.png" />
+    <Resource Include="Images\promotion.jpg" />
+    <Resource Include="Images\Sign up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\download.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner10.jpg" />
+    <Resource Include="Images\banner8.jpg" />
+    <Resource Include="Images\banner9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\facebook.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\good_mood.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Coff_idea.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Positive.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Good_People.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Food_bst_fnd.jpg" />
+    <Resource Include="Images\food_is_ess.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\waiter serving.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner15.jpg" />
+    <Resource Include="Images\banner16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\slide1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\banner23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\burgurpromo5.jpg" />
+    <Resource Include="Images\cakepromp.jpg" />
+    <Resource Include="Images\choclatepromo.jpg" />
+    <Resource Include="Images\cokepromo1.jpg" />
+    <Resource Include="Images\familypromo1.jpg" />
+    <Resource Include="Images\foodorg.jpg" />
+    <Resource Include="Images\kitzpizzapromo1.jpg" />
+    <Resource Include="Images\pizza promotion1.jpg" />
+    <Resource Include="Images\pizzapromo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\sitting in resturent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\char-siu-1-11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\welcome.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Feedback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\thanks.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\promoback.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

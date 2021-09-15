@@ -1,0 +1,201 @@
+﻿<Window x:Class="Online_Food_Order_Software.Address"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Food_Order_Software"
+        mc:Ignorable="d"
+        Title="Address" Height="760" Width="1349"  WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="775*"/>
+            <ColumnDefinition Width="567*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="13*">
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images\Background\bg1.jpg" ></ImageBrush>
+            </Grid.Background>
+
+            <Button  Height="30" Width="60" FontSize="15"  FontWeight="Bold" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Click="Button_Click_6">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ct.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,10,80,0" Click="Button_Click_4" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\Home.jpg"/>
+                </Button.Background>
+            </Button>
+            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,10,80,0" Click="Button_Click_5"  >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\Home.jpg"/>
+                </Button.Background>
+            </Button>
+
+            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,10,160,0" Click="Button_Click_4" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\Exit.jpg"/>
+                </Button.Background>
+            </Button>
+
+
+            <Button Width="150" FontSize="15"   Foreground="Blue" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,20,0,4" Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </Button.Resources>
+
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\Menu.jpg"></ImageBrush>
+                </Button.Background>
+
+            </Button>
+        </Grid>
+
+
+
+        <Grid  Grid.Row="1" HorizontalAlignment="Right" MaxWidth="1360" Margin="-20,0,-9,0" Width="1370" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="135*"/>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="21*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background >
+                <ImageBrush ImageSource="Images\Background\bg2.jpg " ></ImageBrush>
+            </Grid.Background>
+
+            <Grid.RowDefinitions >
+                <RowDefinition Height="1*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid  Grid.Row="0" Margin="210,0,110,0" Grid.ColumnSpan="3"  >
+                <Grid.Background >
+                    <ImageBrush  ImageSource="Images\Background\i4.jpg" ></ImageBrush>
+                </Grid.Background>
+
+                <Label Content="Delivery Address" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Top" Height="40" BorderThickness="0" Width="230" FontSize="25" FontWeight="Bold" Margin="525,10,180,0"></Label>
+                <StackPanel Margin="12,0,13,125"  RenderTransformOrigin="0.5,0.5" >
+                    <Label Content="Personal Details" Foreground="blue"  Height="30" HorizontalAlignment="Left" BorderThickness="0" FontWeight="Bold" Width="279" FontSize="18"  Margin="408,50,0,0"></Label>
+                    <Label Content="Coustomer Name" Foreground="Black"  Height="30" HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="ID Number" Height="30" Foreground="Black"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="E -mail" Height="30" Foreground="Black"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+
+                    <Label Content="Address Details" Height="30" Foreground="Blue"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="Bold" Width="279" FontSize="18"  Margin="408,20,0,0"></Label>
+                    <Label Content="Door No" Height="30" Foreground="Black"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="Apartment Name" Foreground="Black"  Height="30" HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="Street Name" Height="30" Foreground="Black"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="Landmark(e.g. near the shop)" Height="30" Foreground="Black"  HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="390" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="City" Height="30" HorizontalAlignment="Left" Foreground="Black"  BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+                    <Label Content="Province" Height="30" HorizontalAlignment="Left" Foreground="Black"  BorderThickness="0" FontWeight="DemiBold" Width="279" FontSize="15"  Margin="408,10,0,0"></Label>
+
+                    <Label Content="Save your address as" Foreground="Black"  Height="30" HorizontalAlignment="Left" BorderThickness="0" FontWeight="DemiBold" Width="250" FontSize="15"  Margin="408,0,0,0"></Label>
+
+                </StackPanel>
+                <StackPanel Margin="0,10,0,0">
+                    <TextBox x:Name="Customer_name" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="1" Background="White"  Width="180" FontSize="12"  Margin="710,82,0,0"></TextBox>
+                    <TextBox x:Name="Customer_Id"  Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="10"  Margin="710,15,0,0"></TextBox>
+                    <TextBox  x:Name="Email" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0" Width="180" FontSize="12"  Margin="710,15,0,0"></TextBox>
+
+                    <TextBox Name="DoorNo"  Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,63,0,0"></TextBox>
+                    <TextBox Name="Apartment_Name" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,20,0,0"></TextBox>
+                    <TextBox  Name="Street_Name" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,15,0,0"></TextBox>
+                    <TextBox Name="Landmark" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,16,0,0" TextChanged="Landmark_TextChanged"></TextBox>
+                    <TextBox Name="City" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="10"  Margin="710,15,0,0"></TextBox>
+                    <ComboBox Name="Province" SelectedIndex="0" FontWeight="Bold" Height="25" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,13,0,0" SelectionChanged="Province_SelectionChanged">
+                        <ComboBox.ItemsSource>
+                            <CompositeCollection>
+                                <ComboBoxItem Visibility="Visible">--Select your Area--</ComboBoxItem>
+                                <ComboBoxItem>Sabaragamuwa</ComboBoxItem>
+                                <ComboBoxItem>Southern</ComboBoxItem>
+                                <ComboBoxItem>Western</ComboBoxItem>
+                                <ComboBoxItem>Uva</ComboBoxItem>
+                                <ComboBoxItem>Central</ComboBoxItem>
+                                <ComboBoxItem>Eastern</ComboBoxItem>
+                                <ComboBoxItem>North Western</ComboBoxItem>
+                                <ComboBoxItem>North Central</ComboBoxItem>
+                                <ComboBoxItem>Northern</ComboBoxItem>
+                            </CompositeCollection>
+                        </ComboBox.ItemsSource>
+
+
+                    </ComboBox>
+
+
+                    <ComboBox x:Name="Place" SelectedIndex="0"  Height="25" HorizontalAlignment="Left" FontWeight="Bold" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,8,0,0">
+
+                        <ComboBoxItem x:Name="cmh" >Home</ComboBoxItem>
+                        <ComboBoxItem x:Name="cmw">Work</ComboBoxItem>
+                        <ComboBoxItem x:Name="cmo">Other</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock x:Name="tb" Text="Select" IsHitTestVisible="False" Visibility="Hidden"></TextBlock>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="116,-2,150,10">
+
+                    <StackPanel Orientation="Horizontal" Margin="300,640,0,0">
+                        <Button  IsCancel="True" FontWeight="Bold" Height="24" Width="84" FontSize="18"  Margin="160,-60,10,0"  VerticalAlignment="Top"  HorizontalAlignment="Left" Click="Button_Click_2" >
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"></Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images\Controls\Submit.jpg"></ImageBrush>
+                            </Button.Background>
+                        </Button>
+                        <Button   Height="24" Width="77" FontSize="18"  VerticalAlignment="Top" Margin="10,-60,10,0"   HorizontalAlignment="Left"  RenderTransformOrigin="0.61,-3.1" Click="Button_Click_1"  >
+                            <Button.Resources>
+                                <Style TargetType="{x:Type Border}">
+                                    <Setter Property="CornerRadius" Value="5"></Setter>
+                                </Style>
+                            </Button.Resources>
+                            <Button.Background>
+                                <ImageBrush ImageSource="Images\Controls\Cancel.jpg"></ImageBrush>
+                            </Button.Background>
+                        </Button>
+
+
+
+                    </StackPanel>
+
+                </StackPanel>
+            </Grid>
+        </Grid>
+
+
+
+    </Grid>
+
+</Window>

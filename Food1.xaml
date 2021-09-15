@@ -1,0 +1,298 @@
+﻿<Page x:Class="Online_Food_Order_Software.Food1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Online_Food_Order_Software"
+       d:DesignHeight="760" d:DesignWidth="1360"
+      Title="Food1" Background="NavajoWhite">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images\Background\bg3.jpg" ></ImageBrush>
+        </Grid.Background>
+
+        <StackPanel >
+
+            <Image Source="Images\FoodAndDrink\FA1.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="200,50,0,0" >
+
+            </Image>
+            <Button  x:Name="button1"  Height="40"  Width="200" HorizontalAlignment="Left" Margin="200,00,0,0"  FontSize="20"   Click="Button_Click">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <Button  x:Name="button2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="200,-40,856,0"    FontSize="20"   Click="Button_Click_1" Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="ta"  Height="40" x:FieldModifier="private"    Width="40"  Margin="280,-40,0,0"    HorizontalAlignment="Left"              Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"  Visibility="Collapsed"></TextBox>
+            <Button x:Name="cmdUp"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="240,-40,0,0"    HorizontalAlignment="Left"   FontSize="20"  Click="CmdUp_Click"                         Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="cmdDown" Height="40"  x:FieldModifier="private"    Width="40"  Margin="320,-40,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="CmdDown_Click"                        Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="oa" Height="40"  x:FieldModifier="private"    Width="40"  Margin="360,-40,0,0"    HorizontalAlignment="Left"      Visibility="Collapsed" Click="oa_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel >
+            <Image Source="Images\FoodAndDrink\FA2.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="200,315,0,0" ></Image>
+            <Button  x:Name="bb1"  Height="40"  Width="200" HorizontalAlignment="Left"  Margin="200,0,0,0"    FontSize="20"  Click="B1_Click"   >
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="bb2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="200,-40,856,0"     FontSize="20"   Click="B2_Click"   Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="tb"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="280,-40,0,0"    HorizontalAlignment="Left"  Text="1"     Padding="5"    TextChanged="Tb_TextChanged"   Visibility="Collapsed"></TextBox>
+            <Button  x:Name="ub"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="240,-40,0,0"    HorizontalAlignment="Left"    FontSize="20"  Click="Ub_Click"               Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="db"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="320,-40,0,0"    HorizontalAlignment="Left"   FontSize="20"  Click="Db_Click"               Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="ob"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="360,-40,0,0"    HorizontalAlignment="Left"    FontSize="20"  Visibility="Collapsed" Click="ob_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel >
+            <Image Source="Images\FoodAndDrink\FA4.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="600,315,0,0" ></Image>
+            <Button  x:Name="bc1"  Height="40"  Width="200" HorizontalAlignment="Left"  Margin="600,0,0,0"     FontSize="20"   Click="Bc1_Click" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="bc2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="600,-40,0,0"   FontSize="20"  Click="Bc2_Click" Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="tc"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="680,-40,0,0"    HorizontalAlignment="Left"  Text="1"     Padding="5" TextChanged="Tc_TextChanged"  Visibility="Collapsed"  ></TextBox>
+            <Button  x:Name="uc"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="640,-40,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="Uc_Click" Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="dc"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="720,-40,0,0"    HorizontalAlignment="Left"    FontSize="20" Click="Dc_Click" Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="oc"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="760,-40,0,0"    HorizontalAlignment="Left"    FontSize="20"  Visibility="Collapsed" Click="oc_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel >
+            <Image Source="Images\FoodAndDrink\FA3.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="600,50,0,0" ></Image>
+            <Button  x:Name="bd1"  Height="40"  Width="200" HorizontalAlignment="Left"  Margin="600,0,0,0"    FontSize="20"   Click="Bd1_Click" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="bd2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="600,-40,0,0"    FontSize="20"  Click="Bd2_Click"  Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="td"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="680,-40,0,0"    HorizontalAlignment="Left"  Text="1"     Padding="5" TextChanged="Td_TextChanged"  Visibility="Collapsed"   ></TextBox>
+            <Button  x:Name="ud"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="640,-40,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="Ud_Click" Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="dd"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="720,-40,0,0"    HorizontalAlignment="Left"    FontSize="20" Click="Dd_Click" Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="od"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="760,-40,0,0"    HorizontalAlignment="Left"  FontSize="20" Visibility="Collapsed" Click="od_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+
+        <StackPanel >
+            <Image Source="Images\FoodAndDrink\FA5.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="1000,50,0,0" ></Image>
+            <Button  x:Name="be1"  Height="40"  Width="200" HorizontalAlignment="Left"  Margin="1000,0,0,0"     FontSize="20"   Click="Be1_Click" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+
+            <Button  x:Name="be2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="1000,-40,0,0"   FontSize="20"  Click="Be2_Click"   Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="te"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1080,-40,0,0"    HorizontalAlignment="Left"  Text="1"     Padding="5" TextChanged="Te_TextChanged"    Visibility="Collapsed"  ></TextBox>
+            <Button  x:Name="ue"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1040,-40,0,0"    HorizontalAlignment="Left"  FontSize="20" Click="Ue_Click"  Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="de"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1120,-40,0,0"    HorizontalAlignment="Left"  FontSize="20" Click="De_Click"  Visibility="Collapsed">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="oe"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1160,-40,0,0"    HorizontalAlignment="Left"    FontSize="20"  Visibility="Collapsed" Click="oe_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        <StackPanel Margin="5,0,-5,0" >
+            <Image Source="Images\FoodAndDrink\FA6.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="1000,315,0,0" ></Image>
+            <Button  x:Name="bf1"  Height="40"  Width="200" HorizontalAlignment="Left"  Margin="1000,0,0,0"     FontSize="20"  Click="Bf1_Click"  >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\cart.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="bf2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="1000,-40,0,0"    FontSize="20"  Click="Bf2_Click" Visibility="Collapsed"  >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\bin.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBox x:Name="tf"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1080,-40,0,0"    HorizontalAlignment="Left"  Text="1"     Padding="5" TextChanged="Tf_TextChanged"    Visibility="Collapsed"   ></TextBox>
+            <Button  x:Name="uf"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1040,-40,0,0"    HorizontalAlignment="Left" FontSize="20" Click="Uf_Click"   Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\min.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="df"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1120,-40,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="Df_Click"  Visibility="Collapsed" >
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\plus.jpeg"></ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button  x:Name="of"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="1160,-40,0,0"    HorizontalAlignment="Left"   FontSize="20"  Visibility="Collapsed" Click="of_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images\Controls\ok.png"></ImageBrush>
+                </Button.Background>
+            </Button>
+
+        </StackPanel>
+        <StackPanel RenderTransformOrigin="0.415,0.513" Height="760" VerticalAlignment="Top">
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="200,190,0,0" Padding="0,10" Content="     Zinger Tandoori - Rs:250" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="600,-40,0,0" Padding="0,10" Content="    Smoky Red Rice - Rs:400" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="1000,-40,0,0" Padding="0,10" Content="     Tacos Recipe   -  Rs:450" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="200,225,0,0" Padding="0,10" Content=" Chicken Rice Bowl - Rs:400" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="600,-40,0,0" Padding="0,10" Content="     Big 12 Bucket  - Rs:300" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+            <Label Width="200" Height="40" HorizontalAlignment="Left" Margin="1000,-40,0,0" Padding="0,10" Content="     Nugget burgger - Rs:350" Foreground="Blue" FontSize="15" FontWeight="Bold"></Label>
+
+
+            <TextBox Height="23" Visibility="Hidden"  x:Name="n" TextWrapping="Wrap" Width="100" Text="" TextChanged="n_TextChanged" />
+
+        </StackPanel>
+        <Label  x:Name="bu"  FontWeight="Thin" Foreground="White"  Height="35" BorderThickness="1" BorderBrush="Gray" VerticalAlignment="Top"  Background="Blue" FontSize="15" Width="125" Content="Previously bought"  HorizontalAlignment="Left" Margin="20,20,0,0"   >
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"></Setter>
+                </Style>
+            </Label.Resources>
+        </Label>
+        <Label  x:Name="si" FontWeight="Thin" Foreground="White"  FontSize="15" Height="35" BorderThickness="1" BorderBrush="Gray" VerticalAlignment="Top"  Background="Blue"  Width="110" Content="Selected Items "  HorizontalAlignment="Right" Margin="0,25,35,0">
+            <Label.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"></Setter>
+                </Style>
+            </Label.Resources>
+        </Label>
+
+
+        <DataGrid x:Name="CartGridF1" FontWeight="Bold" Foreground="White" Background="Transparent" RowBackground="Transparent"  BorderThickness="0" FontSize="15" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="160" Height="415" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,65,0,0" HeadersVisibility="None" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <DataGrid.Columns >
+                <DataGridTextColumn x:Name="na1" Binding="{Binding Item_Name}" Width="140" ></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="155" Height="440" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,65,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+
+
+
+            <DataGrid.Columns  >
+
+                <DataGridTextColumn x:Name="nN" Foreground="White" FontWeight="Bold" FontSize="14" Binding="{Binding Item_Name}" Width="100" ></DataGridTextColumn>
+                <DataGridTextColumn x:Name="nQ"  Foreground="White" FontWeight="Bold" FontSize="14"  Binding="{Binding Quantity}" Width="100" ></DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Page>

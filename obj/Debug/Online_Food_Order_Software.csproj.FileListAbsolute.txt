@@ -1,0 +1,5 @@
+C:\Users\KISHANTHAN\source\repos\Online_Food_Order_Software\obj\Debug\Online_Food_Order_Software.csprojAssemblyReference.cache
+C:\Users\KISHANTHAN\source\repos\Online_Food_Order_Software\obj\Debug\MainWindow.g.cs
+C:\Users\KISHANTHAN\source\repos\Online_Food_Order_Software\obj\Debug\App.g.cs
+C:\Users\KISHANTHAN\source\repos\Online_Food_Order_Software\obj\Debug\Online_Food_Order_Software_MarkupCompile.cache
+C:\Users\KISHANTHAN\source\repos\Online_Food_Order_Software\obj\Debug\Online_Food_Order_Software_MarkupCompile.lref
