@@ -37,8 +37,8 @@ namespace Online_Food_Order_Software
             {
                 int x = 0;
 
-                DatabaseReposi databaseRepository = new DatabaseReposi();
-                foreach (var cat in databaseRepository.supliers_set)
+                DatabaseReposi DatabaseReposi = new DatabaseReposi();
+                foreach (var cat in DatabaseReposi.supliers_set)
                 {
                     if (cat.Name.ToString() != "")
                     {
@@ -252,7 +252,7 @@ namespace Online_Food_Order_Software
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
            // test test1 = new test();
-           // test1.Show();
+         //   test1.Show();
             this.Close();
 
         }
@@ -277,5 +277,4 @@ namespace Online_Food_Order_Software
 
         }
     }
-    }
-
+}

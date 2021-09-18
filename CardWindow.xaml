@@ -42,6 +42,7 @@
                 <Label Content="Expire Month" HorizontalAlignment="Left" FontSize="12" Height="30" Width="125" Foreground="White" Margin="284,10,0,0"/>
                 <Label Content="Expire year" HorizontalAlignment="Left" FontSize="12" Height="30" Width="90" Foreground="White" Margin="464,-30,0,10"/>
                 <Label Content="Security code"  HorizontalAlignment="Left" FontSize="12" Height="30" Width="90" Foreground="White"  Margin="284,20,0,0"/>
+                <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="Submit" FontSize="15"   Height="35" Width="96"   HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,50,181,0" Click="Button_Click_1"/>
 
             </StackPanel>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="191,0,37,0" Width="564">
@@ -84,26 +85,10 @@
 
                 <PasswordBox Name="PW" Height="20" FontWeight="Bold" Width="100" HorizontalAlignment="Left" Margin="414,0,0,10" ToolTip="3 digits on back of your card"/>
 
-                <Button Height="20" Width="70"  HorizontalAlignment="Center" Margin="424,20,70,0" Click="Button_Click_1">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="5"></Setter>
-                        </Style>
-                    </Button.Resources>
-                    <Button.Background>
-                        <ImageBrush ImageSource="Images\Controls\Cancel.jpg"></ImageBrush>
-                    </Button.Background>
-                </Button>
-                <Button  Height="18" Width="68"  BorderThickness="0"   HorizontalAlignment="Center" Margin="314,-23,182,0" Click="Button_Click">
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="5"></Setter>
-                        </Style>
-                    </Button.Resources>
-                    <Button.Background>
-                        <ImageBrush ImageSource="Images\Controls\Submit.jpg"></ImageBrush>
-                    </Button.Background>
-                </Button>
+
+                <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="Cancel" FontSize="15"   Height="35" Width="85"   HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,45,65,0" Click="Button_Click"/>
+
+
 
 
             </StackPanel>

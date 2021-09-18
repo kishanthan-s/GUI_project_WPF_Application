@@ -21,11 +21,18 @@ namespace Online_Food_Order_Software
     /// </summary>
     public partial class CardWindow : Window
     {
+
         public CardWindow()
         {
             InitializeComponent();
         }
 
+        private string UsN = Global.UserName;
+        /*    public CardWindow(string UN) : this()
+            {
+                UsN = UN;
+            }
+        */
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
@@ -72,7 +79,7 @@ namespace Online_Food_Order_Software
                     {
 
 
-                        //User_Name = UsN, didnt add
+                        User_Name = UsN,
                         Card_Holder_Name = holder.Text,
                         Payment_Method = "Card",
                         Card_Type = type.Text,
@@ -112,4 +119,3 @@ namespace Online_Food_Order_Software
         }
     }
 }
-

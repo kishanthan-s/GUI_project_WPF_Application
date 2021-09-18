@@ -20,36 +20,69 @@ namespace Online_Food_Order_Software
     /// </summary>
     public partial class FinalWindow : Window
     {
+
+
         public FinalWindow()
         {
             InitializeComponent();
+            delivery();
         }
 
-        public FinalWindow(string pr) : this()
+        /*  public FinalWindow(string pr) : this()
+          {
+
+
+              int x = 10;
+              for (int r = 1; r < x; r++)
+              {
+                  DatabaseReposi repository = new DatabaseReposi();
+
+                  var suplier = repository.supliers_set.Find(r);
+                  if (suplier.Province == pr)
+                  {
+                      SUP.Text = suplier.Name;
+                      CON.Text = suplier.Contact_No;
+                      VEH.Text = suplier.Vehical_No;
+
+
+                  }
+              }
+
+          }
+        */
+
+
+        public void delivery()
         {
 
+            DatabaseReposi repository = new DatabaseReposi();
+            var UserProvince = repository.deliveries_set.Where(a => ((a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault();
+            string pr = UserProvince.Province;
 
-            int x = 10;
-            for (int r = 1; r < x; r++)
-            {
-                DatabaseReposi repository = new DatabaseReposi();
-
-                var suplier = repository.supliers_set.Find(r);
-                if (suplier.Province == pr)
-                {
-                    SUP.Text = suplier.Name;
-                    CON.Text = suplier.Contact_No;
-                    VEH.Text = suplier.Vehical_No;
+            var supliyDelails = repository.supliers_set.Where(a => ((a.Province == pr))).FirstOrDefault();
 
 
-                }
-            }
+            SUP.Text = supliyDelails.Name;
+            CON.Text = supliyDelails.Contact_No;
+            VEH.Text = supliyDelails.Vehical_No;
+
+            /*  for (int r = 1; r < x; r++)
+              {
+
+
+                  var suplier = repository.supliers_set.Find(r);
+                  if (suplier.Province == pr)
+                  {
+                      SUP.Text = suplier.Name;
+                      CON.Text = suplier.Contact_No;
+                      VEH.Text = suplier.Vehical_No;
+
+
+                  }
+              }
+            */
 
         }
-
-
-
-
 
 
 
@@ -70,7 +103,8 @@ namespace Online_Food_Order_Software
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             this.Close();
-
+            FoodWindow food = new FoodWindow();
+            food.Show();
 
             /*Next*/
 

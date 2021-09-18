@@ -115,7 +115,7 @@
 
                         </StackPanel>
                         <StackPanel>
-                            <TextBox x:Name="SUP" FontWeight="Medium" Height="27" BorderThickness="0" VerticalAlignment="Top" FontSize="12"  Background="Transparent"  Margin="156,11,39,10" TextChanged="SUP_TextChanged"  />
+                            <TextBox x:Name="SUP" FontWeight="Medium" Height="27" BorderThickness="0" VerticalAlignment="Top" FontSize="12"  Background="Transparent"  Margin="156,11,10,10" TextChanged="SUP_TextChanged"  />
                             <TextBox x:Name="CON"  FontWeight="Medium" Height="27" BorderThickness="0" VerticalAlignment="Top" FontSize="12"  Background="Transparent"    Margin="156,11,44,10"  />
                             <TextBox x:Name="VEH"  FontWeight="Medium" Height="27" BorderThickness="0" VerticalAlignment="Top" FontSize="12"  Background="Transparent"    Margin="156,11,49,10"  />
                         </StackPanel>

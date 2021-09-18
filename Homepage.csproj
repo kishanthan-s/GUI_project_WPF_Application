@@ -126,37 +126,10 @@
     <Compile Include="FoodWindow.xaml.cs">
       <DependentUpon>FoodWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202102122041266_latest.cs" />
-    <Compile Include="Migrations\202102122041266_latest.designer.cs">
-      <DependentUpon>202102122041266_latest.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271008083_feed_promo.cs" />
-    <Compile Include="Migrations\202102271008083_feed_promo.designer.cs">
-      <DependentUpon>202102271008083_feed_promo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271058004_feed.cs" />
-    <Compile Include="Migrations\202102271058004_feed.designer.cs">
-      <DependentUpon>202102271058004_feed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271126345_final.cs" />
-    <Compile Include="Migrations\202102271126345_final.designer.cs">
-      <DependentUpon>202102271126345_final.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271345239_final1.cs" />
-    <Compile Include="Migrations\202102271345239_final1.designer.cs">
-      <DependentUpon>202102271345239_final1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271357165_final2.cs" />
-    <Compile Include="Migrations\202102271357165_final2.designer.cs">
-      <DependentUpon>202102271357165_final2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271359038_final3.cs" />
-    <Compile Include="Migrations\202102271359038_final3.designer.cs">
-      <DependentUpon>202102271359038_final3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202102271421591_final4.cs" />
-    <Compile Include="Migrations\202102271421591_final4.designer.cs">
-      <DependentUpon>202102271421591_final4.cs</DependentUpon>
+    <Compile Include="Global.cs" />
+    <Compile Include="Migrations\202109180835334_all.cs" />
+    <Compile Include="Migrations\202109180835334_all.designer.cs">
+      <DependentUpon>202109180835334_all.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class1.cs" />
@@ -172,8 +145,8 @@
     <Compile Include="Signup.xaml.cs">
       <DependentUpon>Signup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sucess.xaml.cs">
-      <DependentUpon>Sucess.xaml</DependentUpon>
+    <Compile Include="Success.xaml.cs">
+      <DependentUpon>Success.xaml</DependentUpon>
     </Compile>
     <Compile Include="Term_conditon.xaml.cs">
       <DependentUpon>Term_conditon.xaml</DependentUpon>
@@ -271,7 +244,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sucess.xaml">
+    <Page Include="Success.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -302,29 +275,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202102122041266_latest.resx">
-      <DependentUpon>202102122041266_latest.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271008083_feed_promo.resx">
-      <DependentUpon>202102271008083_feed_promo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271058004_feed.resx">
-      <DependentUpon>202102271058004_feed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271126345_final.resx">
-      <DependentUpon>202102271126345_final.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271345239_final1.resx">
-      <DependentUpon>202102271345239_final1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271357165_final2.resx">
-      <DependentUpon>202102271357165_final2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271359038_final3.resx">
-      <DependentUpon>202102271359038_final3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102271421591_final4.resx">
-      <DependentUpon>202102271421591_final4.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202109180835334_all.resx">
+      <DependentUpon>202109180835334_all.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -437,6 +389,81 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\promoback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background\bg1.jpg" />
+    <Resource Include="Images\Background\bg2.jpg" />
+    <Resource Include="Images\Background\bg3.jpg" />
+    <Resource Include="Images\Background\bg4.jpg" />
+    <Resource Include="Images\Background\bg5.jpg" />
+    <Resource Include="Images\Background\bg6.jpg" />
+    <Resource Include="Images\Background\correct.png" />
+    <Resource Include="Images\Background\gbb1-1.jpg" />
+    <Resource Include="Images\Background\gbb1.jpg" />
+    <Resource Include="Images\Background\i4.jpg" />
+    <Resource Include="Images\Background\i53cjd.jpg" />
+    <Resource Include="Images\Background\img2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Controls\bin.jpeg" />
+    <Resource Include="Images\Controls\Cancel.JPG" />
+    <Resource Include="Images\Controls\cart.png" />
+    <Resource Include="Images\Controls\ct.png" />
+    <Resource Include="Images\Controls\Drink.JPG" />
+    <Resource Include="Images\Controls\Exit.JPG" />
+    <Resource Include="Images\Controls\Food.JPG" />
+    <Resource Include="Images\Controls\Home.JPG" />
+    <Resource Include="Images\Controls\Menu.JPG" />
+    <Resource Include="Images\Controls\min.jpeg" />
+    <Resource Include="Images\Controls\ok.JPG" />
+    <Resource Include="Images\Controls\ok.png" />
+    <Resource Include="Images\Controls\plus.jpeg" />
+    <Resource Include="Images\Controls\Submit.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\FoodAndDrink\1.jpg" />
+    <Resource Include="Images\FoodAndDrink\3.jpg" />
+    <Resource Include="Images\FoodAndDrink\3D1.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3D2.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3D3.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3D4.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3D5.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3D6.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F1.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F2.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F3.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F4.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F5.jpeg" />
+    <Resource Include="Images\FoodAndDrink\3F6.jpeg" />
+    <Resource Include="Images\FoodAndDrink\4.jpg" />
+    <Resource Include="Images\FoodAndDrink\5.jpg" />
+    <Resource Include="Images\FoodAndDrink\7.jpg" />
+    <Resource Include="Images\FoodAndDrink\8.jpg" />
+    <Resource Include="Images\FoodAndDrink\9.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA1.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA2.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA3.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA4.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA5.jpg" />
+    <Resource Include="Images\FoodAndDrink\DA6.jpg" />
+    <Resource Include="Images\FoodAndDrink\DB1.jpeg" />
+    <Resource Include="Images\FoodAndDrink\Db3.jpeg" />
+    <Resource Include="Images\FoodAndDrink\DB4.jpeg" />
+    <Resource Include="Images\FoodAndDrink\DB5.jpeg" />
+    <Resource Include="Images\FoodAndDrink\DB6.jpeg" />
+    <Resource Include="Images\FoodAndDrink\DB9.jpeg" />
+    <Resource Include="Images\FoodAndDrink\FA1.jpg" />
+    <Resource Include="Images\FoodAndDrink\FA2.jpg" />
+    <Resource Include="Images\FoodAndDrink\FA3.jpg" />
+    <Resource Include="Images\FoodAndDrink\FA4.jpg" />
+    <Resource Include="Images\FoodAndDrink\FA5.jpg" />
+    <Resource Include="Images\FoodAndDrink\FA6.jpg" />
+    <Resource Include="Images\FoodAndDrink\FB1.jpeg" />
+    <Resource Include="Images\FoodAndDrink\FB2.jpeg" />
+    <Resource Include="Images\FoodAndDrink\FB3.jpeg" />
+    <Resource Include="Images\FoodAndDrink\FB4.jpeg" />
+    <Resource Include="Images\FoodAndDrink\FB5.jpg" />
+    <Resource Include="Images\FoodAndDrink\FB6.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

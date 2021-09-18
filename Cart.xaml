@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Cart" Width="1360" Height="760"  WindowState="Maximized" WindowStyle="None">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1205*"/>
+            <ColumnDefinition Width="147*"/>
+        </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="58*"></RowDefinition>
@@ -15,70 +19,46 @@
             </RowDefinition>
             <RowDefinition Height="427*"/>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" Height="78" VerticalAlignment="Bottom" Margin="0,-20,0,0" >
+        <Border Grid.Row="0" Height="78" VerticalAlignment="Bottom" Margin="0,-20,0,0" Grid.ColumnSpan="2" >
             <Border.Background>
                 <ImageBrush ImageSource="Images\Background\bg1.jpg"></ImageBrush>
             </Border.Background>
 
         </Border>
-        <Border Height="730" VerticalAlignment="Bottom" Margin="0,0,-3,-18" Grid.RowSpan="3" >
+        <Border Height="730" VerticalAlignment="Bottom" Margin="0,0,-3,-18" Grid.RowSpan="3" Grid.ColumnSpan="2" >
             <Border.Background>
                 <ImageBrush ImageSource="Images\Background\img2.jpeg"></ImageBrush>
             </Border.Background>
 
         </Border>
 
-        <StackPanel Orientation="Vertical" Margin="0,0,-2,0" >
-            <Label  Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,20,0" Grid.Column="1" >
+        <StackPanel Orientation="Vertical" Margin="0,0,-2,0" Grid.ColumnSpan="2" >
+            <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="HOME" FontSize="20"   Height="40" Width="96"    HorizontalAlignment="Right"  VerticalAlignment="Bottom" Margin="0,0,80,4" Click="Button_Click_13" />
+            <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="Exit" FontSize="20"   Height="40" Width="96"   HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-45,181,0"  Click="Button_Click_1"/>
+
+            <Label  Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-40,20,0" Grid.Column="1" RenderTransformOrigin="0.0,-1.133" >
                 <Label.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"></Setter>
+                        <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Label.Resources>
                 <Label.Background>
-                    <ImageBrush ImageSource="Images\Controls\ct.png"></ImageBrush>
+                    <ImageBrush ImageSource="Images\Controls\ct.png"/>
                 </Label.Background>
             </Label>
 
-            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-30,90,0" Grid.Column="1" Click="Button_Click_1">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
-                    </Style>
-                </Button.Resources>
-                <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Home.jpg"></ImageBrush>
-                </Button.Background>
-            </Button>
-            <Button Width="60" Height="30" HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="945,-30,0,0" Grid.Column="1" Click="Button_Click_1">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
-                    </Style>
-                </Button.Resources>
-                <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Exit.jpg"></ImageBrush>
-                </Button.Background>
-            </Button>
         </StackPanel>
-        <Button Width="150" FontSize="15" Foreground="Blue" FontWeight="Bold" HorizontalAlignment="Left" Margin="10,20,0,8" Click="Button_Click">
-
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="5"></Setter>
-                </Style>
-            </Button.Resources>
-            <Button.Background>
-                <ImageBrush ImageSource="Images\Controls\Menu.jpg"></ImageBrush>
-            </Button.Background>
-        </Button>
-
-        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="30" FontWeight="Bold" Content="Bill" Height="50" Width="100" Margin="675,-5,577,0"></Label>
+        <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="Menu" FontSize="20"  VerticalAlignment="Bottom"  Height="40" Width="96"    HorizontalAlignment="Left" Margin="10,-5,0,23" Click="Button_Click"/>
 
 
 
 
-        <Grid RenderTransformOrigin="0.349,0.464" Grid.Row="1" Grid.RowSpan="2">
+        <Label HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="30" FontWeight="Bold" Content="Bill" Height="50" Width="100" Margin="675,-5,430,0"></Label>
+
+
+
+
+        <Grid RenderTransformOrigin="0.349,0.464" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
             <Label HorizontalAlignment="Center" FontWeight="Normal" VerticalAlignment="Top" Background="LightBlue" Foreground="Black"  FontSize="25"  Content="Cart Items" Height="39" Width="130" Margin="160,2,1062,0">
                 <Label.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -225,15 +205,15 @@
                 </Label.Resources>
             </Label>
             <StackPanel Orientation="Horizontal" >
-                <RadioButton x:Name="RH"  Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,210,0,0" Checked="RH_Checked" ></RadioButton>
-                <RadioButton x:Name="RW"  Width="30" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,213,0,0" Checked="RW_Checked" ></RadioButton>
-                <RadioButton x:Name="RO"  Width="25" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,213,0,0" Checked="RO_Checked" />
+                <RadioButton x:Name="RH"  Width="20" Height="17" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="540,210,0,0" Checked="RH_Checked" ></RadioButton>
+                <RadioButton x:Name="RW"  Width="15" Height="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,213,0,0" Checked="RW_Checked" ></RadioButton>
+                <RadioButton x:Name="RO"  Width="15" Height="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,213,0,0" Checked="RO_Checked" />
 
             </StackPanel>
             <StackPanel>
                 <Label Content="Home" Foreground="White" FontSize="15" HorizontalAlignment="Left" Margin="480,200,0,0" VerticalAlignment="Top" Width="55"/>
-                <Label Content="Other" Foreground="White" FontSize="15" HorizontalAlignment="Left" Margin="655,-26,0,0" VerticalAlignment="Top" Width="60"/>
-                <Label Content="Work" Foreground="White" FontSize="15" HorizontalAlignment="Left" Margin="570,-31,0,0" VerticalAlignment="Top" Width="60" Height="31"/>
+                <Label Content="Other" Foreground="White" FontSize="15" HorizontalAlignment="Left" Margin="640,-26,0,0" VerticalAlignment="Top" Width="50"/>
+                <Label Content="Work" Foreground="White" FontSize="15" HorizontalAlignment="Left" Margin="570,-31,0,0" VerticalAlignment="Top" Width="45" Height="31"/>
 
             </StackPanel>
 
@@ -336,14 +316,9 @@
 
 
             </Label>
+            <Button FontWeight="Bold" Background="White" Foreground="#0B4F67" BorderBrush="#0B4F67"  BorderThickness="4" Content="Buy" FontSize="20" Width="96" Height="50"  HorizontalAlignment="Right" Margin="0,500,181,0"  Click="Button_Click_2"/>
 
-            <Button Content="Buy" HorizontalAlignment="Left" Margin="1075,632,0,0" FontSize="18" VerticalAlignment="Top" Width="105" Background="Blue" Foreground="White" FontWeight="Bold" Click="Button_Click_2" Height="30">
-                <Button.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
-                    </Style>
-                </Button.Resources>
-            </Button>
+
 
             <Grid Width="300"  Height="200" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="850,460,0,0">
                 <Grid.ColumnDefinitions>
@@ -378,8 +353,9 @@
 
             </StackPanel>
         </Grid>
-        <Button Content="click" Width="50" Height="50" Click="Button_Click_1"  Visibility="Hidden" Margin="651,4"/>
-        <DataGrid Visibility="Hidden" x:Name="DeliveryGrid" FontSize="12" AutoGenerateColumns="True" Width="600" Margin="750,2,2,135" SelectionChanged="CartGrid3_SelectionChanged" Grid.Row="1"/>
+        <Button Content="click" Width="50" Height="50" Click="Button_Click_1"  Visibility="Hidden" Margin="651,4,504,4"/>
+        <DataGrid Visibility="Hidden" x:Name="DeliveryGrid" FontSize="12" AutoGenerateColumns="True" Width="600" Margin="750,2,2,135" SelectionChanged="CartGrid3_SelectionChanged" Grid.Row="1" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
+

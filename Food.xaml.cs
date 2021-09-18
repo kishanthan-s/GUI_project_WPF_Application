@@ -23,8 +23,9 @@ namespace Online_Food_Order_Software
         public Food()
         {
             InitializeComponent();
-        }
 
+            /*     myFrame.Content = new Food1(UsN);*/
+        }
         private string UsN;
         public Food(string UN) : this()
         {
@@ -51,6 +52,7 @@ namespace Online_Food_Order_Software
             myFrame.Content = new Food3();
 
         }
+
 
     }
 }

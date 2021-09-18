@@ -25,12 +25,17 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
         }
-       
+        private string UsN = Global.UserName;
+        /* public Address(string UN) : this()
+         {
+             Customer_name.Text = UN;
 
+         }
+        */
         public Address(string CN, string EM, string DN, string AN, string SN, string LM, string PR, string PL, string CT, string ID) : this()
         {
 
-           // User_name = UsN, couldn't add
+
             Customer_name.Text = CN;
             Email.Text = EM;
             DoorNo.Text = DN;
@@ -83,33 +88,49 @@ namespace Online_Food_Order_Software
 
             else
             {
-                using (DatabaseReposi repository = new DatabaseReposi())
+                DatabaseReposi repository = new DatabaseReposi();
+
+                if (repository.deliveries_set.Where((a => (a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault() != null)
                 {
-                    Delivery1 delivery = new Delivery1()
-                    {
-
-                        Customer_Name = Customer_name.Text,
-                        Customer_ID = Customer_Id.Text,
-                        Email = Email.Text,
-                        Door_No = DoorNo.Text,
-                        Apartment_Name = Apartment_Name.Text,
-                        Street_name = Street_Name.Text,
-                        Landmark = Landmark.Text,
-                        City = City.Text,
-                        Province = Province.Text,
-                        Place = Place.Text,
-
-
-
-
-
-                    };
-                    repository.deliveries_set.Add(delivery);
-                    repository.SaveChanges();
-
-                    this.Close();
+                    update();
 
                 }
+                else
+                {
+                    add();
+                }
+
+                /*  using (DatabaseReposi repository = new DatabaseReposi())
+                   {
+                       Delivery1 delivery = new Delivery1()
+                       {
+
+                           User_name = Global.UserName,
+                           Customer_Name = Customer_name.Text,
+                           Customer_ID = Customer_Id.Text,
+                           Email = Email.Text,
+                           Door_No = DoorNo.Text,
+                           Apartment_Name = Apartment_Name.Text,
+                           Street_name = Street_Name.Text,
+                           Landmark = Landmark.Text,
+                           City = City.Text,
+                           Province = Province.Text,
+                           Place = Place.Text,
+
+
+
+
+
+                       };
+                       repository.deliveries_set.Add(delivery);
+                       repository.SaveChanges();*/
+                Global.addres = Place.Text;
+                Cart cart = new Cart();
+                cart.Show();
+
+                this.Close();
+
+
 
 
             }
@@ -117,8 +138,55 @@ namespace Online_Food_Order_Software
 
 
         }
+        public void update()
+        {
+            DatabaseReposi repository = new DatabaseReposi();
+            var PatUpdate = repository.deliveries_set.Where((a => (a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault();///passes patient id
 
 
+            PatUpdate.User_name = Global.UserName;
+            PatUpdate.Customer_Name = Customer_name.Text;
+            PatUpdate.Customer_ID = Customer_Id.Text;
+            PatUpdate.Email = Email.Text;
+            PatUpdate.Door_No = DoorNo.Text;
+            PatUpdate.Apartment_Name = Apartment_Name.Text;
+            PatUpdate.Street_name = Street_Name.Text;
+            PatUpdate.Landmark = Landmark.Text;
+            PatUpdate.City = City.Text;
+            PatUpdate.Province = Province.Text;
+            PatUpdate.Place = Place.Text;
+
+            repository.SaveChanges();
+
+
+
+        }
+
+        public void add()
+        {
+            DatabaseReposi repository = new DatabaseReposi();
+
+            Delivery1 delivery = new Delivery1()
+            {
+
+                User_name = Global.UserName,
+                Customer_Name = Customer_name.Text,
+                Customer_ID = Customer_Id.Text,
+                Email = Email.Text,
+                Door_No = DoorNo.Text,
+                Apartment_Name = Apartment_Name.Text,
+                Street_name = Street_Name.Text,
+                Landmark = Landmark.Text,
+                City = City.Text,
+                Province = Province.Text,
+                Place = Place.Text,
+
+
+            };
+            repository.deliveries_set.Add(delivery);
+            repository.SaveChanges();
+
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -162,9 +230,6 @@ namespace Online_Food_Order_Software
             this.Close();
         }
     }
-
 }
-
-
 
 
