@@ -30,10 +30,7 @@
 
             <TextBlock Text="Breadtalk member" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30" Foreground="Gray" FontSize="18"/>
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox Name="textBoxEmail" materialDesign:HintAssist.Hint="Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10"></TextBox>
-                <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" OpacityMask="Crimson" Foreground="#FFE5572C"  />
-                <PasswordBox  Name="passwordBox1" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10"></PasswordBox>
-            </StackPanel>
+          </StackPanel>
             <Button Content="Log In"   VerticalAlignment="Top" Width="106" Margin="87,198,87,0"  Background="#FF59565D" Click="Button_Click" />
         </Grid>
         <Grid HorizontalAlignment="Left" Height="124" Margin="0,460,-10,-48.8" VerticalAlignment="Top" Width="360">
