@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Food_Order_Software"
         mc:Ignorable="d"
-        Title="Success" Height="450" Width="800">
+          Title="Success" WindowStyle="None" Width="1360" Height="760" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
     <Grid>
 
         <Border Grid.Row="1" Background="Gray" Margin="0">
