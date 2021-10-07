@@ -1,0 +1,56 @@
+﻿<Window x:Class="Online_Food_Order_Software.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Food_Order_Software"
+        mc:Ignorable="d"
+        Title="Login"  ResizeMode="NoResize" Width="350"  WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid  HorizontalAlignment="Right" Width="350" >
+        <Rectangle Height="280" VerticalAlignment="Top">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint=".5,1" StartPoint=".5,0" >
+                    <GradientStop Color="#FF2281D1"></GradientStop>
+                    <GradientStop Color="#FF34268A" Offset="1"></GradientStop>
+                    <GradientStop Color="#FF332888" Offset=".5"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Image Source="Images/download.jpg" Width="100" Height="100" VerticalAlignment="Top" Margin="50" ></Image>
+
+
+        <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="45,0,33,105" HorizontalAlignment="Center">
+            <Rectangle Width="280" Height="240" Fill="White"  VerticalAlignment="Bottom"  >
+                <Rectangle.Effect>
+                    <DropShadowEffect Color="#FFBBBBBB" Direction="0" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"/>
+                </Rectangle.Effect>
+            </Rectangle>
+
+            <TextBlock Text="Breadtalk member" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="30" Foreground="Gray" FontSize="18"/>
+            <StackPanel VerticalAlignment="Center" Margin="10">
+                <TextBox Name="textBoxEmail"   Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,10"></TextBox>
+                <TextBlock Height="23" HorizontalAlignment="Left" x:Name ="errormessage" VerticalAlignment="Top" Width="247" OpacityMask="Crimson" Foreground="#FFE5572C"  />
+                <PasswordBox  Name="passwordBox1"  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Margin="0,10"></PasswordBox>
+            </StackPanel>
+            <Button Content="Log In"   VerticalAlignment="Top" Width="106" Margin="87,198,87,0"  Background="#FF59565D" Click="Button_Click" />
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="124" Margin="0,460,-10,-48.8" VerticalAlignment="Top" Width="360">
+            <Button Content="Create account" HorizontalAlignment="Left" Margin="90,73,0,0" VerticalAlignment="Top" Width="170" Background="#FF59565D" Click="Button_Click_2"/>
+
+
+        </Grid>
+
+    </Grid>
+
+</Window>
