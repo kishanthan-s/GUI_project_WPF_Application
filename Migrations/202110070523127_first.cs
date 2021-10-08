@@ -3,10 +3,24 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class all : DbMigration
+    public partial class first : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        CustomerID = c.String(nullable: false, maxLength: 128),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                        EmailID = c.String(),
+                        Password = c.String(),
+                        ConfirmPassword = c.String(),
+                        phone_num = c.String(),
+                    })
+                .PrimaryKey(t => t.CustomerID);
+            
             CreateTable(
                 "dbo.Class1",
                 c => new
@@ -59,6 +73,30 @@
                 .PrimaryKey(t => t.Payment_ID);
             
             CreateTable(
+                "dbo.promoes",
+                c => new
+                    {
+                        customerID = c.String(nullable: false, maxLength: 128),
+                        itemID = c.String(nullable: false, maxLength: 128),
+                        itemPrice = c.String(),
+                        discount = c.String(),
+                    })
+                .PrimaryKey(t => new { t.customerID, t.itemID });
+            
+            CreateTable(
+                "dbo.Feedbacks",
+                c => new
+                    {
+                        ID = c.String(nullable: false, maxLength: 128),
+                        Name = c.String(),
+                        Email = c.String(),
+                        Phone_number = c.String(),
+                        Subject = c.String(),
+                        Message = c.String(),
+                    })
+                .PrimaryKey(t => t.ID);
+            
+            CreateTable(
                 "dbo.Supliers",
                 c => new
                     {
@@ -75,9 +113,12 @@
         public override void Down()
         {
             DropTable("dbo.Supliers");
+            DropTable("dbo.Feedbacks");
+            DropTable("dbo.promoes");
             DropTable("dbo.Payments");
             DropTable("dbo.Delivery1");
             DropTable("dbo.Class1");
+            DropTable("dbo.Customers");
         }
     }
 }

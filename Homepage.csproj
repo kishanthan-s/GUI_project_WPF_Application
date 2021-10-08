@@ -129,9 +129,9 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202109180835334_all.cs" />
-    <Compile Include="Migrations\202109180835334_all.designer.cs">
-      <DependentUpon>202109180835334_all.cs</DependentUpon>
+    <Compile Include="Migrations\202110070523127_first.cs" />
+    <Compile Include="Migrations\202110070523127_first.designer.cs">
+      <DependentUpon>202110070523127_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Class1.cs" />
@@ -267,8 +267,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202109180835334_all.resx">
-      <DependentUpon>202109180835334_all.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202110070523127_first.resx">
+      <DependentUpon>202110070523127_first.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
