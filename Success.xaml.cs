@@ -26,7 +26,7 @@ namespace Online_Food_Order_Software
 
             /*
 
-            using (DatabaseRepository repository = new DatabaseRepository())
+            using (DatabaseReposi repository = new DatabaseReposi())
             {
                 var cartList = repository.Cart1s.Where(b => b.Customer_Name == "Kasun" && b.Buy_Scussess == 0).ToList();
                 CartGrid.ItemsSource = cartList;

@@ -132,7 +132,6 @@ C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Online_Food_Or
 C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Homepage.csproj.GenerateResource.cache
 C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Homepage.csproj.CoreCompileInputs.cache
 C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Homepage.csproj.CopyComplete
-C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.all.resources
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Homepage.csproj.AssemblyReference.cache
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Address.g.cs
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\CardWindow.g.cs
@@ -210,3 +209,13 @@ C:\Users\KISHANTHAN\Desktop\final\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.first.resources
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Signup.g.cs
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Signup.baml
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\bin\Debug\MaterialDesignColors.dll
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Login.g.cs
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Signup.g.cs
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Login.baml
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Signup.baml
+C:\Users\Isuru Lakshan\Desktop\wpf4thsemproject\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.first.resources

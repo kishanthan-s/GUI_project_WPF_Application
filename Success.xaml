@@ -7,9 +7,9 @@
         mc:Ignorable="d"
           Title="Success" WindowStyle="None" Width="1360" Height="760" WindowStartupLocation="CenterScreen" WindowState="Maximized" >
     <Grid>
-
-        <Border Grid.Row="1" Background="Gray" Margin="0">
-        </Border>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images\Background\bgimg1.jpg" ></ImageBrush>
+        </Grid.Background>
 
         <DataGrid Visibility="Hidden" x:Name="paymentgrid" Foreground="Black" Background="Transparent" RowBackground="Transparent"  BorderThickness="0" FontSize="15" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="160" Height="490" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <DataGrid.Columns >
@@ -21,14 +21,14 @@
         <Grid Margin="400,100,400,100" RenderTransformOrigin="0.5,0.5">
 
 
-            <Grid.RowDefinitions >
+            <Grid.RowDefinitions  >
                 <RowDefinition Height="1*"></RowDefinition>
                 <RowDefinition Height="3*"></RowDefinition>
 
             </Grid.RowDefinitions>
 
-            <Grid  Grid.Row="0" >
-                <Border Background="SpringGreen" CornerRadius="30,30,0,0"></Border>
+            <Grid  Grid.Row="0">
+                <Border Opacity="0.5" Background="SpringGreen" CornerRadius="30,30,0,0"></Border>
                 <Image Source="Images\Background\correct.png" Width="50" Height="50"  HorizontalAlignment="Left" Margin="255,5,0,83" RenderTransformOrigin="-0.7,0.9" ></Image>
                 <Label Content="SUCCESS" FontWeight="Normal" HorizontalContentAlignment="Center" Foreground="White" Width="100" Height="30"  FontSize="15" ></Label>
                 <Label Content="Order Completed Successfully!" FontWeight="Normal" HorizontalContentAlignment="Center" Foreground="Black" Width="300" Margin="125,95,127,3" FontSize="18" />
@@ -37,9 +37,9 @@
             </Grid>
 
             <Grid Grid.Row="1">
-                <Border Background="WhiteSmoke" CornerRadius="0,0,30,30">
+                <Border Opacity="0.5" Background="WhiteSmoke" CornerRadius="0,0,30,30">
                 </Border>
-                <Border BorderBrush="Black" Background="LightBlue" BorderThickness="0" Margin="55,97,207,67" CornerRadius="15"/>
+                <Border Opacity="0.8" BorderBrush="Black" Background="LightBlue" BorderThickness="0" Margin="55,97,207,67" CornerRadius="15"/>
                 <StackPanel>
                     <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="14" Foreground="Blue"  Content="Order Details" Margin="90,130,362,0"  />
                     <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="12"  Content="Customer Name :" Margin="90,10,357,0"  />
@@ -65,15 +65,19 @@
 
                 </Label>
 
-                <Button  Width="40" Height="30"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="256,374,256,0" Click="Button_Click_1">
+                <Button Content="OK" FontSize="22" FontWeight="Bold"  Width="59" Height="30"  HorizontalAlignment="Center" VerticalAlignment="Top" Margin="256,374,237,0" Click="Button_Click_1">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"></Setter>
                         </Style>
                     </Button.Resources>
                     <Button.Background>
-                        <ImageBrush ImageSource="Images\Controls\Ok.jpg"></ImageBrush>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#b4fefc" Offset="0.4"/>
+                            <GradientStop Color="#76d5fc" Offset="1"/>
+                        </RadialGradientBrush>
                     </Button.Background>
+
                 </Button>
 
             </Grid>

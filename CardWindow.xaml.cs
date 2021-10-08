@@ -19,103 +19,103 @@ namespace Online_Food_Order_Software
     /// <summary>
     /// Interaction logic for CardWindow.xaml
     /// </summary>
-    public partial class CardWindow : Window
-    {
-
-        public CardWindow()
-        {
-            InitializeComponent();
-        }
-
-        private string UsN = Global.UserName;
-        /*    public CardWindow(string UN) : this()
-            {
-                UsN = UN;
-            }
-        */
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public partial class CardWindow : Window
         {
 
-            if (holder.Text == "")
+            public CardWindow()
             {
-                MessageBox.Show("Complete all ");
+                InitializeComponent();
             }
 
-
-            else if (type.Text == "")
-            {
-                MessageBox.Show("Complete all ");
-
-            }
-
-            else if (no.Text == "")
-            {
-                MessageBox.Show("Complete all ");
-
-            }
-
-            else if (month.Text == "")
-            {
-                MessageBox.Show("Complete all ");
-
-            }
-            else if (year.Text == "")
-            {
-                MessageBox.Show("Complete all ");
-
-            }
-            else if (PW.Password == "")
-            {
-                MessageBox.Show("Complete all ");
-
-            }
-
-            else
-            {
-                using (DatabaseReposi repository1 = new DatabaseReposi())
+            private string UsN = Global.UserName;
+            /*    public CardWindow(string UN) : this()
                 {
+                    UsN = UN;
+                }
+            */
+            private void Button_Click(object sender, RoutedEventArgs e)
+            {
 
-                    Payment payment = new Payment()
-                    {
-
-
-                        User_Name = UsN,
-                        Card_Holder_Name = holder.Text,
-                        Payment_Method = "Card",
-                        Card_Type = type.Text,
-                        Card_Number = no.Text,
-                        Expire_Month = month.Text,
-                        Expire_Year = year.Text,
-
-
-                    };
-                    repository1.payments_set.Add(payment);
-                    repository1.SaveChanges();
+                if (holder.Text == "")
+                {
+                    MessageBox.Show("Complete all ");
                 }
 
 
+                else if (type.Text == "")
+                {
+                    MessageBox.Show("Complete all ");
+
+                }
+
+                else if (no.Text == "")
+                {
+                    MessageBox.Show("Complete all ");
+
+                }
+
+                else if (month.Text == "")
+                {
+                    MessageBox.Show("Complete all ");
+
+                }
+                else if (year.Text == "")
+                {
+                    MessageBox.Show("Complete all ");
+
+                }
+                else if (PW.Password == "")
+                {
+                    MessageBox.Show("Complete all ");
+
+                }
+
+                else
+                {
+                    using (DatabaseReposi repository1 = new DatabaseReposi())
+                    {
+
+                        Payment payment = new Payment()
+                        {
 
 
-                this.Close();
+                            User_Name = UsN,
+                            Card_Holder_Name = holder.Text,
+                            Payment_Method = "Card",
+                            Card_Type = type.Text,
+                            Card_Number = no.Text,
+                            Expire_Month = month.Text,
+                            Expire_Year = year.Text,
+
+
+                        };
+                        repository1.payments_set.Add(payment);
+                        repository1.SaveChanges();
+                    }
+
+
+
+
+                    this.Close();
+                }
+
+
             }
 
 
-        }
+            private void Button_Click_1(object sender, RoutedEventArgs e)
+            {
+                this.Close();
+            }
 
+            private void month_SelectionChanged(object sender, SelectionChangedEventArgs e)
+            {
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+            }
 
-        private void month_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+            private void cbi2_Selected(object sender, RoutedEventArgs e)
+            {
 
-        }
-
-        private void cbi2_Selected(object sender, RoutedEventArgs e)
-        {
-
+            }
         }
     }
-}

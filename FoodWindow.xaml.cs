@@ -251,9 +251,9 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           // test test1 = new test();
-         //   test1.Show();
-            this.Close();
+         //   test test1 = new test();
+        //    test1.Show();
+         //  this.Close();
 
         }
 

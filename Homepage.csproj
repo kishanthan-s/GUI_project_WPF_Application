@@ -464,6 +464,9 @@
     <Resource Include="Images\FoodAndDrink\FB5.jpg" />
     <Resource Include="Images\FoodAndDrink\FB6.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Background\bgimg1.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

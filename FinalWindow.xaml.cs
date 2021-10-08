@@ -88,7 +88,7 @@ namespace Online_Food_Order_Software
 
         private void MediaEliment_MediaEnded(object sender, RoutedEventArgs e)
         {
-            me.Position = TimeSpan.FromMilliseconds(1);
+            me.Position = TimeSpan.FromMilliseconds(2);
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -119,7 +119,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            //this.Close();
 
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -134,3 +134,4 @@ namespace Online_Food_Order_Software
         }
     }
 }
+

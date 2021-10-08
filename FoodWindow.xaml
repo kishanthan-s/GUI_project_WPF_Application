@@ -15,60 +15,79 @@
             <ImageBrush ImageSource="Images\Background\bg1.jpg" ></ImageBrush>
         </Grid.Background>
         <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="2,-1,-2,1">
-            <Button  Margin="50,20,5,0" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="75" Click="Button_Click_2" >
+            <Button  Content="Food" FontSize="22" FontWeight="Bold" Margin="50,12,5,0" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="75" Click="Button_Click_2" >
+
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
+                        <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Food.jpg"/>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
                 </Button.Background>
             </Button>
-            <Button  HorizontalAlignment="Left" Margin="0,20,5,2" Height="30" VerticalAlignment="Top" Width="75" Click="Button_Click">
+            <Button   Content="Drink" FontSize="22" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,12,5,2" Height="40" VerticalAlignment="Top" Width="75" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
+                        <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Drink.jpg"/>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
                 </Button.Background>
+
             </Button>
 
         </StackPanel>
 
-
         <StackPanel Orientation="Vertical" Grid.ColumnSpan="2" Margin="0,0,-2,0" >
-            <Button Width="60" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,20,0" Grid.Column="1" Click="Button_Click_3" >
+            <Button   Content="Cart" FontSize="22" FontWeight="Bold" Width="60" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,20,0" Grid.Column="1" Click="Button_Click_3" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="10"></Setter>
+                        <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\ct.png"></ImageBrush>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
                 </Button.Background>
+
             </Button>
-            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-30,100,0" Click="Button_Click_1">
+            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="68" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,92,0" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
+                        <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Home.jpg"/>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
                 </Button.Background>
+
             </Button>
-            <Button Width="60" Height="30" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-30,180,0" Click="Button_Click_4" >
+            <Button   Content="Exit" FontSize="22" FontWeight="Bold" Width="60" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,180,0" Click="Button_Click_4" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"/>
+                        <Setter Property="CornerRadius" Value="5"></Setter>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
-                    <ImageBrush ImageSource="Images\Controls\Exit.jpg"/>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
                 </Button.Background>
+
             </Button>
         </StackPanel>
 

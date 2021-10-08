@@ -591,6 +591,29 @@ namespace Online_Food_Order_Software
 
         }
 
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            DatabaseReposi repository = new DatabaseReposi();
+
+
+            var deliveryList = repository.deliveries_set.ToList();
+            DeliveryGrid.ItemsSource = deliveryList;
+
+            Application.Current.Shutdown();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
+            this.Close();
+        }
+
         private void CartGrid_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
         {
 
@@ -788,13 +811,7 @@ namespace Online_Food_Order_Software
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-            DatabaseReposi repository = new DatabaseReposi();
 
-
-            var deliveryList = repository.deliveries_set.ToList();
-            DeliveryGrid.ItemsSource = deliveryList;
-
-            Application.Current.Shutdown();
 
         }
 
