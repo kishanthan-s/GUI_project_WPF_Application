@@ -208,3 +208,5 @@ C:\Users\KISHANTHAN\Desktop\final\WPF-new\bin\Debug\MaterialDesignColors.pdb
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.pdb
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.first.resources
+C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Signup.g.cs
+C:\Users\KISHANTHAN\Desktop\final\WPF-new\obj\Debug\Signup.baml

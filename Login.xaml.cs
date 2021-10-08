@@ -61,14 +61,14 @@ namespace Online_Food_Order_Software
                             else
                             {
                                 errormessage.Text = "Sorry! Please enter existing password.";
-                                // MessageBox.Show("Sorry! Please enter existing password.");
+                                 MessageBox.Show("Sorry! Please enter existing password.");
 
                             }
                         }
                         else
                         {
                             errormessage.Text = "Sorry! Please enter existing emailid/password.";
-                            //MessageBox.Show("Sorry! Please enter existing emailid/password.");
+                            MessageBox.Show("Sorry! Please enter existing emailid/password.");
 
                         }
                     }
@@ -82,16 +82,16 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //Signup Signup_Win = new Signup();
-           // Signup_Win.Show();
-            //this.Close();
+            Signup Signup_Win = new Signup();
+            Signup_Win.Show();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-           // Signup Signup_Win = new Signup();
-           // Signup_Win.Show();
-           // this.Close();
+            Signup Signup_Win = new Signup();
+            Signup_Win.Show();
+            this.Close();
         }
     }
 }
