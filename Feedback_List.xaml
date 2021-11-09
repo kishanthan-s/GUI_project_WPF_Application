@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Food_Order_Software"
         mc:Ignorable="d"
-        Title="Feedback_List" Height="450" Width="800">
+         Title="Feedback_List"  Width="1349"  WindowState="Maximized" WindowStyle="None" >
     <Grid>
-        
+        <Border Height="860" VerticalAlignment="Top" >
+            <Border.Background>
+                <ImageBrush ImageSource="Images\feedback_res.jpg" ></ImageBrush>
+            </Border.Background>
+
+        </Border>
+        <DataGrid x:Name="dataGrid" FontSize="15" AutoGenerateColumns="True" AlternatingRowBackground="BurlyWood" AlternationCount="2" Opacity=".5" >
+
+        </DataGrid>
+        <Button  HorizontalAlignment="Left" Margin="1233,0,0,0" VerticalAlignment="Top" Width="109" Content="Exit" FontSize="20" Height="38" Click="Button_Click"/>
+
+
     </Grid>
 </Window>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Online_Food_Order_Software.Database;
+using Online_Food_Order_Software.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,18 @@ namespace Online_Food_Order_Software
         public Feedback_List()
         {
             InitializeComponent();
+            using (DatabaseReposi reposit = new DatabaseReposi())
+            {
+                Feedback Feedback_res = new Feedback();
+
+                var Feedback_list = reposit.response.ToList();
+                dataGrid.ItemsSource = Feedback_list;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

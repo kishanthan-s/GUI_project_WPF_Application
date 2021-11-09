@@ -6,62 +6,269 @@
         xmlns:local="clr-namespace:Online_Food_Order_Software"
         mc:Ignorable="d"
         Title="Promotion" WindowState="Maximized" ResizeMode="NoResize" Width="1608" Height="900" WindowStyle="None" Background="#FF7D6868">
-    
-    <Grid >
-       <Grid.Background>
-            <ImageBrush ImageSource="Images/promoback.jpg" Stretch="UniformToFill"/>
+
+    <Grid Margin="0,0,0,-64" >
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images\promoback.jpg" ></ImageBrush>
         </Grid.Background>
-        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1123">
+
+        <Grid  HorizontalAlignment="Left" Height="720" Margin="0,180,0,0" VerticalAlignment="Top" Width="1112">
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="20,7,0,0" Source="images/choclatepromo.jpg" Stretch="Fill" />
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="380,7,0,0" Source="images/familypromo1.jpg"  Stretch="Fill"></Image>
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="740,7,0,0" Source="images/pizza promotion1.jpg"  Stretch="Fill"></Image>
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="20,350,0,0" Source="images/cokepromo1.jpg"  Stretch="Fill"/>
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="380,350,0,0" Source="images/cokepromo1.jpg"  Stretch="Fill"></Image>
+            <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="740,350,0,0" Source="images/cakepromp.jpg"  Stretch="Fill"></Image>
+            <Grid HorizontalAlignment="Left" Height="40" Margin="20,268,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1"  Height="40"  FontSize="20"   Click="Button_Click" >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="ta"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"   Visibility="Collapsed"  />
+                </Button>
+                <Button  x:Name="button2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="210,0,0,0"    FontSize="20"    Click="Button_Click_1" RenderTransformOrigin="0.96,0.53" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUp"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="170,0,0,0"    HorizontalAlignment="Left"   FontSize="20"  Click="CmdUp_Click" RenderTransformOrigin="0.04,0.47" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDown" Height="40"  x:FieldModifier="private"    Width="40"  Margin="90,0,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="CmdDown_Click" RenderTransformOrigin="0.75,0.41"  Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oa" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,210,0"    HorizontalAlignment="Right"     Click="oa_Click" VerticalAlignment="Bottom" RenderTransformOrigin="0.94,0.5" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+            <Grid HorizontalAlignment="Left" Height="40" Margin="380,268,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1A"  Height="40"  FontSize="20" Click="button1A_Click"    >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="taA"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"  Visibility="Collapsed"   />
+                </Button>
+                <Button  x:Name="button2A"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="211,0,0,0"    FontSize="20" RenderTransformOrigin="1.22,0.5" Click="button2A_Click" VerticalAlignment="Top"  Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUpA"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="171,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="0.87,0.47" Click="cmdUpA_Click" Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDownA" Height="40"  x:FieldModifier="private"    Width="40"  Margin="95,0,0,0"    HorizontalAlignment="Left"   FontSize="20"  RenderTransformOrigin="0.9,0.56" Click="cmdDownA_Click"  Visibility="Collapsed"   >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oaA" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,205,0"    HorizontalAlignment="Right"     VerticalAlignment="Top" Click="oaA_Click" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+
+            <Grid HorizontalAlignment="Left" Height="40" Margin="740,268,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1B"  Height="40"  FontSize="20" Click="button1B_Click"   >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="taB"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"  Visibility="Collapsed"   />
+                </Button>
+                <Button  x:Name="button2B"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="211,0,0,0"    FontSize="20" Click="button2B_Click" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUpB"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="171,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="0.09,0.56" Click="cmdUpB_Click" VerticalAlignment="Top" Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDownB" Height="40"  x:FieldModifier="private"    Width="40"  Margin="90,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="1.8,0.53" Click="cmdDownB_Click"   Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oaB" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,210,0"    HorizontalAlignment="Right"     VerticalAlignment="Bottom" Click="oaB_Click" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+            <Grid HorizontalAlignment="Left" Height="40" Margin="20,611,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1R"  Height="40"  FontSize="20" Click="button1R_Click"    >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="taR"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"   Visibility="Collapsed"   />
+                </Button>
+                <Button  x:Name="button2R"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="211,0,0,0"    FontSize="20" RenderTransformOrigin="0.17,0.53" Click="button2R_Click"    Visibility="Collapsed"   >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUpR"  x:FieldModifier="private"    Width="40"  Margin="171,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="0.27,0.59" Click="cmdUpR_Click"   Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDownR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="90,0,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="cmdDownR_Click" RenderTransformOrigin="0.38,0.447" VerticalAlignment="Top"  Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oaR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,210,0"    HorizontalAlignment="Right"     VerticalAlignment="Bottom" RenderTransformOrigin="1.03,0.47" Click="oaR_Click"   Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+            <Grid HorizontalAlignment="Left" Height="40" Margin="380,611,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1AR"  Height="40"  FontSize="20" Click="button1AR_Click"   >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="taAR"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"  Visibility="Collapsed"   />
+                </Button>
+                <Button  x:Name="button2AR"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="207,0,0,0"    FontSize="20" Click="button2AR_Click"  Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUpAR"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="167,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="0.21,0.47" Click="cmdUpAR_Click" Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDownAR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="90,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="1.17,0.47" Click="cmdDownAR_Click" Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oaAR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,210,0"    HorizontalAlignment="Right"      VerticalAlignment="Bottom" RenderTransformOrigin="1,0.47" Click="oaAR_Click" Visibility="Collapsed" >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Height="40" Margin="740,611,0,0" VerticalAlignment="Top" Width="300">
+                <Button  x:Name="button1BR"  Height="40"  FontSize="20" Click="button1BR_Click"    >
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\cart.png"></ImageBrush>
+                    </Button.Background>
+                    <TextBox x:Name="taBR"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"   Visibility="Collapsed" />
+                </Button>
+                <Button  x:Name="button2BR"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="210,0,0,0"    FontSize="20" RenderTransformOrigin="0.23,0.44" Click="button2BR_Click"  Visibility="Collapsed"    >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdUpBR"   Height="40"  x:FieldModifier="private"    Width="40"  Margin="170,0,0,0"    HorizontalAlignment="Left"   FontSize="20" Click="cmdUpBR_Click" Visibility="Collapsed"  >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\min.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="cmdDownBR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="90,0,0,0"    HorizontalAlignment="Left"   FontSize="20" RenderTransformOrigin="0.93,0.47" Click="cmdDownBR_Click"   Visibility="Collapsed"   >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\plus.jpeg"></ImageBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="oaBR" Height="40"  x:FieldModifier="private"    Width="40"  Margin="0,0,210,0"    HorizontalAlignment="Right"      VerticalAlignment="Bottom" RenderTransformOrigin="0.79,0.41" Click="oaBR_Click" Visibility="Collapsed"    >
+                    <Button.Background>
+                        <ImageBrush ImageSource="Images\controls\ok.png"></ImageBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+
+
+
+
+
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1608">
             <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="90" FontSize="40" Width="1123" FontFamily="Curlz MT" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Opacity="1.5" Foreground="#FFFDFAFA" >
-                
+
                 <TextBlock.Effect>
                     <DropShadowEffect/>
                 </TextBlock.Effect><Run Text="We believe providing nourishment is our blessing" FontWeight="Bold" FontSize="48">
-    <Run.Foreground>
-        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        <Run.Foreground>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
             <GradientStop Color="White" Offset="1"/>
         </LinearGradientBrush>
     </Run.Foreground>
-</Run><InlineUIContainer>  
+        </Run><InlineUIContainer>  
                 </InlineUIContainer></TextBlock>
-
         </Grid>
 
-        <Grid  HorizontalAlignment="Left" Height="542" Margin="0,180,0,0" VerticalAlignment="Top" Width="1608">
-            <Button Margin="20,7,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}"  Background="{x:Null}" Click="Button_Click">
-                <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="266" Source="images/burgurpromo5.jpg" Stretch="Fill" />
-            </Button>
-            <Button Margin="380,7,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top"  Height="250"  Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_1">
-                <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="266" Source="images/familypromo1.jpg"  Stretch="Fill"></Image>
-            </Button>
-            <Button Margin="740,7,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}"  BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_2"  >
-                <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="266" Source="images/pizza promotion1.jpg"  Stretch="Fill"></Image>
-            </Button>
-            <Button Margin="1100,7,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}"  BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_3">
-                <Image Height="250" Width="266" HorizontalAlignment="Left"  VerticalAlignment="Top" Source="images/pizzapromo1.jpg" Stretch="Fill" ></Image>
-            </Button>
-            <Button Margin="1100,265,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_7">
-                <Image Height="240" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"  Source="images/cakepromp.jpg" Stretch="Fill"/>
-            </Button>
-            <Button Margin="380,265,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_5">
-                <Image Height="250" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"  Source="images/kitzpizzapromo1.jpg" Stretch="Fill"/>
-            </Button>
-            <Button Margin="740,265,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_6">
-                <Image Height="250" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"  Source="images/choclatepromo.jpg" Stretch="Fill"/>
-            </Button>
-            <Button Margin="20,265,0,0" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="Button_Click_4">
-                <Image Height="240" Width="266" HorizontalAlignment="Left" VerticalAlignment="Top"  Source="images/cokepromo1.jpg" Stretch="Fill"/>
-            </Button>
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="710" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,180,97,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="Transparent"></Setter>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
 
 
 
+            <DataGrid.Columns  >
 
+                <DataGridTextColumn x:Name="nN" Foreground="White" FontWeight="Bold" FontSize="14" Binding="{Binding Item_Name}" Width="100" ></DataGridTextColumn>
+                <DataGridTextColumn x:Name="nQ"  Foreground="White" FontWeight="Bold" FontSize="14"  Binding="{Binding Quantity}" Width="100" ></DataGridTextColumn>
 
-        </Grid>
+            </DataGrid.Columns>
+        </DataGrid>
 
-
-        <Grid HorizontalAlignment="Left" Height="128" Margin="0,772,0,0" VerticalAlignment="Top" Width="1608">
+        <Grid HorizontalAlignment="Left" Height="118" Margin="0,846,0,-64" VerticalAlignment="Top" Width="1608">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="white" Offset="0"/>

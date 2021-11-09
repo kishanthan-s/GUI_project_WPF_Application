@@ -25,59 +25,654 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
         }
+        // using (DatabaseReposi repositio = new DatabaseReposi())
+        //promo promotions = new promo()
 
-        
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            using (DatabaseReposi repositio = new DatabaseReposi())
+            if (button2.Visibility == Visibility.Collapsed)
             {
-                promo promotions = new promo()
-                {
+                button2.Visibility = Visibility.Visible;
+            }
 
-                    customerID = CusID.cusid,
-                    itemID = "10",
-                    discount = "50",
-                    itemPrice = "5000"
-                };
-                repositio.promotion.Add(promotions);
-                repositio.SaveChanges();
-                this.Close();
-            };
+            if (ta.Visibility == Visibility.Collapsed)
+            {
+                ta.Visibility = Visibility.Visible;
+            }
+            if (cmdUp.Visibility == Visibility.Collapsed)
+            {
+                cmdUp.Visibility = Visibility.Visible;
+            }
+            if (cmdDown.Visibility == Visibility.Collapsed)
+            {
+                cmdDown.Visibility = Visibility.Visible;
+            }
+            if (oa.Visibility == Visibility.Collapsed)
+            {
+                oa.Visibility = Visibility.Visible;
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           
-        }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
+            button2.Visibility = Visibility.Collapsed;
+            cmdUp.Visibility = Visibility.Collapsed;
+            cmdDown.Visibility = Visibility.Collapsed;
+            ta.Visibility = Visibility.Collapsed;
+            oa.Visibility = Visibility.Collapsed;
+            if (button1.Visibility == Visibility.Collapsed)
+            {
+                button1.Visibility = Visibility.Visible;
+            }
+            ta.Text = numValue.ToString();
 
         }
 
-        private void Button_Click_5(object sender, RoutedEventArgs e)
+        private void CmdUp_Click(object sender, RoutedEventArgs e)
         {
+            int input = Convert.ToInt32(ta.Text);
+            if (input > 0)
+            {
+                int inout = input - 1;
+                ta.Text = inout.ToString();
+
+            }
+        }
+
+        private void CmdDown_Click(object sender, RoutedEventArgs e)
+        {
+            int input = Convert.ToInt32(ta.Text);
+            int inout = input + 1;
+            ta.Text = inout.ToString();
+        }
+        private int numValue = 0;
+
+
+        public void NumberUpDown()
+        {
+            InitializeComponent();
+            ta.Text = numValue.ToString();
+
+
+
 
         }
 
-        private void Button_Click_6(object sender, RoutedEventArgs e)
+        private void oa_Click(object sender, RoutedEventArgs e)
         {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotions = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D1",
+                    Item_Name = "Red BUll Energy ",
+                    Item_Prize = 400,
+                    Quantity = int.Parse(ta.Text),
+                    Total_prize = int.Parse(ta.Text) * 400,
+
+                };
+                repository.promotion.Add(promotions);
+                repository.SaveChanges();
+
+
+
+                button2.Visibility = Visibility.Collapsed;
+                cmdUp.Visibility = Visibility.Collapsed;
+                cmdDown.Visibility = Visibility.Collapsed;
+                ta.Visibility = Visibility.Collapsed;
+                oa.Visibility = Visibility.Collapsed;
+                if (button1.Visibility == Visibility.Collapsed)
+                {
+                    button1.Visibility = Visibility.Visible;
+                }
+                ta.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF1 = repository1.promotion.Where(b => b.Item == "1D1").ToList();
+                newCart.ItemsSource = cartListF1;
+
+
+
+
+            }
+
+
+
+
+
+
+
 
         }
 
-        private void Button_Click_7(object sender, RoutedEventArgs e)
+        private void txtNum_TextChanged(object sender, TextChangedEventArgs e)
         {
+
+        }
+        //-----------------promotion 2-------------------------------------------------------
+        private void button1A_Click(object sender, RoutedEventArgs e)
+        {
+            if (button2A.Visibility == Visibility.Collapsed)
+            {
+                button2A.Visibility = Visibility.Visible;
+            }
+
+            if (taA.Visibility == Visibility.Collapsed)
+            {
+                taA.Visibility = Visibility.Visible;
+            }
+            if (cmdUpA.Visibility == Visibility.Collapsed)
+            {
+                cmdUpA.Visibility = Visibility.Visible;
+            }
+            if (cmdDownA.Visibility == Visibility.Collapsed)
+            {
+                cmdDownA.Visibility = Visibility.Visible;
+            }
+            if (oaA.Visibility == Visibility.Collapsed)
+            {
+                oaA.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void button2A_Click(object sender, RoutedEventArgs e)
+        {
+            button2A.Visibility = Visibility.Collapsed;
+            cmdUpA.Visibility = Visibility.Collapsed;
+            cmdDownA.Visibility = Visibility.Collapsed;
+            taA.Visibility = Visibility.Collapsed;
+            oaA.Visibility = Visibility.Collapsed;
+            if (button1A.Visibility == Visibility.Collapsed)
+            {
+                button1A.Visibility = Visibility.Visible;
+            }
+            taA.Text = numValue.ToString();
+        }
+        private void cmdDownA_Click(object sender, RoutedEventArgs e)
+        {
+            int inputA = Convert.ToInt32(taA.Text);
+            int inoutA = inputA + 1;
+            taA.Text = inoutA.ToString();
+        }
+
+        private void cmdUpA_Click(object sender, RoutedEventArgs e)
+        {
+            int inputA = Convert.ToInt32(taA.Text);
+            if (inputA > 0)
+            {
+                int inoutA = inputA - 1;
+                taA.Text = inoutA.ToString();
+
+            }
+        }
+
+        private void oaA_Click(object sender, RoutedEventArgs e)
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotion = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D2",
+                    Item_Name = " Energy ",
+                    Item_Prize = 500,
+                    Quantity = int.Parse(taA.Text),
+                    Total_prize = int.Parse(taA.Text) * 500,
+
+                };
+                repository.promotion.Add(promotion);
+                repository.SaveChanges();
+
+
+
+                button2A.Visibility = Visibility.Collapsed;
+                cmdUpA.Visibility = Visibility.Collapsed;
+                cmdDownA.Visibility = Visibility.Collapsed;
+                taA.Visibility = Visibility.Collapsed;
+                oaA.Visibility = Visibility.Collapsed;
+                if (button1A.Visibility == Visibility.Collapsed)
+                {
+                    button1A.Visibility = Visibility.Visible;
+                }
+                taA.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D2").ToList();
+                newCart.ItemsSource = cartListF2;
+
+
+
+
+            }
+
+        }
+
+
+
+        //---------------------------promotion 3----------------------------------
+
+
+        private void button1B_Click(object sender, RoutedEventArgs e)
+        {
+            if (button2B.Visibility == Visibility.Collapsed)
+            {
+                button2B.Visibility = Visibility.Visible;
+            }
+
+            if (taB.Visibility == Visibility.Collapsed)
+            {
+                taB.Visibility = Visibility.Visible;
+            }
+            if (cmdUpB.Visibility == Visibility.Collapsed)
+            {
+                cmdUpB.Visibility = Visibility.Visible;
+            }
+            if (cmdDownB.Visibility == Visibility.Collapsed)
+            {
+                cmdDownB.Visibility = Visibility.Visible;
+            }
+            if (oaB.Visibility == Visibility.Collapsed)
+            {
+                oaB.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void button2B_Click(object sender, RoutedEventArgs e)
+        {
+
+            button2B.Visibility = Visibility.Collapsed;
+            cmdUpB.Visibility = Visibility.Collapsed;
+            cmdDownB.Visibility = Visibility.Collapsed;
+            taB.Visibility = Visibility.Collapsed;
+            oaB.Visibility = Visibility.Collapsed;
+            if (button1B.Visibility == Visibility.Collapsed)
+            {
+                button1B.Visibility = Visibility.Visible;
+            }
+            taB.Text = numValue.ToString();
+
+        }
+
+
+        private void cmdDownB_Click(object sender, RoutedEventArgs e)
+        {
+            int inputB = Convert.ToInt32(taB.Text);
+            int inoutB = inputB + 1;
+            taB.Text = inoutB.ToString();
+        }
+
+        private void cmdUpB_Click(object sender, RoutedEventArgs e)
+        {
+            int inputB = Convert.ToInt32(taB.Text);
+            if (inputB > 0)
+            {
+                int inoutB = inputB - 1;
+                taB.Text = inoutB.ToString();
+
+            }
+        }
+
+
+        private void oaB_Click(object sender, RoutedEventArgs e)
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotion = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D3",
+                    Item_Name = " Energy ",
+                    Item_Prize = 500,
+                    Quantity = int.Parse(taB.Text),
+                    Total_prize = int.Parse(taB.Text) * 500,
+
+                };
+                repository.promotion.Add(promotion);
+                repository.SaveChanges();
+
+
+
+                button2B.Visibility = Visibility.Collapsed;
+                cmdUpB.Visibility = Visibility.Collapsed;
+                cmdDownB.Visibility = Visibility.Collapsed;
+                taB.Visibility = Visibility.Collapsed;
+                oaB.Visibility = Visibility.Collapsed;
+                if (button1B.Visibility == Visibility.Collapsed)
+                {
+                    button1B.Visibility = Visibility.Visible;
+                }
+                taB.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D3").ToList();
+                newCart.ItemsSource = cartListF2;
+
+
+
+
+            }
+
+        }
+
+        //--------------------row 2 promotion 1--------------------------
+
+        private void button1R_Click(object sender, RoutedEventArgs e)
+        {
+            if (button2R.Visibility == Visibility.Collapsed)
+            {
+                button2R.Visibility = Visibility.Visible;
+            }
+
+            if (taR.Visibility == Visibility.Collapsed)
+            {
+                taR.Visibility = Visibility.Visible;
+            }
+            if (cmdUpR.Visibility == Visibility.Collapsed)
+            {
+                cmdUpR.Visibility = Visibility.Visible;
+            }
+            if (cmdDownR.Visibility == Visibility.Collapsed)
+            {
+                cmdDownR.Visibility = Visibility.Visible;
+            }
+            if (oaR.Visibility == Visibility.Collapsed)
+            {
+                oaR.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void button2R_Click(object sender, RoutedEventArgs e)
+        {
+            button2R.Visibility = Visibility.Collapsed;
+            cmdUpR.Visibility = Visibility.Collapsed;
+            cmdDownR.Visibility = Visibility.Collapsed;
+            taR.Visibility = Visibility.Collapsed;
+            oaR.Visibility = Visibility.Collapsed;
+            if (button1R.Visibility == Visibility.Collapsed)
+            {
+                button1R.Visibility = Visibility.Visible;
+            }
+            taR.Text = numValue.ToString();
+
+        }
+
+        private void cmdUpR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputR = Convert.ToInt32(taR.Text);
+            if (inputR > 0)
+            {
+                int inoutR = inputR - 1;
+                taR.Text = inoutR.ToString();
+
+            }
+        }
+
+        private void cmdDownR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputR = Convert.ToInt32(taR.Text);
+            int inoutR = inputR + 1;
+            taR.Text = inoutR.ToString();
+
+        }
+
+
+        private void oaR_Click(object sender, RoutedEventArgs e)
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotion = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D4",
+                    Item_Name = "Red BUll Energy ",
+                    Item_Prize = 400,
+                    Quantity = int.Parse(ta.Text),
+                    Total_prize = int.Parse(ta.Text) * 400,
+
+                };
+                repository.promotion.Add(promotion);
+                repository.SaveChanges();
+
+
+
+                button2R.Visibility = Visibility.Collapsed;
+                cmdUpR.Visibility = Visibility.Collapsed;
+                cmdDownR.Visibility = Visibility.Collapsed;
+                taR.Visibility = Visibility.Collapsed;
+                oaR.Visibility = Visibility.Collapsed;
+                if (button1R.Visibility == Visibility.Collapsed)
+                {
+                    button1R.Visibility = Visibility.Visible;
+                }
+                taR.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF1 = repository1.promotion.Where(b => b.Item == "1D4").ToList();
+                newCart.ItemsSource = cartListF1;
+
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+        //-------------row 2 promotion 2----------------------------------
+
+        private void button1AR_Click(object sender, RoutedEventArgs e)
+        {
+            if (button2AR.Visibility == Visibility.Collapsed)
+            {
+                button2AR.Visibility = Visibility.Visible;
+            }
+
+            if (taAR.Visibility == Visibility.Collapsed)
+            {
+                taAR.Visibility = Visibility.Visible;
+            }
+            if (cmdUpAR.Visibility == Visibility.Collapsed)
+            {
+                cmdUpAR.Visibility = Visibility.Visible;
+            }
+            if (cmdDownAR.Visibility == Visibility.Collapsed)
+            {
+                cmdDownAR.Visibility = Visibility.Visible;
+            }
+            if (oaAR.Visibility == Visibility.Collapsed)
+            {
+                oaAR.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void button2AR_Click(object sender, RoutedEventArgs e)
+        {
+            button2AR.Visibility = Visibility.Collapsed;
+            cmdUpAR.Visibility = Visibility.Collapsed;
+            cmdDownAR.Visibility = Visibility.Collapsed;
+            taAR.Visibility = Visibility.Collapsed;
+            oaAR.Visibility = Visibility.Collapsed;
+            if (button1AR.Visibility == Visibility.Collapsed)
+            {
+                button1AR.Visibility = Visibility.Visible;
+            }
+            taAR.Text = numValue.ToString();
+        }
+        private void cmdDownAR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputAR = Convert.ToInt32(taAR.Text);
+            int inoutAR = inputAR + 1;
+            taAR.Text = inoutAR.ToString();
+        }
+
+        private void cmdUpAR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputAR = Convert.ToInt32(taAR.Text);
+            if (inputAR > 0)
+            {
+                int inoutAR = inputAR - 1;
+                taAR.Text = inoutAR.ToString();
+
+            }
+        }
+
+        private void oaAR_Click(object sender, RoutedEventArgs e)
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotion = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D5",
+                    Item_Name = " Energy ",
+                    Item_Prize = 500,
+                    Quantity = int.Parse(taAR.Text),
+                    Total_prize = int.Parse(taAR.Text) * 500,
+
+                };
+                repository.promotion.Add(promotion);
+                repository.SaveChanges();
+
+
+
+                button2AR.Visibility = Visibility.Collapsed;
+                cmdUpAR.Visibility = Visibility.Collapsed;
+                cmdDownAR.Visibility = Visibility.Collapsed;
+                taAR.Visibility = Visibility.Collapsed;
+                oaAR.Visibility = Visibility.Collapsed;
+                if (button1AR.Visibility == Visibility.Collapsed)
+                {
+                    button1AR.Visibility = Visibility.Visible;
+                }
+                taAR.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D5").ToList();
+                newCart.ItemsSource = cartListF2;
+
+
+
+
+            }
+
+        }
+
+        //-------------------row 2 promotion 3------------------
+        private void button1BR_Click(object sender, RoutedEventArgs e)
+        {
+            if (button2BR.Visibility == Visibility.Collapsed)
+            {
+                button2BR.Visibility = Visibility.Visible;
+            }
+
+            if (taBR.Visibility == Visibility.Collapsed)
+            {
+                taBR.Visibility = Visibility.Visible;
+            }
+            if (cmdUpBR.Visibility == Visibility.Collapsed)
+            {
+                cmdUpBR.Visibility = Visibility.Visible;
+            }
+            if (cmdDownBR.Visibility == Visibility.Collapsed)
+            {
+                cmdDownBR.Visibility = Visibility.Visible;
+            }
+            if (oaBR.Visibility == Visibility.Collapsed)
+            {
+                oaBR.Visibility = Visibility.Visible;
+            }
+
+        }
+
+        private void button2BR_Click(object sender, RoutedEventArgs e)
+        {
+
+            button2BR.Visibility = Visibility.Collapsed;
+            cmdUpBR.Visibility = Visibility.Collapsed;
+            cmdDownBR.Visibility = Visibility.Collapsed;
+            taBR.Visibility = Visibility.Collapsed;
+            oaBR.Visibility = Visibility.Collapsed;
+            if (button1BR.Visibility == Visibility.Collapsed)
+            {
+                button1BR.Visibility = Visibility.Visible;
+            }
+            taBR.Text = numValue.ToString();
+
+        }
+
+
+        private void cmdDownBR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputBR = Convert.ToInt32(taBR.Text);
+            int inoutBR = inputBR + 1;
+            taBR.Text = inoutBR.ToString();
+        }
+
+        private void cmdUpBR_Click(object sender, RoutedEventArgs e)
+        {
+            int inputBR = Convert.ToInt32(taBR.Text);
+            if (inputBR > 0)
+            {
+                int inoutBR = inputBR - 1;
+                taBR.Text = inoutBR.ToString();
+
+            }
+        }
+
+
+        private void oaBR_Click(object sender, RoutedEventArgs e)
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                promo promotion = new promo()
+                {
+
+                    Customer_ID = "",
+                    Item = "1D6",
+                    Item_Name = " Energy ",
+                    Item_Prize = 500,
+                    Quantity = int.Parse(taBR.Text),
+                    Total_prize = int.Parse(taBR.Text) * 500,
+
+                };
+                repository.promotion.Add(promotion);
+                repository.SaveChanges();
+
+
+
+                button2BR.Visibility = Visibility.Collapsed;
+                cmdUpBR.Visibility = Visibility.Collapsed;
+                cmdDownBR.Visibility = Visibility.Collapsed;
+                taBR.Visibility = Visibility.Collapsed;
+                oaBR.Visibility = Visibility.Collapsed;
+                if (button1BR.Visibility == Visibility.Collapsed)
+                {
+                    button1BR.Visibility = Visibility.Visible;
+                }
+                taBR.Text = numValue.ToString();
+
+                DatabaseReposi repository1 = new DatabaseReposi();
+                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D6").ToList();
+                newCart.ItemsSource = cartListF2;
+
+
+
+
+            }
 
         }
 

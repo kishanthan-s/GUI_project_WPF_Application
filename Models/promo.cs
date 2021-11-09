@@ -10,13 +10,16 @@ namespace Online_Food_Order_Software.Models
 {
     class promo
     {
-        [Key,Column(Order=0)]
-        public string customerID { get; set; }
-        [Key, Column(Order = 1)]
-        public string itemID { get; set; }
 
-        public string itemPrice { get; set; }
+        [Key]
 
-        public string discount { get; set; }
+        public string Customer_ID { get; set; }
+        public string Item { get; set; }
+
+        public string Item_Name { get; set; }
+        public int Item_Prize { get; set; }
+        public int Quantity { get; set; }
+        public int Total_prize { get; set; }
+
     }
 }

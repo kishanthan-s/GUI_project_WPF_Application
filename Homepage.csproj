@@ -82,6 +82,9 @@
     <Compile Include="Address.xaml.cs">
       <DependentUpon>Address.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin_Login.xaml.cs">
+      <DependentUpon>Admin_Login.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CardWindow.xaml.cs">
       <DependentUpon>CardWindow.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,9 @@
     </Compile>
     <Compile Include="DrinkWindow.xaml.cs">
       <DependentUpon>DrinkWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Feedback_List.xaml.cs">
+      <DependentUpon>Feedback_List.xaml</DependentUpon>
     </Compile>
     <Compile Include="FinalWindow.xaml.cs">
       <DependentUpon>FinalWindow.xaml</DependentUpon>
@@ -163,6 +169,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Admin_Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CardWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -192,6 +202,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DrinkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Feedback_List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -466,6 +480,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Background\bgimg1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\feedback_res.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bin.jpeg" />
+    <Resource Include="Images\cart.png" />
+    <Resource Include="Images\min.jpeg" />
+    <Resource Include="Images\ok.JPG" />
+    <Resource Include="Images\plus.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
