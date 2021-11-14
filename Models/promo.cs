@@ -11,9 +11,11 @@ namespace Online_Food_Order_Software.Models
     class promo
     {
 
+        
         [Key]
+        public int PromoId { get; set; }
 
-        public string Customer_ID { get; set; }
+        public int Customer_ID { get; set; }
         public string Item { get; set; }
 
         public string Item_Name { get; set; }

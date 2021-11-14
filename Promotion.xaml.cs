@@ -24,10 +24,20 @@ namespace Online_Food_Order_Software
         public Promotion()
         {
             InitializeComponent();
+            CheckID();
         }
         // using (DatabaseReposi repositio = new DatabaseReposi())
         //promo promotions = new promo()
 
+
+        public void CheckID()
+        {
+            DatabaseReposi repository1 = new DatabaseReposi();
+            var cartListF1 = repository1.buyer.Where(b => b.EmailID == Global.Email).FirstOrDefault();
+            Global.CustomerID = cartListF1.CustomerID;
+
+
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -53,6 +63,8 @@ namespace Online_Food_Order_Software
                 oa.Visibility = Visibility.Visible;
             }
         }
+
+
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
@@ -104,20 +116,30 @@ namespace Online_Food_Order_Software
         {
             using (DatabaseReposi repository = new DatabaseReposi())
             {
+                
                 promo promotions = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D1",
                     Item_Name = "Red BUll Energy ",
                     Item_Prize = 400,
                     Quantity = int.Parse(ta.Text),
                     Total_prize = int.Parse(ta.Text) * 400,
-
+                   
                 };
                 repository.promotion.Add(promotions);
                 repository.SaveChanges();
 
+
+                /////isuru
+                int totalPrice,ItemPrize,quantity;
+                ItemPrize = 400;
+                quantity = int.Parse(ta.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;
+
+                /////
 
 
                 button2.Visibility = Visibility.Collapsed;
@@ -217,7 +239,7 @@ namespace Online_Food_Order_Software
                 promo promotion = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D2",
                     Item_Name = " Energy ",
                     Item_Prize = 500,
@@ -326,7 +348,7 @@ namespace Online_Food_Order_Software
                 promo promotion = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D3",
                     Item_Name = " Energy ",
                     Item_Prize = 500,
@@ -431,7 +453,7 @@ namespace Online_Food_Order_Software
                 promo promotion = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D4",
                     Item_Name = "Red BUll Energy ",
                     Item_Prize = 400,
@@ -536,7 +558,7 @@ namespace Online_Food_Order_Software
                 promo promotion = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D5",
                     Item_Name = " Energy ",
                     Item_Prize = 500,
@@ -641,7 +663,7 @@ namespace Online_Food_Order_Software
                 promo promotion = new promo()
                 {
 
-                    Customer_ID = "",
+                    Customer_ID = Global.CustomerID,
                     Item = "1D6",
                     Item_Name = " Energy ",
                     Item_Prize = 500,

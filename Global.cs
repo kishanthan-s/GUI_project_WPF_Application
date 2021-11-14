@@ -8,6 +8,11 @@ namespace Online_Food_Order_Software
 {
     public static class Global
     {
+        public static int PromoTotalBill = 0;
+
+        public static string Email = null;
+
+        public static int CustomerID = 0;
 
         public static string UserName = "Isuru";
 

@@ -102,9 +102,10 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            cus_feedback feedback = new cus_feedback();
+            feedback.Show();
             this.Close();
-            FoodWindow food = new FoodWindow();
-            food.Show();
+
 
             /*Next*/
 

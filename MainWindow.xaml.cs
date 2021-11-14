@@ -49,9 +49,13 @@ namespace Homepage
 
         private void Signup_butt_Click(object sender, RoutedEventArgs e)
         {
-            Promotion Promo_win = new Promotion();
+            //go to login
+
+          /*  Promotion Promo_win = new Promotion();
             Promo_win.Show();
             this.Close();
+
+            */
         }
 
         private void Home_butt_Click(object sender, RoutedEventArgs e)

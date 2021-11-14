@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Homepage"
         mc:Ignorable="d"
-        Title="MainWindow"  WindowState="Maximized"    ResizeMode="NoResize" Width="1608" Height="900" WindowStyle="None"  >
+        Title="MainWindow"  WindowState="Maximized"    ResizeMode="NoResize"  WindowStyle="None"  >
     <Grid  >
         <Grid HorizontalAlignment="Left" Width="300" Margin="0,0,0,167.4">
             <Grid.Background>

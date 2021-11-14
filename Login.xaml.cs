@@ -54,6 +54,7 @@ namespace Online_Food_Order_Software
                             if (users.Password.Equals(password))
                             {
                                 MessageBox.Show("Login sucessfull");
+                                Global.Email=textBoxEmail.Text;
                                 Promotion Promo_win = new Promotion();
                                 Promo_win.Show();
                                 this.Close();
