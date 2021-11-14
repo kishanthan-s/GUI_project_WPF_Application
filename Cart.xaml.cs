@@ -79,10 +79,10 @@ namespace Online_Food_Order_Software
 
         }
 
+
         private string pr;
         private int xr = 0, pm = -0;
         private string UsN = Global.UserName;
-
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -114,9 +114,9 @@ namespace Online_Food_Order_Software
             t = t - 1;
             if (t != 0)
             {
-                if (xr != 0)
+                if (Global.addressMethod !=null)
                 {
-                    if (pm != 0)
+                    if (Global.PaymentMethod !=null)
                     {
 
 
@@ -149,7 +149,7 @@ namespace Online_Food_Order_Software
 
                                     pr = cartList.Province;
 
-                                    Global.province = "pr";
+                                 //   Global.province = "pr";
                                     /* FinalWindow final = new FinalWindow(pr);
                                      final.Show();*/
                                 }
@@ -174,7 +174,7 @@ namespace Online_Food_Order_Software
 
 
                                     pr = cartList.Province;
-                                    Global.province = "pr";
+                                  //  Global.province = "pr";
                                     /* FinalWindow final = new FinalWindow(pr);
                                      final.Show();*/
                                 }
@@ -199,7 +199,7 @@ namespace Online_Food_Order_Software
                                     Cml = cartList.Email;
 
                                     pr = cartList.Province;
-                                    Global.province = "pr";
+                                 //   Global.province = "pr";
                                     /*
                                     FinalWindow final = new FinalWindow(pr);
                                     final.Show();*/
@@ -223,7 +223,7 @@ namespace Online_Food_Order_Software
                             }
                             AmP = name.Text.ToString();
 
-                            Global.province = "pr";
+                          //  Global.province = "pr";
                             /*
                             FinalWindow final = new FinalWindow(pr);
                             final.Show();*/
@@ -287,6 +287,7 @@ namespace Online_Food_Order_Software
         {
             Address address = new Address();
             address.Show();
+            this.Close();
 
 
             if (hN.Visibility == Visibility.Visible)
@@ -312,6 +313,7 @@ namespace Online_Food_Order_Software
         {
             Address address = new Address();
             address.Show();
+            this.Close();
             if (oN.Visibility == Visibility.Visible)
             {
                 oN.Visibility = Visibility.Hidden;
@@ -389,7 +391,7 @@ namespace Online_Food_Order_Software
                 DatabaseReposi repository = new DatabaseReposi();
 
                 var cartList = repository.deliveries_set.Find(r);
-                if (cartList.User_name == UsN && cartList.Place == "Home")
+                if (cartList.User_name == Global.UserName && cartList.Place == "Home")
                 {
 
                     CN = cartList.User_name;
@@ -406,9 +408,7 @@ namespace Online_Food_Order_Software
                     Address address = new Address(CN, EM, DN, AN, SN, LM, PR, PL, CT, ID);
                     address.Show();
 
-                    cartList.User_name = "";
-                    cartList.Place = "";
-                    repository.SaveChanges();
+                    this.Close();
                 }
             }
 
@@ -581,6 +581,7 @@ namespace Online_Food_Order_Software
 
 
                     address.Show();
+                    this.Close();
 
                 }
             }
@@ -619,9 +620,76 @@ namespace Online_Food_Order_Software
 
         }
 
+        public void CheckHome()
+        {
+            allHidden();
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            if (repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == "Home"))).FirstOrDefault() != null)
+            {
+                Global.addressMethod = "Home";
+                hD.Visibility = Visibility.Visible;
+                hE.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                hN.Visibility = Visibility.Visible;
+
+            }
+        }
+        public void CheckWork()
+        {
+            allHidden();
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            if (repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == "Work"))).FirstOrDefault() != null)
+            {
+                Global.addressMethod = "Work";
+
+                wD.Visibility = Visibility.Visible;
+                wE.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                wN.Visibility = Visibility.Visible;
+
+            }
+        }
+        public void CheckOther()
+        {
+            allHidden();
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            if (repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == "Other"))).FirstOrDefault() != null)
+            {
+                Global.addressMethod = "Other";
+
+                oD.Visibility = Visibility.Visible;
+                oE.Visibility = Visibility.Visible;
+
+            }
+            else
+            {
+                oN.Visibility = Visibility.Visible;
+
+            }
+        }
+        public void allHidden()
+        {
+            wN.Visibility = Visibility.Hidden;
+            wD.Visibility = Visibility.Hidden;
+            wE.Visibility = Visibility.Hidden;
+
+            oN.Visibility = Visibility.Hidden;
+            oD.Visibility = Visibility.Hidden;
+            oE.Visibility = Visibility.Hidden;
+        }
         private void RH_Checked(object sender, RoutedEventArgs e)
         {
-            Global.addres = "Home";
+            CheckHome();
+            
+          /*  Global.addres = "Home";
             xr = 1;
 
 
@@ -655,7 +723,7 @@ namespace Online_Food_Order_Software
 
                   }
               }*/
-            for (int r = 1; r < x; r++)
+        /*    for (int r = 1; r < x; r++)
             {
                 DatabaseReposi repository11 = new DatabaseReposi();
 
@@ -678,13 +746,14 @@ namespace Online_Food_Order_Software
             }
 
 
-
+            */
         }
 
         private void RW_Checked(object sender, RoutedEventArgs e)
         {
             Global.addres = "Work";
-            xr = 2;
+            CheckWork();
+         /*   xr = 2;
 
 
             hN.Visibility = Visibility.Hidden;
@@ -721,13 +790,14 @@ namespace Online_Food_Order_Software
             {
                 wN.Visibility = Visibility.Visible;
             }
-
+         */
         }
 
         private void RO_Checked(object sender, RoutedEventArgs e)
         {
             Global.addres = "Other";
-            xr = 3;
+            CheckOther();
+          /*  xr = 3;
 
 
             wN.Visibility = Visibility.Hidden;
@@ -768,7 +838,7 @@ namespace Online_Food_Order_Software
             }
 
 
-
+            */
 
         }
 
@@ -794,6 +864,7 @@ namespace Online_Food_Order_Software
 
             if (cash.Visibility == Visibility.Hidden)
             {
+                Global.PaymentMethod = "Cash on Delivery";
                 cash.Visibility = Visibility.Visible;
             }
 

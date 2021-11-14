@@ -24,6 +24,7 @@ namespace Online_Food_Order_Software
         public Address()
         {
             InitializeComponent();
+            Customer_name.Focus(); 
         }
         private string UsN = Global.UserName;
         /* public Address(string UN) : this()
@@ -50,11 +51,8 @@ namespace Online_Food_Order_Software
 
         }
 
-
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        public void addbtn()
         {
-
 
             if (Customer_name.Text == "")
             {
@@ -134,6 +132,12 @@ namespace Online_Food_Order_Software
 
 
             }
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+            addbtn();
 
 
 
@@ -157,8 +161,8 @@ namespace Online_Food_Order_Software
             PatUpdate.Place = Place.Text;
 
             repository.SaveChanges();
-
-
+            Global.addressMethod = Place.Text;
+            MessageBox.Show("Successfully Updated!!");
 
         }
 
@@ -185,6 +189,9 @@ namespace Online_Food_Order_Software
             };
             repository.deliveries_set.Add(delivery);
             repository.SaveChanges();
+            Global.addressMethod = Place.Text;
+
+            MessageBox.Show("Successfully Added!!");
 
         }
 
@@ -197,6 +204,9 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Cart cart = new Cart();
+            cart.Show();
+
             this.Close();
         }
 
@@ -227,7 +237,93 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            Cart cart = new Cart();
+            cart.Show();
+
             this.Close();
+        }
+
+        private void Customer_name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Customer_Id.Focus();
+            }
+        }
+
+        private void Customer_Id_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Email.Focus();
+            }
+        }
+
+        private void Email_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                DoorNo.Focus();
+            }
+        }
+
+        private void DoorNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Apartment_Name.Focus();
+            }
+        }
+
+        private void Apartment_Name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Street_Name.Focus();
+            }
+        }
+
+        private void Street_Name_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Landmark.Focus();
+            }
+        }
+
+        private void Landmark_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                City.Focus();
+            }
+
+        }
+
+        private void City_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Province.Focus();
+            }
+
+            switch (e.Key)
+            {
+
+              
+
+                case Key.F5:
+                    this.Close();
+                    break;
+
+
+                case Key.F9:
+                    addbtn();
+                  //  PaymentBtn();
+                    break;
+
+               
+            }
         }
     }
 }

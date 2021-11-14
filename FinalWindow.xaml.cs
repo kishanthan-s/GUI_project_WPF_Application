@@ -56,7 +56,7 @@ namespace Online_Food_Order_Software
         {
 
             DatabaseReposi repository = new DatabaseReposi();
-            var UserProvince = repository.deliveries_set.Where(a => ((a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault();
+            var UserProvince = repository.deliveries_set.Where(a => ((a.User_name == Global.UserName) && (a.Place == Global.addressMethod))).FirstOrDefault();
             string pr = UserProvince.Province;
 
             var supliyDelails = repository.supliers_set.Where(a => ((a.Province == pr))).FirstOrDefault();

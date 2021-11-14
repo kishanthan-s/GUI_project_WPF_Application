@@ -58,50 +58,50 @@
 
             </StackPanel>
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="191,0,37,0" Width="564">
-                <TextBox Name="holder" FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left"  Margin="414,200,0,10" ></TextBox>
-                <ComboBox x:Name="type"  FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left" Margin="414,10,0,10" Text="Select" >
+                <TextBox x:Name="holder" FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left"  KeyDown="holder_KeyDown" Margin="414,200,0,10" />
+                <ComboBox x:Name="type"  FontWeight="Bold" Height="20" Width="100" KeyDown="type_KeyDown" HorizontalAlignment="Left" Margin="414,10,0,10" Text="Select" >
                     <ComboBoxItem x:Name="cbi1" Content="Visa card"/>
                     <ComboBoxItem x:Name="cbi2" Content="Creadit card" Selected="cbi2_Selected"/>
                     <ComboBoxItem x:Name="cbi3" Content="Master Card"/>
                     <ComboBoxItem x:Name="cbi4" Content="Pay pal"/>
                     <ComboBoxItem x:Name="cbi5" Content="G pay"/>
                 </ComboBox>
-                <TextBox  Name="no" FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left" Margin="414,10,0,10" ></TextBox>
-                <ComboBox Name="month" FontWeight="Bold"  FontSize="10" Height="20" Width="85" HorizontalAlignment="Left" Margin="259,40,0,10" SelectionChanged="month_SelectionChanged" >
-                    <ComboBoxItem>January</ComboBoxItem>
-                    <ComboBoxItem>February</ComboBoxItem>
-                    <ComboBoxItem>March</ComboBoxItem>
-                    <ComboBoxItem>April</ComboBoxItem>
-                    <ComboBoxItem>May</ComboBoxItem>
-                    <ComboBoxItem>June</ComboBoxItem>
-                    <ComboBoxItem>July</ComboBoxItem>
-                    <ComboBoxItem>August</ComboBoxItem>
-                    <ComboBoxItem>September</ComboBoxItem>
-                    <ComboBoxItem>October</ComboBoxItem>
-                    <ComboBoxItem>November</ComboBoxItem>
-                    <ComboBoxItem>December</ComboBoxItem>
+                <TextBox  x:Name="no" KeyDown="no_KeyDown_1"  FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left" Margin="414,10,0,10" />
+                <ComboBox x:Name="month" KeyDown="month_KeyDown" FontWeight="Bold"  FontSize="10" Height="20" Width="85" HorizontalAlignment="Left" Margin="259,40,0,10" SelectionChanged="month_SelectionChanged" >
+                    <ComboBoxItem Content="January"/>
+                    <ComboBoxItem Content="February"/>
+                    <ComboBoxItem Content="March"/>
+                    <ComboBoxItem Content="April"/>
+                    <ComboBoxItem Content="May"/>
+                    <ComboBoxItem Content="June"/>
+                    <ComboBoxItem Content="July"/>
+                    <ComboBoxItem Content="August"/>
+                    <ComboBoxItem Content="September"/>
+                    <ComboBoxItem Content="October"/>
+                    <ComboBoxItem Content="November"/>
+                    <ComboBoxItem Content="December"/>
 
                 </ComboBox>
-                <ComboBox Name="year" FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left" Margin="414,-30,0,10" >
-                    <ComboBoxItem>2021</ComboBoxItem>
-                    <ComboBoxItem>2022</ComboBoxItem>
-                    <ComboBoxItem>2023</ComboBoxItem>
-                    <ComboBoxItem>2024</ComboBoxItem>
-                    <ComboBoxItem>2025</ComboBoxItem>
-                    <ComboBoxItem>2026</ComboBoxItem>
-                    <ComboBoxItem>2027</ComboBoxItem>
-                    <ComboBoxItem>2028</ComboBoxItem>
-                    <ComboBoxItem>2029</ComboBoxItem>
-                    <ComboBoxItem>2030</ComboBoxItem>
+                <ComboBox x:Name="year" KeyDown="year_KeyDown" FontWeight="Bold" Height="20" Width="100" HorizontalAlignment="Left" Margin="414,-30,0,10" >
+                    <ComboBoxItem Content="2021"/>
+                    <ComboBoxItem Content="2022"/>
+                    <ComboBoxItem Content="2023"/>
+                    <ComboBoxItem Content="2024"/>
+                    <ComboBoxItem Content="2025"/>
+                    <ComboBoxItem Content="2026"/>
+                    <ComboBoxItem Content="2027"/>
+                    <ComboBoxItem Content="2028"/>
+                    <ComboBoxItem Content="2029"/>
+                    <ComboBoxItem Content="2030"/>
                 </ComboBox>
 
-                <PasswordBox Name="PW" Height="20" FontWeight="Bold" Width="100" HorizontalAlignment="Left" Margin="414,0,0,10" ToolTip="3 digits on back of your card"/>
+                <PasswordBox x:Name="PW" Height="20" FontWeight="Bold" Width="100" KeyDown="PW_KeyDown" HorizontalAlignment="Left" Margin="414,0,0,10" ToolTip="3 digits on back of your card"/>
 
 
                 <Button    FontSize="22" FontWeight="Bold" BorderThickness="2" Content="Cancel"  Height="35" Width="85"   HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,45,65,0" Click="Button_Click">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="5"></Setter>
+                            <Setter Property="CornerRadius" Value="5"/>
                         </Style>
                     </Button.Resources>
                     <Button.Background>
