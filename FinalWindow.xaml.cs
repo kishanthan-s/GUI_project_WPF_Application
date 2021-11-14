@@ -50,13 +50,13 @@ namespace Online_Food_Order_Software
 
           }
         */
-
+        private string UsN = Convert.ToString(Global.CustomerID);
 
         public void delivery()
         {
 
             DatabaseReposi repository = new DatabaseReposi();
-            var UserProvince = repository.deliveries_set.Where(a => ((a.User_name == Global.UserName) && (a.Place == Global.addressMethod))).FirstOrDefault();
+            var UserProvince = repository.deliveries_set.Where(a => ((a.User_name == UsN) && (a.Place == Global.addressMethod))).FirstOrDefault();
             string pr = UserProvince.Province;
 
             var supliyDelails = repository.supliers_set.Where(a => ((a.Province == pr))).FirstOrDefault();

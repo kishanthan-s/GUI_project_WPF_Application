@@ -26,7 +26,8 @@ namespace Online_Food_Order_Software
             InitializeComponent();
             Customer_name.Focus(); 
         }
-        private string UsN = Global.UserName;
+
+        private string UsN = Convert.ToString(Global.CustomerID);
         /* public Address(string UN) : this()
          {
              Customer_name.Text = UN;
@@ -88,7 +89,7 @@ namespace Online_Food_Order_Software
             {
                 DatabaseReposi repository = new DatabaseReposi();
 
-                if (repository.deliveries_set.Where((a => (a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault() != null)
+                if (repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addres))).FirstOrDefault() != null)
                 {
                     update();
 
@@ -145,10 +146,10 @@ namespace Online_Food_Order_Software
         public void update()
         {
             DatabaseReposi repository = new DatabaseReposi();
-            var PatUpdate = repository.deliveries_set.Where((a => (a.User_name == Global.UserName) && (a.Place == Global.addres))).FirstOrDefault();///passes patient id
+            var PatUpdate = repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addres))).FirstOrDefault();///passes patient id
 
 
-            PatUpdate.User_name = Global.UserName;
+            PatUpdate.User_name = UsN;
             PatUpdate.Customer_Name = Customer_name.Text;
             PatUpdate.Customer_ID = Customer_Id.Text;
             PatUpdate.Email = Email.Text;
@@ -173,7 +174,7 @@ namespace Online_Food_Order_Software
             Delivery1 delivery = new Delivery1()
             {
 
-                User_name = Global.UserName,
+                User_name = UsN,
                 Customer_Name = Customer_name.Text,
                 Customer_ID = Customer_Id.Text,
                 Email = Email.Text,

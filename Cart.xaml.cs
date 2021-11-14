@@ -82,7 +82,8 @@ namespace Online_Food_Order_Software
 
         private string pr;
         private int xr = 0, pm = -0;
-        private string UsN = Global.UserName;
+
+        private string UsN = Convert.ToString(Global.CustomerID);
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -391,7 +392,7 @@ namespace Online_Food_Order_Software
                 DatabaseReposi repository = new DatabaseReposi();
 
                 var cartList = repository.deliveries_set.Find(r);
-                if (cartList.User_name == Global.UserName && cartList.Place == "Home")
+                if (cartList.User_name == UsN && cartList.Place == "Home")
                 {
 
                     CN = cartList.User_name;

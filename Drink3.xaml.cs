@@ -44,7 +44,7 @@ namespace Online_Food_Order_Software
 
 
 
-        private string UsN = Global.UserName;
+             private string UsN = Convert.ToString(Global.CustomerID);
         /*   public Food1(string UN) : this()
            {
                n.Text = UN;

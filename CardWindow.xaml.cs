@@ -28,13 +28,14 @@ namespace Online_Food_Order_Software
                 holder.Focus();
                  }
 
-            private string UsN = Global.UserName;
-            /*    public CardWindow(string UN) : this()
+        private string UsN = Convert.ToString(Global.CustomerID);
+
+        /*    public CardWindow(string UN) : this()
                 {
                     UsN = UN;
                 }
             */
-            private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
             {
 
             this.Close();
@@ -86,7 +87,7 @@ namespace Online_Food_Order_Software
                     {
 
 
-                        User_Name = Global.UserName,
+                        User_Name = UsN,
                         Card_Holder_Name = holder.Text,
                         Payment_Method = "Card",
                         Card_Type = type.Text,
