@@ -28,13 +28,20 @@ namespace Online_Food_Order_Software
         }
         // using (DatabaseReposi repositio = new DatabaseReposi())
         //promo promotions = new promo()
+        public void Functocaltotal ( int ItemPrize, string quantity )
+        {
+            int totalPrice;
+            int  quantity1 = int.Parse(quantity);
+            totalPrice = ItemPrize * quantity1;
+            Global.PromoTotalBill += totalPrice;
 
+        }
 
         public void CheckID()
         {
             DatabaseReposi repository1 = new DatabaseReposi();
-            var cartListF1 = repository1.buyer.Where(b => b.EmailID == Global.Email).FirstOrDefault();
-            Global.CustomerID = cartListF1.CustomerID;
+            var CheckIDCustomer = repository1.buyer.Where(b => b.EmailID == Global.Email).FirstOrDefault();
+            Global.CustomerID = CheckIDCustomer.CustomerID;
 
 
         }
@@ -132,12 +139,14 @@ namespace Online_Food_Order_Software
                 repository.SaveChanges();
 
 
-                /////isuru
-                int totalPrice,ItemPrize,quantity;
-                ItemPrize = 400;
-                quantity = int.Parse(ta.Text);
-                totalPrice = ItemPrize * quantity;
-                Global.PromoTotalBill += totalPrice;
+                /////sending to global variable
+               // int totalPrice,ItemPrize,quantity;
+               // ItemPrize = 400;
+                //quantity = int.Parse(ta.Text);
+                //totalPrice = ItemPrize * quantity;
+               // Global.PromoTotalBill += totalPrice;
+                Functocaltotal( 400, ta.Text);
+
 
                 /////
 
@@ -249,6 +258,7 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                Functocaltotal(500, taA.Text);
 
 
 

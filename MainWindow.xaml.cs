@@ -35,27 +35,30 @@ namespace Homepage
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-           // Login Login_Win = new Login();
-           // Login_Win.Show();
+            Login Login_Win = new Login();
+            Login_Win.Show();
             
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-          //  Signup Signup_Win = new Signup();
-         //   Signup_Win.Show();
-        //    this.Close();
+           Signup Signup_Win = new Signup();
+           Signup_Win.Show();
+           this.Close();
         }
 
         private void Signup_butt_Click(object sender, RoutedEventArgs e)
         {
+
+            Login Login_Win = new Login();
+            Login_Win.Show();
             //go to login
 
-          /*  Promotion Promo_win = new Promotion();
-            Promo_win.Show();
-            this.Close();
+            /*  Promotion Promo_win = new Promotion();
+              Promo_win.Show();
+              this.Close();
 
-            */
+              */
         }
 
         private void Home_butt_Click(object sender, RoutedEventArgs e)
