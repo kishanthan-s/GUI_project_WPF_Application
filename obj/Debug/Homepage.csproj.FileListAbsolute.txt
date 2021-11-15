@@ -455,10 +455,10 @@ C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Term_conditon.baml
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\thanks.baml
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\welcome.baml
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.g.resources
-C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.all.resources
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.Properties.Resources.resources
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Homepage.csproj.GenerateResource.cache
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Homepage.csproj.CoreCompileInputs.cache
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Homepage.csproj.CopyComplete
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
+C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources

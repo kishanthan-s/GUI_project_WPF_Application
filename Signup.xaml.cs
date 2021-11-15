@@ -93,6 +93,7 @@ namespace Online_Food_Order_Software
                                 };
                                 reposi.buyer.Add(Member);
                                 reposi.SaveChanges();
+                                Global.Email = textBoxEmail.Text ;
                                 welcome welcome_win = new welcome();
                                 welcome_win.Show();
                                 Close();
