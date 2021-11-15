@@ -69,26 +69,37 @@ namespace Online_Food_Order_Software
                 }
                 else
                 {
+                    string emailcheck = textBoxEmail.Text;
                     using (DatabaseReposi reposi = new DatabaseReposi())
                     {
-                        Customer Member = new Customer
+                        var users = reposi.buyer.FirstOrDefault(a => a.EmailID.Equals(emailcheck));
                         {
-                          //  CustomerID = passwordBox1.Password,
-                            FirstName = textBoxFirstName.Text,
-                            LastName = textBoxLastName.Text,
-                            EmailID = textBoxEmail.Text,
-                            Password = passwordBox1.Password,
-                            phone_num = textBoxphone_num.Text,
-                            ConfirmPassword = passwordBoxConfirm.Password
+                            if (users != null)
+                            {
+                                errormessage.Text = "The email has been already taken";
+                            }
+                            else
+                            {
+                                Customer Member = new Customer
+                                {
+                                   // CustomerID = passwordBox1.Password,
+                                    FirstName = textBoxFirstName.Text,
+                                    LastName = textBoxLastName.Text,
+                                    EmailID = textBoxEmail.Text,
+                                    Password = passwordBox1.Password,
+                                    phone_num = textBoxphone_num.Text,
+                                    ConfirmPassword = passwordBoxConfirm.Password
 
-                        };
-                        reposi.buyer.Add(Member);
-                        reposi.SaveChanges();
-                        Global.Email = textBoxEmail.Text;
-                        welcome welcome_win = new welcome();
-                        welcome_win.Show();
-                        Close();
+                                };
+                                reposi.buyer.Add(Member);
+                                reposi.SaveChanges();
+                                welcome welcome_win = new welcome();
+                                welcome_win.Show();
+                                Close();
+                            }
 
+
+                        }
                     }
 
 
