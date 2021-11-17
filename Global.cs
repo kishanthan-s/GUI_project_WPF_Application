@@ -10,6 +10,10 @@ namespace Online_Food_Order_Software
     {
         public static int PromoTotalBill = 0;
 
+        public static int cartlBill = 0;
+
+        public static int totalBill = 0;
+
         public static string Email = null;
 
         public static int CustomerID = 0;

@@ -125,7 +125,8 @@ namespace Online_Food_Order_Software
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            SwichOff swich = new SwichOff();
+            swich.ShowDialog();
 
         }
 

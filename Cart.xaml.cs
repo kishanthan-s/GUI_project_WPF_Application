@@ -1,4 +1,5 @@
 ﻿using Online_Food_Order_Software.Database;
+using Online_Food_Order_Software.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,17 +29,31 @@ namespace Online_Food_Order_Software
 
 
             add();
+            sell.Text = Convert.ToString(Global.PromoTotalBill);
+            initFunc();
+            total();
+
+        }
+        public void initFunc()
+        {
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+
+
+                var cartList = repository.promotion.Where(b => b.Customer_ID == Global.CustomerID).ToList();
+                CartGrid_pro.ItemsSource = cartList;
+
+            }
 
             using (DatabaseReposi repository = new DatabaseReposi())
             {
 
 
-
-
-                var cartList = repository.class1s_set.Where(b => b.Customer_Name == UsN && b.Buy_Scussess != 1).ToList();
+                var cartList = repository.class1s_set.Where(b => b.Customer_Name == UsN && b.Buy_Scussess == 0).ToList();
                 CartGrid.ItemsSource = cartList;
 
             }
+
             using (DatabaseReposi repository = new DatabaseReposi())
             {
                 var cartList2 = repository.deliveries_set.ToList();
@@ -73,12 +88,17 @@ namespace Online_Food_Order_Software
 
                 }
                 name.Text = v.ToString();
-
+                Global.cartlBill += v;
             }
 
 
         }
 
+        public void total()
+        {
+            Global.totalBill = Global.PromoTotalBill + Global.cartlBill;
+            totalBill.Text = Convert.ToString(Global.totalBill);
+        }
 
         private string pr;
         private int xr = 0, pm = -0;
@@ -224,11 +244,13 @@ namespace Online_Food_Order_Software
                             }
                             AmP = name.Text.ToString();
 
-                          //  Global.province = "pr";
+                            //  Global.province = "pr";
                             /*
                             FinalWindow final = new FinalWindow(pr);
                             final.Show();*/
-
+                            Global.totalBill = 0;
+                            Global.PromoTotalBill = 0;
+                            Global.cartlBill = 0;
                             Success success1 = new Success(CuN, Pm, AmP, Cml);
                             success1.Show();
                             this.Close();
@@ -676,6 +698,34 @@ namespace Online_Food_Order_Software
 
             }
         }
+
+        private void total_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void MenuItem_DelPat_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBoxResult.Yes == MessageBox.Show("Are you sure want to delelte?\nAll details related this item will be lost.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No))
+            {
+                Class1 SelPat = CartGrid.SelectedItem as Class1;
+                if (SelPat == null) return;
+                using (DatabaseReposi QueryDel = new DatabaseReposi())
+                {
+                    var Pat = QueryDel.class1s_set.Find(SelPat.Cart_ID1);
+                    //cancel
+                    Pat.Buy_Scussess =2 ;
+                    QueryDel.SaveChanges();
+                }
+
+                initFunc();
+                total();
+                //  DelPrev();
+                //  load();
+
+            }
+        }
+
         public void allHidden()
         {
             wN.Visibility = Visibility.Hidden;

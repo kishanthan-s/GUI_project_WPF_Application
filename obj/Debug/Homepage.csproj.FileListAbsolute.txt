@@ -462,3 +462,5 @@ C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources
 C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources
+C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\SwichOff.g.cs
+C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\SwichOff.baml

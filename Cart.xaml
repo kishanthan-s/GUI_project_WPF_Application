@@ -137,7 +137,11 @@
                             <DataGridTextColumn x:Name="Tp" Binding="{Binding Total_prize}" Header="Total_prize" Width="100" ></DataGridTextColumn>
 
                         </DataGrid.Columns>
-
+                        <DataGrid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Delete Item" Click="MenuItem_DelPat_Click" Background="#FFD05B5B"/>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
                     </DataGrid>
                 </Label>
             </Canvas>
@@ -160,7 +164,7 @@
                     <Label.Background>
                         <ImageBrush ImageSource="Images\Background\bg2.jpg"></ImageBrush>
                     </Label.Background>
-                    <DataGrid x:Name="CartGrid_pro" FontSize="12"  Background="Transparent" BorderThickness="0" RowBackground="Transparent"  AutoGenerateColumns="False" Width="400" Height="270" SelectionChanged="CartGrid_SelectionChanged"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                    <DataGrid x:Name="CartGrid_pro" FontSize="12"  Background="Transparent" BorderThickness="0" RowBackground="Transparent"  AutoGenerateColumns="False" Width="380" Height="270" SelectionChanged="CartGrid_SelectionChanged"  ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
                         <DataGrid.ColumnHeaderStyle>
                             <Style TargetType="{x:Type DataGridColumnHeader}">
                                 <Setter Property="Background" Value="Transparent"></Setter>
@@ -409,7 +413,7 @@
             <StackPanel Margin="0,-18,0,0">
                 <TextBox Name="name" Width="150" Height="27" FontSize="15" HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" Foreground="White" Margin="1120,427,0,0"/>
                 <TextBox Name="sell" Width="150" Height="25" FontSize="15" HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" Foreground="White" Margin="1120,10,0,0"/>
-                <TextBox Name="total" Width="150" Height="25" FontSize="15"  HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" Foreground="White" Margin="1120,10,0,0"/>
+                <TextBox x:Name="totalBill" Width="150" Height="25" FontSize="15"  HorizontalAlignment="Left" Background="Transparent" VerticalAlignment="Top" Foreground="White" Margin="1120,10,0,0" TextChanged="total_TextChanged"/>
 
             </StackPanel>
         </Grid>

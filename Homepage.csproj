@@ -156,6 +156,9 @@
     <Compile Include="Success.xaml.cs">
       <DependentUpon>Success.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SwichOff.xaml.cs">
+      <DependentUpon>SwichOff.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Term_conditon.xaml.cs">
       <DependentUpon>Term_conditon.xaml</DependentUpon>
     </Compile>
@@ -258,6 +261,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Success.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SwichOff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
