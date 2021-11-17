@@ -380,7 +380,6 @@ C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Homepage.csproj.Co
 C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Homepage.csproj.CopyComplete
 C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
-C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.all.resources
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\bin\Debug\Online_Food_Order_Software.exe.config
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\bin\Debug\Online_Food_Order_Software.exe
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\bin\Debug\Online_Food_Order_Software.pdb
@@ -462,3 +461,4 @@ C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Homepage.csproj.CopyComplete
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
 C:\Users\KISHANTHAN\Desktop\WPF\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources
+C:\Users\Isuru Lakshan\Desktop\FoodAndDrink\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources
