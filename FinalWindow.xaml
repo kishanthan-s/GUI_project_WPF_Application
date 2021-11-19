@@ -34,7 +34,7 @@
 
 
                 </Button>
-                <Button Content="Home" FontSize="22" FontWeight="Bold" Width="66" Height="35" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-35,94,0" Grid.Column="1" Click="Button_Click_1">
+                <Button Content="Logout" FontSize="22" FontWeight="Bold" Width="66" Height="35" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-35,94,0" Grid.Column="1" Click="Button_Click_1">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"></Setter>
@@ -48,7 +48,7 @@
                     </Button.Background>
 
                 </Button>
-                <Button Content="Exit" FontSize="22" FontWeight="Bold" Width="66" Height="35" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-35,174,0" Click="Button_Click_4" >
+                <Button Content="Home" FontSize="22" FontWeight="Bold" Width="66" Height="35" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-35,174,0" Click="Button_Click_4" >
 
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">

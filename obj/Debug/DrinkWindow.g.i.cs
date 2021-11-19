@@ -273,7 +273,7 @@ namespace Online_Food_Order_Software {
             case 4:
             
             #line 61 "..\..\DrinkWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_4);
             
             #line default
             #line hidden
@@ -281,7 +281,7 @@ namespace Online_Food_Order_Software {
             case 5:
             
             #line 75 "..\..\DrinkWindow.xaml"
-            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_4);
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_1);
             
             #line default
             #line hidden
