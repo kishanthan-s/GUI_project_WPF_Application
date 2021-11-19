@@ -162,6 +162,9 @@
     <Compile Include="Term_conditon.xaml.cs">
       <DependentUpon>Term_conditon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
+    </Compile>
     <Compile Include="thanks.xaml.cs">
       <DependentUpon>thanks.xaml</DependentUpon>
     </Compile>
@@ -269,6 +272,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Term_conditon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
