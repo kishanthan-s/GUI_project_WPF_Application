@@ -17,8 +17,7 @@ using System.Windows.Shapes;
 
 namespace Online_Food_Order_Software
 {
-    /// <summary>
-    /// Interaction logic for Drink1.xaml
+    /// <summary>/// Interaction logic for Drink1.xaml
     public partial class Drink1 : Page
     {
         public Drink1()
