@@ -38,7 +38,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Global.DirectToLogout();
+            this.Close();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -57,8 +58,8 @@ namespace Online_Food_Order_Software
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-
+            Global.DirectToHome();
+            this.Close();
         }
     }
 }

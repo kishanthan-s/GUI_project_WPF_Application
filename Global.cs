@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Homepage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,21 @@ namespace Online_Food_Order_Software
 
         public static string PaymentMethod = null;
 
+        public static void DirectToHome()
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            //  this.close();
+        }
 
+        public static void DirectToLogout()
+        {
+            Login login = new Login();
+            login.Show();
+            //  this.close();
+        }
 
     }
+
+
 }

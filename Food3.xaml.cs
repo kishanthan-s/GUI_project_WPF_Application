@@ -685,5 +685,32 @@ namespace Online_Food_Order_Software
         private void n_TextChanged(object sender, TextChangedEventArgs e)
         {
         }
+
+        private void MenuItem_DelPat_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBoxResult.Yes == MessageBox.Show("Are you sure want to delelte?\nAll details related this item will be lost.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No))
+            {
+                Class1 SelPat = newCart.SelectedItem as Class1;
+                if (SelPat == null) return;
+                using (DatabaseReposi QueryDel = new DatabaseReposi())
+                {
+                    var Pat = QueryDel.class1s_set.Find(SelPat.Cart_ID1);
+                    //cancel
+                    Pat.Buy_Scussess = 2;
+                    QueryDel.SaveChanges();
+                }
+
+
+                //  DelPrev();
+                //  load();
+
+            }
+
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            var cartListF1 = repository1.class1s_set.Where(b => b.Customer_Name == UsN && b.Buy_Scussess == 0).ToList();
+            newCart.ItemsSource = cartListF1;
+
+        }
     }
 }

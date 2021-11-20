@@ -54,10 +54,10 @@
 
 
         <StackPanel Orientation="Vertical" Grid.ColumnSpan="5" Margin="0,0,-2,0" >
-            <Button   Content="Cart" FontSize="22" FontWeight="Bold" Width="60" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,20,0" Grid.Column="1" Click="Button_Click_3" >
+            <Button   Content="Cart" FontSize="22" FontWeight="Bold" Width="65" Height="40" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,10,0" Click="Button_Click_3" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
+                        <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
@@ -68,10 +68,10 @@
                 </Button.Background>
 
             </Button>
-            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="68" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,92,0" Click="Button_Click_1">
+            <Button   Content="Logout" FontSize="22" FontWeight="Bold" Width="80" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,80,0" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
+                        <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
@@ -82,10 +82,10 @@
                 </Button.Background>
 
             </Button>
-            <Button   Content="Exit" FontSize="22" FontWeight="Bold" Width="60" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,180,0" Click="Button_Click_4" >
+            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="66" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,174,0" Click="Button_Click_4" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
-                        <Setter Property="CornerRadius" Value="5"></Setter>
+                        <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
                 <Button.Background>
@@ -138,7 +138,7 @@
 
                         </DataGrid.Columns>
                         <DataGrid.ContextMenu>
-                            <ContextMenu>
+                            <ContextMenu IsEnabled="False">
                                 <MenuItem Header="Delete Item" Click="MenuItem_DelPat_Click" Background="#FFD05B5B"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>

@@ -26,30 +26,25 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             delivery();
+            imagedisplayAsync();
+
         }
 
-        /*  public FinalWindow(string pr) : this()
-          {
+        public async Task imagedisplayAsync()
+        {
+            while (true)
+            {
+                img1.Visibility = Visibility.Visible;
+                await Task.Delay(1200);
+                img1.Visibility = Visibility.Hidden;
+                img2.Visibility = Visibility.Visible;
+                await Task.Delay(1200);
+                img2.Visibility = Visibility.Hidden;
+            }
 
 
-              int x = 10;
-              for (int r = 1; r < x; r++)
-              {
-                  DatabaseReposi repository = new DatabaseReposi();
 
-                  var suplier = repository.supliers_set.Find(r);
-                  if (suplier.Province == pr)
-                  {
-                      SUP.Text = suplier.Name;
-                      CON.Text = suplier.Contact_No;
-                      VEH.Text = suplier.Vehical_No;
-
-
-                  }
-              }
-
-          }
-        */
+        }
         private string UsN = Convert.ToString(Global.CustomerID);
 
         public void delivery()
@@ -86,10 +81,7 @@ namespace Online_Food_Order_Software
 
 
 
-        private void MediaEliment_MediaEnded(object sender, RoutedEventArgs e)
-        {
-            me.Position = TimeSpan.FromMilliseconds(2);
-        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FoodWindow food = new FoodWindow();
@@ -120,13 +112,14 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //this.Close();
+            Global.DirectToLogout();
+            this.Close();
 
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            SwichOff swich = new SwichOff();
-            swich.ShowDialog();
+            Global.DirectToHome();
+            this.Close();
 
         }
 

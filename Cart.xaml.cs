@@ -135,9 +135,9 @@ namespace Online_Food_Order_Software
             t = t - 1;
             if (t != 0)
             {
-                if (Global.addressMethod !=null)
+                if (Global.addressMethod != null)
                 {
-                    if (Global.PaymentMethod !=null)
+                    if (Global.PaymentMethod != null)
                     {
 
 
@@ -170,7 +170,7 @@ namespace Online_Food_Order_Software
 
                                     pr = cartList.Province;
 
-                                 //   Global.province = "pr";
+                                    //   Global.province = "pr";
                                     /* FinalWindow final = new FinalWindow(pr);
                                      final.Show();*/
                                 }
@@ -195,7 +195,7 @@ namespace Online_Food_Order_Software
 
 
                                     pr = cartList.Province;
-                                  //  Global.province = "pr";
+                                    //  Global.province = "pr";
                                     /* FinalWindow final = new FinalWindow(pr);
                                      final.Show();*/
                                 }
@@ -220,7 +220,7 @@ namespace Online_Food_Order_Software
                                     Cml = cartList.Email;
 
                                     pr = cartList.Province;
-                                 //   Global.province = "pr";
+                                    //   Global.province = "pr";
                                     /*
                                     FinalWindow final = new FinalWindow(pr);
                                     final.Show();*/
@@ -617,6 +617,9 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
+            Global.DirectToHome();
+            this.Close();
+            /*
             DatabaseReposi repository = new DatabaseReposi();
 
 
@@ -624,6 +627,8 @@ namespace Online_Food_Order_Software
             DeliveryGrid.ItemsSource = deliveryList;
 
             Application.Current.Shutdown();
+
+            */
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -714,7 +719,7 @@ namespace Online_Food_Order_Software
                 {
                     var Pat = QueryDel.class1s_set.Find(SelPat.Cart_ID1);
                     //cancel
-                    Pat.Buy_Scussess =2 ;
+                    Pat.Buy_Scussess = 2;
                     QueryDel.SaveChanges();
                 }
 
@@ -739,157 +744,157 @@ namespace Online_Food_Order_Software
         private void RH_Checked(object sender, RoutedEventArgs e)
         {
             CheckHome();
-            
-          /*  Global.addres = "Home";
-            xr = 1;
+
+            /*  Global.addres = "Home";
+              xr = 1;
 
 
 
-            wN.Visibility = Visibility.Hidden;
-            wD.Visibility = Visibility.Hidden;
-            wE.Visibility = Visibility.Hidden;
+              wN.Visibility = Visibility.Hidden;
+              wD.Visibility = Visibility.Hidden;
+              wE.Visibility = Visibility.Hidden;
 
-            oN.Visibility = Visibility.Hidden;
-            oD.Visibility = Visibility.Hidden;
-            oE.Visibility = Visibility.Hidden;
-
-
-            DatabaseReposi repository1 = new DatabaseReposi();
-            var cartList11 = repository1.deliveries_set.ToList();
-            CartGrid2.ItemsSource = cartList11;
-            int x = CartGrid2.Items.Count;
-            /*  for (int r = 1; r < x; r++)
-              {
-                  DatabaseReposi repository = new DatabaseReposi();
-
-                  var cartList = repository.deliveries_set.Find(r);
-                  if (cartList.User_name == UsN && cartList.Place == "Home")
-                  {
+              oN.Visibility = Visibility.Hidden;
+              oD.Visibility = Visibility.Hidden;
+              oE.Visibility = Visibility.Hidden;
 
 
-                      pr = cartList.Province;
-                      FinalWindow final1 = new FinalWindow(pr);
-                      final1.Show();
-
-
-                  }
-              }*/
-        /*    for (int r = 1; r < x; r++)
-            {
-                DatabaseReposi repository11 = new DatabaseReposi();
-
-                var cartList1 = repository11.deliveries_set.Find(r);
-                if (cartList1.User_name == UsN && cartList1.Place == "Home")
+              DatabaseReposi repository1 = new DatabaseReposi();
+              var cartList11 = repository1.deliveries_set.ToList();
+              CartGrid2.ItemsSource = cartList11;
+              int x = CartGrid2.Items.Count;
+              /*  for (int r = 1; r < x; r++)
                 {
+                    DatabaseReposi repository = new DatabaseReposi();
+
+                    var cartList = repository.deliveries_set.Find(r);
+                    if (cartList.User_name == UsN && cartList.Place == "Home")
+                    {
 
 
-                    hD.Visibility = Visibility.Visible;
-                    hE.Visibility = Visibility.Visible;
+                        pr = cartList.Province;
+                        FinalWindow final1 = new FinalWindow(pr);
+                        final1.Show();
 
 
+                    }
+                }*/
+            /*    for (int r = 1; r < x; r++)
+                {
+                    DatabaseReposi repository11 = new DatabaseReposi();
+
+                    var cartList1 = repository11.deliveries_set.Find(r);
+                    if (cartList1.User_name == UsN && cartList1.Place == "Home")
+                    {
+
+
+                        hD.Visibility = Visibility.Visible;
+                        hE.Visibility = Visibility.Visible;
+
+
+
+                    }
 
                 }
-
-            }
-            if (hD.Visibility == Visibility.Hidden)
-            {
-                hN.Visibility = Visibility.Visible;
-            }
+                if (hD.Visibility == Visibility.Hidden)
+                {
+                    hN.Visibility = Visibility.Visible;
+                }
 
 
-            */
+                */
         }
 
         private void RW_Checked(object sender, RoutedEventArgs e)
         {
             Global.addres = "Work";
             CheckWork();
-         /*   xr = 2;
+            /*   xr = 2;
 
 
-            hN.Visibility = Visibility.Hidden;
-            hD.Visibility = Visibility.Hidden;
-            hE.Visibility = Visibility.Hidden;
+               hN.Visibility = Visibility.Hidden;
+               hD.Visibility = Visibility.Hidden;
+               hE.Visibility = Visibility.Hidden;
 
-            oN.Visibility = Visibility.Hidden;
-            oD.Visibility = Visibility.Hidden;
-            oE.Visibility = Visibility.Hidden;
-
-
-            DatabaseReposi repository2 = new DatabaseReposi();
-            var cartList22 = repository2.deliveries_set.ToList();
-            CartGrid2.ItemsSource = cartList22;
-
-            int x = CartGrid2.Items.Count;
-            for (int r = 1; r < x; r++)
-            {
-                DatabaseReposi repository22 = new DatabaseReposi();
-
-                var cartList2 = repository22.deliveries_set.Find(r);
-                if (cartList2.User_name == UsN && cartList2.Place == "Work")
-                {
-
-                    wD.Visibility = Visibility.Visible;
-                    wE.Visibility = Visibility.Visible;
+               oN.Visibility = Visibility.Hidden;
+               oD.Visibility = Visibility.Hidden;
+               oE.Visibility = Visibility.Hidden;
 
 
+               DatabaseReposi repository2 = new DatabaseReposi();
+               var cartList22 = repository2.deliveries_set.ToList();
+               CartGrid2.ItemsSource = cartList22;
 
-                }
+               int x = CartGrid2.Items.Count;
+               for (int r = 1; r < x; r++)
+               {
+                   DatabaseReposi repository22 = new DatabaseReposi();
 
-            }
-            if (wD.Visibility == Visibility.Hidden)
-            {
-                wN.Visibility = Visibility.Visible;
-            }
-         */
+                   var cartList2 = repository22.deliveries_set.Find(r);
+                   if (cartList2.User_name == UsN && cartList2.Place == "Work")
+                   {
+
+                       wD.Visibility = Visibility.Visible;
+                       wE.Visibility = Visibility.Visible;
+
+
+
+                   }
+
+               }
+               if (wD.Visibility == Visibility.Hidden)
+               {
+                   wN.Visibility = Visibility.Visible;
+               }
+            */
         }
 
         private void RO_Checked(object sender, RoutedEventArgs e)
         {
             Global.addres = "Other";
             CheckOther();
-          /*  xr = 3;
+            /*  xr = 3;
 
 
-            wN.Visibility = Visibility.Hidden;
-            wD.Visibility = Visibility.Hidden;
-            wE.Visibility = Visibility.Hidden;
+              wN.Visibility = Visibility.Hidden;
+              wD.Visibility = Visibility.Hidden;
+              wE.Visibility = Visibility.Hidden;
 
-            hN.Visibility = Visibility.Hidden;
-            hD.Visibility = Visibility.Hidden;
-            hE.Visibility = Visibility.Hidden;
-
-
-
-            DatabaseReposi repository3 = new DatabaseReposi();
-            var cartList33 = repository3.deliveries_set.ToList();
-            CartGrid2.ItemsSource = cartList33;
-
-            int x = CartGrid2.Items.Count;
-            sell.Text = x.ToString();
-
-            for (int r = 1; r < x; r++)
-            {
-                DatabaseReposi repository33 = new DatabaseReposi();
-                var cartList3 = repository33.deliveries_set.Find(r);
-                if (cartList3.User_name == UsN && cartList3.Place == "Other")
-                {
-
-                    oD.Visibility = Visibility.Visible;
-                    oE.Visibility = Visibility.Visible;
+              hN.Visibility = Visibility.Hidden;
+              hD.Visibility = Visibility.Hidden;
+              hE.Visibility = Visibility.Hidden;
 
 
 
-                }
+              DatabaseReposi repository3 = new DatabaseReposi();
+              var cartList33 = repository3.deliveries_set.ToList();
+              CartGrid2.ItemsSource = cartList33;
 
-            }
-            if (oD.Visibility == Visibility.Hidden)
-            {
-                oN.Visibility = Visibility.Visible;
-            }
+              int x = CartGrid2.Items.Count;
+              sell.Text = x.ToString();
+
+              for (int r = 1; r < x; r++)
+              {
+                  DatabaseReposi repository33 = new DatabaseReposi();
+                  var cartList3 = repository33.deliveries_set.Find(r);
+                  if (cartList3.User_name == UsN && cartList3.Place == "Other")
+                  {
+
+                      oD.Visibility = Visibility.Visible;
+                      oE.Visibility = Visibility.Visible;
 
 
-            */
+
+                  }
+
+              }
+              if (oD.Visibility == Visibility.Hidden)
+              {
+                  oN.Visibility = Visibility.Visible;
+              }
+
+
+              */
 
         }
 
@@ -932,7 +937,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            Global.DirectToLogout();
+            this.Close();
 
 
         }

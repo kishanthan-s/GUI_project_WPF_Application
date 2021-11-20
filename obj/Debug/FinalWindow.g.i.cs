@@ -41,15 +41,23 @@ namespace Online_Food_Order_Software {
     public partial class FinalWindow : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 105 "..\..\FinalWindow.xaml"
+        #line 106 "..\..\FinalWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.MediaElement me;
+        internal System.Windows.Controls.Image img1;
         
         #line default
         #line hidden
         
         
-        #line 152 "..\..\FinalWindow.xaml"
+        #line 107 "..\..\FinalWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image img2;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 156 "..\..\FinalWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox SUP;
         
@@ -57,7 +65,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 153 "..\..\FinalWindow.xaml"
+        #line 157 "..\..\FinalWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox CON;
         
@@ -65,7 +73,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 154 "..\..\FinalWindow.xaml"
+        #line 158 "..\..\FinalWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox VEH;
         
@@ -135,35 +143,32 @@ namespace Online_Food_Order_Software {
             #line hidden
             return;
             case 5:
-            this.me = ((System.Windows.Controls.MediaElement)(target));
-            
-            #line 105 "..\..\FinalWindow.xaml"
-            this.me.MediaEnded += new System.Windows.RoutedEventHandler(this.MediaEliment_MediaEnded);
-            
-            #line default
-            #line hidden
+            this.img1 = ((System.Windows.Controls.Image)(target));
             return;
             case 6:
+            this.img2 = ((System.Windows.Controls.Image)(target));
+            return;
+            case 7:
             
-            #line 112 "..\..\FinalWindow.xaml"
+            #line 116 "..\..\FinalWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_2);
             
             #line default
             #line hidden
             return;
-            case 7:
+            case 8:
             this.SUP = ((System.Windows.Controls.TextBox)(target));
             
-            #line 152 "..\..\FinalWindow.xaml"
+            #line 156 "..\..\FinalWindow.xaml"
             this.SUP.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.SUP_TextChanged);
             
             #line default
             #line hidden
             return;
-            case 8:
+            case 9:
             this.CON = ((System.Windows.Controls.TextBox)(target));
             return;
-            case 9:
+            case 10:
             this.VEH = ((System.Windows.Controls.TextBox)(target));
             return;
             }

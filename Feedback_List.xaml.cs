@@ -37,5 +37,11 @@ namespace Online_Food_Order_Software
         {
             this.Close();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SwichOff swich = new SwichOff();
+            swich.ShowDialog();
+        }
     }
 }

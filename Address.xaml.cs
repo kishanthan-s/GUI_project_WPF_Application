@@ -24,7 +24,7 @@ namespace Online_Food_Order_Software
         public Address()
         {
             InitializeComponent();
-            Customer_name.Focus(); 
+            Customer_name.Focus();
         }
 
         private string UsN = Convert.ToString(Global.CustomerID);
@@ -205,25 +205,27 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
-
+            Global.DirectToLogout();
             this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            Cart cart = new Cart();
+            cart.Show();
+            this.Close();
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
-
+            Global.DirectToHome();
+            this.Close();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
+            this.Close();
         }
 
         private void Landmark_TextChanged(object sender, TextChangedEventArgs e)
@@ -311,7 +313,7 @@ namespace Online_Food_Order_Software
             switch (e.Key)
             {
 
-              
+
 
                 case Key.F5:
                     this.Close();
@@ -320,10 +322,10 @@ namespace Online_Food_Order_Software
 
                 case Key.F9:
                     addbtn();
-                  //  PaymentBtn();
+                    //  PaymentBtn();
                     break;
 
-               
+
             }
         }
     }
