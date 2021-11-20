@@ -17,7 +17,8 @@ using System.Windows.Shapes;
 
 namespace Online_Food_Order_Software
 {
-    /// <summary>/// Interaction logic for Drink1.xaml
+    /// <summary>
+    /// Interaction logic for Drink1.xaml
     public partial class Drink1 : Page
     {
         public Drink1()
@@ -42,7 +43,7 @@ namespace Online_Food_Order_Software
 
 
 
-        private string UsN =Convert.ToString(Global.CustomerID);
+        private string UsN = Convert.ToString(Global.CustomerID);
         /*   public Food1(string UN) : this()
            {
                n.Text = UN;
@@ -675,6 +676,33 @@ namespace Online_Food_Order_Software
 
         private void n_TextChanged(object sender, TextChangedEventArgs e)
         {
+        }
+
+        private void MenuItem_DelPat_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBoxResult.Yes == MessageBox.Show("Are you sure want to delelte?\nAll details related this item will be lost.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No))
+            {
+                Class1 SelPat = newCart.SelectedItem as Class1;
+                if (SelPat == null) return;
+                using (DatabaseReposi QueryDel = new DatabaseReposi())
+                {
+                    var Pat = QueryDel.class1s_set.Find(SelPat.Cart_ID1);
+                    //cancel
+                    Pat.Buy_Scussess = 2;
+                    QueryDel.SaveChanges();
+                }
+
+
+                //  DelPrev();
+                //  load();
+
+            }
+
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            var cartListF1 = repository1.class1s_set.Where(b => b.Customer_Name == UsN && b.Buy_Scussess == 0).ToList();
+            newCart.ItemsSource = cartListF1;
+
         }
     }
 }

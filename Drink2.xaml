@@ -292,6 +292,11 @@
                 <DataGridTextColumn x:Name="nQ"  Foreground="White" FontWeight="Bold" FontSize="14"  Binding="{Binding Quantity}" Width="100" ></DataGridTextColumn>
 
             </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete Item" Click="MenuItem_DelPat_Click" Background="#FFD05B5B"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
 
     </Grid>
