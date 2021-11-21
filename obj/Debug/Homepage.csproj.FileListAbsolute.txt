@@ -542,10 +542,10 @@ C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\thanks.baml
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\welcome.baml
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\test.baml
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.g.resources
-C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.created.resources
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Properties.Resources.resources
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Homepage.csproj.GenerateResource.cache
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Homepage.csproj.CoreCompileInputs.cache
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Homepage.csproj.CopyComplete
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
+C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations._new.resources

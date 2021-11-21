@@ -61,7 +61,7 @@
                 </Button.Background>
 
             </Button>
-            <Button   Content="Logout" FontSize="22" FontWeight="Bold" Width="80" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,80,0" Click="Button_Click_1">
+            <Button   Content="Promotion" FontSize="22" FontWeight="Bold" Width="122" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,245,0" Click="Button_Click_5" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -76,6 +76,20 @@
 
             </Button>
             <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="75" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,165,0" Click="Button_Click_4" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+
+            </Button>
+            <Button   Content="Logout" FontSize="22" FontWeight="Bold" Width="80" Height="40" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,-40,80,0" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>

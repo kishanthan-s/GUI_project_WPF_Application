@@ -40,7 +40,7 @@ namespace Online_Food_Order_Software
             {
 
 
-                var cartList = repository.promotion.Where(b => b.Customer_ID == Global.CustomerID).ToList();
+                var cartList = repository.promotion.Where(b => b.Customer_ID == Global.CustomerID && b.BuyScussess ==1).ToList();
                 CartGrid_pro.ItemsSource = cartList;
 
             }
@@ -721,6 +721,30 @@ namespace Online_Food_Order_Software
                     //cancel
                     Pat.Buy_Scussess = 2;
                     QueryDel.SaveChanges();
+                }
+
+                initFunc();
+                total();
+                //  DelPrev();
+                //  load();
+
+            }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBoxResult.Yes == MessageBox.Show("Are you sure want to delelte?\nAll details related this item will be lost.", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No))
+            {
+                promo SelPat = CartGrid_pro.SelectedItem as promo;
+                if (SelPat == null) return;
+                using (DatabaseReposi QueryDelitem = new DatabaseReposi())
+                {
+                    var check = QueryDelitem.promotion.Find(SelPat.PromoId);
+                    int debill = check.Total_prize;
+                    Global.PromoTotalBill = Global.PromoTotalBill - debill;
+                    //cancel
+                    check.BuyScussess = 0;
+                    QueryDelitem.SaveChanges();
                 }
 
                 initFunc();

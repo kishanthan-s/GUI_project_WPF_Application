@@ -32,7 +32,7 @@
                     </Button.Background>
                     <TextBox x:Name="ta"  Height="40" x:FieldModifier="private"    Width="40"    HorizontalAlignment="Left" Text="1"    Padding="5"  TextChanged="txtNum_TextChanged"   Visibility="Collapsed"  />
                 </Button>
-                <Button  x:Name="button2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="210,0,0,0"    FontSize="20"    Click="Button_Click_1" RenderTransformOrigin="0.96,0.53" Visibility="Collapsed" >
+                <Button  x:Name="button2"  Height="40" Width="40" HorizontalAlignment="Left"  Margin="210,0,0,0"    FontSize="20"    RenderTransformOrigin="0.96,0.53" Visibility="Collapsed" >
                     <Button.Background>
                         <ImageBrush ImageSource="Images\controls\bin.jpeg"></ImageBrush>
                     </Button.Background>

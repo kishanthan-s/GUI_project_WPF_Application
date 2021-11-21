@@ -25,6 +25,15 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             CheckID();
+            load();
+        }
+///load data
+        public void load()
+        {
+
+            DatabaseReposi repository1 = new DatabaseReposi();
+            var cartListF1 = repository1.promotion.Where(b => (b.Customer_ID ==Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+            newCart.ItemsSource = cartListF1;
         }
         // using (DatabaseReposi repositio = new DatabaseReposi())
         //promo promotions = new promo()
@@ -73,7 +82,7 @@ namespace Online_Food_Order_Software
 
 
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+       /* private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
             button2.Visibility = Visibility.Collapsed;
@@ -87,7 +96,7 @@ namespace Online_Food_Order_Software
             }
             ta.Text = numValue.ToString();
 
-        }
+        }*/
 
         private void CmdUp_Click(object sender, RoutedEventArgs e)
         {
@@ -123,7 +132,7 @@ namespace Online_Food_Order_Software
         {
             using (DatabaseReposi repository = new DatabaseReposi())
             {
-                
+
                 promo promotions = new promo()
                 {
 
@@ -133,6 +142,7 @@ namespace Online_Food_Order_Software
                     Item_Prize = 400,
                     Quantity = int.Parse(ta.Text),
                     Total_prize = int.Parse(ta.Text) * 400,
+                    BuyScussess = 1,
                    
                 };
                 repository.promotion.Add(promotions);
@@ -163,7 +173,7 @@ namespace Online_Food_Order_Software
                 ta.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF1 = repository1.promotion.Where(b => b.Item == "1D1").ToList();
+                var cartListF1 = repository1.promotion.Where(b => (b.Item == "1D1")&&(b.BuyScussess==1)).ToList();
                 newCart.ItemsSource = cartListF1;
 
 
@@ -254,6 +264,8 @@ namespace Online_Food_Order_Software
                     Item_Prize = 500,
                     Quantity = int.Parse(taA.Text),
                     Total_prize = int.Parse(taA.Text) * 500,
+                    BuyScussess = 1,
+
 
                 };
                 repository.promotion.Add(promotion);
@@ -274,7 +286,7 @@ namespace Online_Food_Order_Software
                 taA.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D2").ToList();
+                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D2") && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = cartListF2;
 
 
@@ -364,6 +376,8 @@ namespace Online_Food_Order_Software
                     Item_Prize = 500,
                     Quantity = int.Parse(taB.Text),
                     Total_prize = int.Parse(taB.Text) * 500,
+                    BuyScussess = 1,
+
 
                 };
                 repository.promotion.Add(promotion);
@@ -383,7 +397,7 @@ namespace Online_Food_Order_Software
                 taB.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D3").ToList();
+                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D3") && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = cartListF2;
 
 
@@ -469,6 +483,8 @@ namespace Online_Food_Order_Software
                     Item_Prize = 400,
                     Quantity = int.Parse(ta.Text),
                     Total_prize = int.Parse(ta.Text) * 400,
+                    BuyScussess = 1,
+
 
                 };
                 repository.promotion.Add(promotion);
@@ -488,7 +504,7 @@ namespace Online_Food_Order_Software
                 taR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF1 = repository1.promotion.Where(b => b.Item == "1D4").ToList();
+                var cartListF1 = repository1.promotion.Where(b => (b.Item == "1D4") && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = cartListF1;
 
 
@@ -574,6 +590,8 @@ namespace Online_Food_Order_Software
                     Item_Prize = 500,
                     Quantity = int.Parse(taAR.Text),
                     Total_prize = int.Parse(taAR.Text) * 500,
+                    BuyScussess = 1,
+
 
                 };
                 repository.promotion.Add(promotion);
@@ -593,7 +611,7 @@ namespace Online_Food_Order_Software
                 taAR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D5").ToList();
+                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D5") && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = cartListF2;
 
 
@@ -679,6 +697,8 @@ namespace Online_Food_Order_Software
                     Item_Prize = 500,
                     Quantity = int.Parse(taBR.Text),
                     Total_prize = int.Parse(taBR.Text) * 500,
+                    BuyScussess = 1,
+
 
                 };
                 repository.promotion.Add(promotion);
@@ -698,7 +718,7 @@ namespace Online_Food_Order_Software
                 taBR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => b.Item == "1D6").ToList();
+                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D6") && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = cartListF2;
 
 
@@ -710,9 +730,19 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            cus_feedback cus_win = new cus_feedback();
-            cus_win.Show();
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
             Close();
+            /*cus_feedback cus_win = new cus_feedback();
+            cus_win.Show();
+            Close();*/
         }
+
+        private void newCart_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+     
     }
 }

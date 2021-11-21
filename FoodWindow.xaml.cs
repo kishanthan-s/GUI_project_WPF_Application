@@ -281,5 +281,12 @@ namespace Online_Food_Order_Software
 
             */
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Promotion promotion = new Promotion();
+            promotion.Show();
+            this.Close();
+        }
     }
 }

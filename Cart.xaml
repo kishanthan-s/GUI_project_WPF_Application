@@ -178,7 +178,11 @@
                             <DataGridTextColumn x:Name="Tp1" Binding="{Binding Total_prize}" Header="Total_prize" Width="100" ></DataGridTextColumn>
 
                         </DataGrid.Columns>
-
+                        <DataGrid.ContextMenu>
+                            <ContextMenu IsEnabled="True">
+                                <MenuItem Header="Delete Item" Click="MenuItem_Click" Background="#FFD05B5B"/>
+                            </ContextMenu>
+                        </DataGrid.ContextMenu>
                     </DataGrid>
                 </Label>
             </Canvas>
