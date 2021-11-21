@@ -692,8 +692,7 @@ namespace Online_Food_Order_Software
                 }
 
 
-                //  DelPrev();
-                //  load();
+
 
             }
 
