@@ -25,15 +25,45 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             Customer_name.Focus();
+            loadData();
         }
 
         private string UsN = Convert.ToString(Global.CustomerID);
+
+
+       public void loadData()
+        {
+            if(Global.AddressEdite == "ok")
+            {
+                DatabaseReposi repository = new DatabaseReposi();
+                var data = repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addressMethod))).FirstOrDefault();
+                
+
+                Customer_name.Text = data.Customer_Name;
+                Email.Text = data.Email;
+                DoorNo.Text = data.Door_No; 
+                Apartment_Name.Text = data.Apartment_Name; 
+                Street_Name.Text = data.Street_name; 
+                Landmark.Text = data.Landmark;
+                Province.Text = data.Province;
+                Place.Text = data.Place; 
+                City.Text = data.City; 
+                Customer_Id.Text = data.Customer_ID; 
+
+            }
+            else
+            {
+
+            }
+        }
+
+
         /* public Address(string UN) : this()
          {
              Customer_name.Text = UN;
 
          }
-        */
+        *//*
         public Address(string CN, string EM, string DN, string AN, string SN, string LM, string PR, string PL, string CT, string ID) : this()
         {
 
@@ -51,7 +81,7 @@ namespace Online_Food_Order_Software
 
 
         }
-
+        */
         public void addbtn()
         {
 
@@ -89,7 +119,7 @@ namespace Online_Food_Order_Software
             {
                 DatabaseReposi repository = new DatabaseReposi();
 
-                if (repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addres))).FirstOrDefault() != null)
+                if (Global.AddressEdite =="ok")
                 {
                     update();
 
@@ -146,10 +176,10 @@ namespace Online_Food_Order_Software
         public void update()
         {
             DatabaseReposi repository = new DatabaseReposi();
-            var PatUpdate = repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addres))).FirstOrDefault();///passes patient id
+            var PatUpdate = repository.deliveries_set.Where((a => (a.User_name == UsN) && (a.Place == Global.addressMethod))).FirstOrDefault();///passes patient id
 
 
-            PatUpdate.User_name = UsN;
+           
             PatUpdate.Customer_Name = Customer_name.Text;
             PatUpdate.Customer_ID = Customer_Id.Text;
             PatUpdate.Email = Email.Text;

@@ -17,9 +17,9 @@ namespace Online_Food_Order_Software
 
         public static string Email = null;
 
-        public static int CustomerID = 110;
+        public static int CustomerID =0;
 
-        public static string UserName = "Isuru";
+        public static string UserName = null;
 
         public static string ProvinceG = null;
 
@@ -30,6 +30,12 @@ namespace Online_Food_Order_Software
         public static string addressMethod = null;
 
         public static string PaymentMethod = null;
+
+
+        public static string CustomerName = null;
+        public static string CustomerEmail = null;
+        public static string CustomerProvince = null;
+        public static string AddressEdite = null;
 
         public static void DirectToHome()
         {

@@ -33,16 +33,19 @@ namespace Online_Food_Order_Software
 
             }
             */
+            CN.Text = Global.CustomerName;
+            cuml.Text = Global.CustomerEmail; 
+
+
         }
 
         public Success(string CuN, string pt, string AmP, string Cml) : this()
         {
 
 
-            CN.Text = CuN;
             PT.Text = pt;
             AP.Text = AmP;
-            cuml.Text = Cml;
+          
 
             PD.Text = DateTime.Now.ToString("yyyy/MM/dd");
 

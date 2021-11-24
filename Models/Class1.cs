@@ -22,7 +22,7 @@ namespace Online_Food_Order_Software.Models
         public int Quantity { get; set; }
         public int Total_prize { get; set; }
 
-        public int Buy_Scussess { get; set; }
+        public int Buy_Scussess { get; set; }//select 1//cancel 0//buy 2//
 
 
     }

@@ -215,8 +215,38 @@
                             </Style>
                         </DataGrid.ColumnHeaderStyle>
                     </DataGrid>
+                    
+                    
+                    
+                    
+                    
                 </Label>
             </Canvas>
+
+
+            <Canvas Visibility="Hidden">
+                <Label Canvas.Left="500" Canvas.Bottom="100" Width="270" Height="200" HorizontalAlignment="Center" Canvas.Top="77" >
+                    <Label.Background>
+                        <ImageBrush ImageSource="Images\Background\bg5.jpg"></ImageBrush>
+                    </Label.Background>
+                    <DataGrid x:Name="CartGrid4" HorizontalAlignment="Center" FontSize="12" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  AutoGenerateColumns="True" Width="275" Height="200" SelectionChanged="CartGrid_SelectionChanged" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                        <DataGrid.ColumnHeaderStyle>
+                            <Style TargetType="{x:Type DataGridColumnHeader}">
+                                <Setter Property="Background" Value="Transparent"></Setter>
+                            </Style>
+                        </DataGrid.ColumnHeaderStyle>
+                    </DataGrid>
+
+
+
+
+
+                </Label>
+            </Canvas>
+
+
+
+
             <!-- 
         <Image Width="142" Height="132" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,17,2,0">
                 <Image.Triggers>

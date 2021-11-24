@@ -66,7 +66,12 @@ namespace Online_Food_Order_Software
                 CartGrid3.ItemsSource = cartList3;
 
             }
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                var cartList4 = repository.promotion.ToList();
+                CartGrid4.ItemsSource = cartList4;
 
+            }
 
 
             using (DatabaseReposi repository = new DatabaseReposi())
@@ -78,7 +83,6 @@ namespace Online_Food_Order_Software
 
                     var cartList1 = repository.class1s_set.Find(r);
                     if (cartList1.Customer_Name == UsN && cartList1.Buy_Scussess == 0)
-
                     {
 
                         v = v + cartList1.Total_prize;
@@ -90,6 +94,40 @@ namespace Online_Food_Order_Software
                 name.Text = v.ToString();
                 Global.cartlBill += v;
             }
+            
+
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                int v = 0, x = CartGrid4.Items.Count;
+                for (int r = 1; r < x; r++)
+                {
+                   
+
+                    var cartList1 = repository.promotion.Find(r);
+                  
+                        if (cartList1.Customer_ID == Global.CustomerID && cartList1.BuyScussess == 1)
+
+                        {
+                            MessageBox.Show("ok");
+                            v = v + cartList1.Total_prize;
+                            break;
+                        };
+
+                    
+
+
+                }
+                sell.Text = v.ToString();
+                Global.PromoTotalBill += v;
+            }
+
+
+
+
+
+
+
+
 
 
         }
@@ -127,6 +165,41 @@ namespace Online_Food_Order_Software
                 RO.IsChecked = true;
             }
         }
+
+        public void addCompletePromo()
+        {
+
+            using (DatabaseReposi repository = new DatabaseReposi())
+            {
+                int y = CartGrid4.Items.Count;
+                DatabaseReposi repository1 = new DatabaseReposi();
+                for (int r = 1; r < y; r++)
+                {
+                    var cartList4 = repository1.promotion.Find(r);
+                    cartList4.BuyScussess = 2;
+                    repository1.SaveChanges();
+
+                }
+            }
+        }
+
+        public void setDeliveryDetails()
+        {
+            DatabaseReposi repository1 = new DatabaseReposi();
+
+         if ( repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == Global.addressMethod))).FirstOrDefault() != null)
+            {
+                var detais = repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == Global.addressMethod))).FirstOrDefault();
+
+
+                Global.CustomerEmail = detais.Email;
+                Global.CustomerName = detais.Customer_Name;
+                Global.CustomerProvince = detais.Province;
+
+               
+            }
+        }
+
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
 
@@ -228,6 +301,25 @@ namespace Online_Food_Order_Software
                             }
                         }
 
+
+                      
+
+
+
+                        using (DatabaseReposi repository = new DatabaseReposi())
+                        {
+                            int y = CartGrid3.Items.Count;
+                            DatabaseReposi repository1 = new DatabaseReposi();
+                            for (int r = 1; r < y; r++)
+                            {
+                                var cartList4 = repository1.class1s_set.Find(r);
+                                cartList4.Buy_Scussess = 1;
+                                repository1.SaveChanges();
+
+                            }
+                        }
+
+
                         using (DatabaseReposi repository = new DatabaseReposi())
                         {
                             string Pm, AmP;
@@ -251,6 +343,8 @@ namespace Online_Food_Order_Software
                             Global.totalBill = 0;
                             Global.PromoTotalBill = 0;
                             Global.cartlBill = 0;
+                            addCompletePromo();
+                            setDeliveryDetails();
                             Success success1 = new Success(CuN, Pm, AmP, Cml);
                             success1.Show();
                             this.Close();
@@ -258,23 +352,7 @@ namespace Online_Food_Order_Software
 
                         }
 
-
-
-
-
-                        using (DatabaseReposi repository = new DatabaseReposi())
-                        {
-                            int y = CartGrid3.Items.Count;
-                            DatabaseReposi repository1 = new DatabaseReposi();
-                            for (int r = 1; r < y; r++)
-                            {
-                                var cartList4 = repository1.class1s_set.Find(r);
-                                cartList4.Buy_Scussess = 1;
-                                repository1.SaveChanges();
-
-                            }
-                        }
-
+                
                     }
                     else
                     {
@@ -406,7 +484,15 @@ namespace Online_Food_Order_Software
 
         private void HE_Click(object sender, RoutedEventArgs e)
         {
+            Global.AddressEdite = "ok";
 
+            Address address = new Address();
+            address.Show();
+            this.Close();
+
+
+
+            /*
 
             int x = CartGrid2.Items.Count;
             for (int r = 1; r < x; r++)
@@ -417,7 +503,7 @@ namespace Online_Food_Order_Software
                 if (cartList.User_name == UsN && cartList.Place == "Home")
                 {
 
-                    CN = cartList.User_name;
+                    CN = cartList.Customer_Name;
                     EM = cartList.Email;
                     DN = cartList.Door_No;
                     AN = cartList.Apartment_Name;
@@ -434,7 +520,7 @@ namespace Online_Food_Order_Software
                     this.Close();
                 }
             }
-
+            */
 
 
         }
@@ -494,6 +580,15 @@ namespace Online_Food_Order_Software
 
         private void WE_Click(object sender, RoutedEventArgs e)
         {
+            Global.AddressEdite = "ok";
+
+            Address address = new Address();
+            address.Show();
+
+            this.Close();
+
+
+            /*
 
             int x = CartGrid2.Items.Count;
             for (int r = 1; r < x; r++)
@@ -505,7 +600,7 @@ namespace Online_Food_Order_Software
                 {
 
 
-                    CN = cartList.User_name;
+                    CN = cartList.Customer_Name;
                     EM = cartList.Email;
                     DN = cartList.Door_No;
                     AN = cartList.Apartment_Name;
@@ -522,7 +617,7 @@ namespace Online_Food_Order_Software
                     this.Close();
 
                 }
-            }
+            }*/
         }
 
         private void OD_Click(object sender, RoutedEventArgs e)
@@ -579,7 +674,13 @@ namespace Online_Food_Order_Software
 
         private void OE_Click(object sender, RoutedEventArgs e)
         {
+            Global.AddressEdite = "ok";
 
+            Address address = new Address();
+            address.Show();
+
+            this.Close();
+            /*
             int x = CartGrid2.Items.Count;
             for (int r = 1; r < x; r++)
             {
@@ -590,7 +691,7 @@ namespace Online_Food_Order_Software
                 {
 
 
-                    CN = cartList.User_name;
+                    CN = cartList.Customer_Name;
                     EM = cartList.Email;
                     DN = cartList.Door_No;
                     AN = cartList.Apartment_Name;
@@ -608,6 +709,7 @@ namespace Online_Food_Order_Software
 
                 }
             }
+            */
         }
 
         private void Button_Click_13(object sender, RoutedEventArgs e)
