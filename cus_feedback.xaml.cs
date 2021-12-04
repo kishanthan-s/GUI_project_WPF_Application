@@ -1,4 +1,5 @@
-﻿using Online_Food_Order_Software.Database;
+﻿using Homepage;
+using Online_Food_Order_Software.Database;
 using Online_Food_Order_Software.Models;
 using System;
 using System.Collections.Generic;
@@ -87,6 +88,17 @@ namespace Online_Food_Order_Software
             Term_conditon term_condi_win = new Term_conditon();
             term_condi_win.Show();
             Close();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MainWindow Main_win = new MainWindow();
+            Main_win.Show();
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

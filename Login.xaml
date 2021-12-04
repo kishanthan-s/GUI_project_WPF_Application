@@ -51,7 +51,7 @@
 
 
         </Grid>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="265,0,0,503.2" Width="75" Height="Auto" Click="Button_Click_3"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="265,0,0,503.2" Width="75" Height="32" Click="Button_Click_3" VerticalAlignment="Bottom"/>
 
     </Grid>
 

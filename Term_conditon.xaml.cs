@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Homepage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,12 @@ namespace Online_Food_Order_Software
         public Term_conditon()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow Main_win = new MainWindow();
+            Main_win.Show();
         }
     }
 }
