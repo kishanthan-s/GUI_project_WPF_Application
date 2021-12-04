@@ -63,7 +63,7 @@ namespace Homepage
 
         private void Home_butt_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow Main_win = new MainWindow();
+            FoodWindow Main_win = new FoodWindow();
             Main_win.Show();
             this.Close();
         }
