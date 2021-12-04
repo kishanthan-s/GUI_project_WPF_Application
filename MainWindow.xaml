@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Homepage"
         mc:Ignorable="d"
         Title="MainWindow"  WindowState="Maximized"    ResizeMode="NoResize"  WindowStyle="None"  >
-    <Grid  >
+    <Grid Margin="0,0,-837,-463.8"  >
         <Grid HorizontalAlignment="Left" Width="300" Margin="0,0,0,167.4">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -15,7 +15,7 @@
                 </LinearGradientBrush>
             </Grid.Background>
 
-            <Button Name="Home_butt"    Content="HOME"      HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Home_butt_Click" />
+            <Button Name="Home_butt"    Content="Menu"      HorizontalAlignment="Left" Margin="0,130,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Home_butt_Click" />
             <Button Name="Login_butt"   Content="LOGIN"     HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Button_Click"/>
             <Button Name="Promotion_butt" Content="PROMOTIONS" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}"  Foreground="#FFF4E8E8" Click="Signup_butt_Click"  />
             <Button Name="Signup_butt"  Content="SIGN UP"   HorizontalAlignment="Left" Margin="0,230,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Button_Click_1"/>

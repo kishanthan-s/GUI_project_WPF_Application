@@ -41,7 +41,7 @@ namespace Online_Food_Order_Software {
     public partial class cus_feedback : System.Windows.Window, System.Windows.Markup.IComponentConnector {
         
         
-        #line 44 "..\..\cus_feedback.xaml"
+        #line 47 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textName;
         
@@ -49,7 +49,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 46 "..\..\cus_feedback.xaml"
+        #line 49 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textEmail;
         
@@ -57,7 +57,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 47 "..\..\cus_feedback.xaml"
+        #line 50 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock errormessage;
         
@@ -65,7 +65,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 49 "..\..\cus_feedback.xaml"
+        #line 52 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textPhone_number;
         
@@ -73,7 +73,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 50 "..\..\cus_feedback.xaml"
+        #line 53 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock errormessage1;
         
@@ -81,7 +81,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 52 "..\..\cus_feedback.xaml"
+        #line 55 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.ComboBox textSubject;
         
@@ -89,7 +89,7 @@ namespace Online_Food_Order_Software {
         #line hidden
         
         
-        #line 59 "..\..\cus_feedback.xaml"
+        #line 62 "..\..\cus_feedback.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox textMessage;
         
@@ -157,7 +157,7 @@ namespace Online_Food_Order_Software {
             return;
             case 9:
             
-            #line 60 "..\..\cus_feedback.xaml"
+            #line 63 "..\..\cus_feedback.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click);
             
             #line default

@@ -711,7 +711,7 @@ namespace Online_Food_Order_Software {
             return;
             case 40:
             
-            #line 284 "..\..\Promotion.xaml"
+            #line 287 "..\..\Promotion.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.Button_Click_8);
             
             #line default

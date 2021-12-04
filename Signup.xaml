@@ -102,8 +102,10 @@
             <Image HorizontalAlignment="Left" Height="127" Margin="840,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/Positive.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="127" Margin="1075,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/food_is_ess.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="127" Margin="1310,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/Food_bst_fnd.jpg" Stretch="Fill"/>
-
+           
         </Grid>
+        <Button Content="Home" HorizontalAlignment="Left" Margin="10,773,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Margin="85,773,0,0" VerticalAlignment="Top" Width="75"/>
 
 
     </Grid>
