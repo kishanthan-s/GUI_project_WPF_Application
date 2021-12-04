@@ -94,5 +94,10 @@ namespace Online_Food_Order_Software
             Signup_Win.Show();
             this.Close();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
