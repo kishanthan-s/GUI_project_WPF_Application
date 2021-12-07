@@ -35,11 +35,27 @@ namespace Online_Food_Order_Software
             while (true)
             {
                 img1.Visibility = Visibility.Visible;
-                await Task.Delay(1200);
+                await Task.Delay(2000);
                 img1.Visibility = Visibility.Hidden;
                 img2.Visibility = Visibility.Visible;
-                await Task.Delay(1200);
+                await Task.Delay(2000);
                 img2.Visibility = Visibility.Hidden;
+
+                img3.Visibility = Visibility.Visible;
+                await Task.Delay(2000);
+                img3.Visibility = Visibility.Hidden;
+                img4.Visibility = Visibility.Visible;
+                await Task.Delay(2000);
+                img4.Visibility = Visibility.Hidden;
+
+                img5.Visibility = Visibility.Visible;
+                await Task.Delay(2000);
+                img5.Visibility = Visibility.Hidden;
+                img6.Visibility = Visibility.Visible;
+                await Task.Delay(2000);
+                img6.Visibility = Visibility.Hidden;
+
+
             }
 
 

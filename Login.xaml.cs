@@ -55,9 +55,20 @@ namespace Online_Food_Order_Software
                             {
                                 MessageBox.Show("Login sucessfull");
                                 Global.Email=textBoxEmail.Text;
-                                Promotion Promo_win = new Promotion();
-                                Promo_win.Show();
-                                this.Close();
+                           
+                                if (Global.MainMenuSelect == "True")
+                                {
+                                    FoodWindow Main_win = new FoodWindow();
+                                    Main_win.Show();
+                                    this.Close();
+                                }
+                                else
+                                {
+                                    Promotion Promo_win = new Promotion();
+                                    Promo_win.Show();
+                                    this.Close();
+                                }
+                                
                             }
                             else
                             {

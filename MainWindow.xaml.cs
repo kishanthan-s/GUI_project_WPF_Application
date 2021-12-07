@@ -49,9 +49,11 @@ namespace Homepage
 
         private void Signup_butt_Click(object sender, RoutedEventArgs e)
         {
+            Global.MainMenuSelect = "False";
 
             Login Login_Win = new Login();
             Login_Win.Show();
+            this.Close();
             //go to login
 
             /*  Promotion Promo_win = new Promotion();
@@ -63,8 +65,20 @@ namespace Homepage
 
         private void Home_butt_Click(object sender, RoutedEventArgs e)
         {
-            FoodWindow Main_win = new FoodWindow();
+            Global.MainMenuSelect = "True";
+            Login Login_Win = new Login();
+            Login_Win.Show();
+            this.Close();            /*FoodWindow Main_win = new FoodWindow();
             Main_win.Show();
+            this.Close();
+
+            */
+        }
+
+        private void addmin_Click(object sender, RoutedEventArgs e)
+        {
+            Admin_Login feedback_List = new Admin_Login();
+            feedback_List.Show();
             this.Close();
         }
     }

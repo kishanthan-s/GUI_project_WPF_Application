@@ -37,6 +37,9 @@ namespace Online_Food_Order_Software
         public static string CustomerProvince = null;
         public static string AddressEdite = null;
 
+
+        public static string MainMenuSelect = null;
+
         public static void DirectToHome()
         {
             MainWindow mainWindow = new MainWindow();

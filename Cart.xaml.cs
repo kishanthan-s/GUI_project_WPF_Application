@@ -108,7 +108,7 @@ namespace Online_Food_Order_Software
                         if (cartList1.Customer_ID == Global.CustomerID && cartList1.BuyScussess == 1)
 
                         {
-                            MessageBox.Show("ok");
+                           // MessageBox.Show("ok");
                             v = v + cartList1.Total_prize;
                             break;
                         };

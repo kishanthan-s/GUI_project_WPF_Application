@@ -1,4 +1,5 @@
-﻿using Online_Food_Order_Software.Database;
+﻿using Homepage;
+using Online_Food_Order_Software.Database;
 using Online_Food_Order_Software.Models;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             this.Close();
         }
 

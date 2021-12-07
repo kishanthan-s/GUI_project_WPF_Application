@@ -103,9 +103,13 @@
                 <Border Background="Gray" CornerRadius="30,30,0,0" Opacity="0.6"></Border>
                 <Label Width="185" FontSize="15" FontWeight="Bold"  Height="46" Content="Your Order is on its way" Margin="181,0,234,0" VerticalAlignment="Top" HorizontalAlignment="Center"/>
 
-                <Image x:Name="img1" Visibility="Visible" Source="Images\de1.jpg" Width="166"  HorizontalAlignment="Left" Margin="200,50,0,0" />
+                <Image x:Name="img1" Visibility="Hidden" Source="Images\de1.jpg" Width="166"  HorizontalAlignment="Left" Margin="200,40,0,10" />
                 <Image x:Name="img2" Visibility="Hidden" Source="Images\de2.jpg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="200,50,0,0" />
 
+                <Image x:Name="img3" Visibility="Hidden" Source="Images\12.jpeg" Width="166"  HorizontalAlignment="Left" Margin="200,50,0,0" />
+                <Image x:Name="img4" Visibility="Hidden" Source="Images\13.jpeg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="200,50,0,0" />
+                <Image x:Name="img5" Visibility="Hidden" Source="Images\14.jpeg" Width="166"  HorizontalAlignment="Left" Margin="200,50,0,0" />
+                <Image x:Name="img6" Visibility="Hidden" Source="Images\15.jpeg" Width="200" Height="170"  HorizontalAlignment="Left" Margin="200,50,0,0" />
 
 
             </Grid>
@@ -113,7 +117,7 @@
                 <Border Opacity="0.6" Background="LightGray" CornerRadius="0,0,30,30"></Border>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Width="485" Height="45" Margin="76,7,39,0" FontSize="15" Text="If you want to contact your supplier , here is the contact details  " Padding="10"></TextBlock>
 
-                <Button  Content="Next" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" BorderThickness="2" Margin="300,0,0,50" VerticalAlignment="Bottom" Width="75" Grid.Column="1" Grid.Row="1" Click="Button_Click_2">
+                <Button  Content="Customer FeedBack" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" BorderThickness="2" Margin="287,0,99,47" VerticalAlignment="Bottom" Width="214" Click="Button_Click_2">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"></Setter>
