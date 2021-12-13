@@ -127,16 +127,39 @@ namespace Online_Food_Order_Software
 
 
         }
+
+        public void update()
+        {
+
+            DatabaseReposi repository = new DatabaseReposi();
+            var PatUpdate = repository.supliers_set.Where((a => (a.Province == cmbProvince.Text))).FirstOrDefault();
+
+
+
+            PatUpdate.Suplier_ID =Convert.ToInt32( txtBarcode.Text);
+            PatUpdate.Name = txtItemName.Text;
+            PatUpdate.Contact_No = txtQuantity.Text;
+            PatUpdate.Vehical_No = txtSalePrice.Text;
+           // PatUpdate.Province = cmbProvince.Text;
+            
+
+            repository.SaveChanges();
+            MessageBox.Show("Successfully Updated!!");
+        }
+
         public void add()
         {
             if (txtBarcode.Text != "" && txtItemName.Text != "" && txtQuantity.Text != "" && txtSalePrice.Text != "")
             {
+                cmbProvince.IsEnabled = true;
 
                 DatabaseReposi strock = new DatabaseReposi();
 
                 if (strock.supliers_set.Where(a => (a.Province == cmbProvince.Text)).FirstOrDefault() != null)
                 {
-                    MessageBox.Show("This Province has already Suplier...! you can only update it");
+                    update();
+                    load();
+                    clear();
                 }
                 else
                 {
@@ -182,7 +205,7 @@ namespace Online_Food_Order_Software
                 txtSalePrice.Text = Pat.Vehical_No;
                 cmbProvince.Text = Pat.Province;
 
-
+                cmbProvince.IsEnabled = false;
 
 
             }
