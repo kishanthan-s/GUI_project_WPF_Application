@@ -549,3 +549,4 @@ C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Homepage.csproj.Copy
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.exe
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations._new.resources
+C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.all.resources

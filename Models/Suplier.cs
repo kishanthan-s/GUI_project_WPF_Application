@@ -12,12 +12,13 @@ namespace Online_Food_Order_Software.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public string Province { get; set; }
         public int Suplier_ID { get; set; }
         public string Name { get; set; }
         public string Contact_No { get; set; }
 
         public string Vehical_No { get; set; }
-        public string Province { get; set; }
+
 
     }
 }
