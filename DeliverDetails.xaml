@@ -81,13 +81,13 @@
             <Label x:Name="lblISalePrice" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Province" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="1010,102,0,0" Width="115"/>
             <Label x:Name="lblTotal" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Suplier ID" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="295,95,0,0" Width="115"/>
 
-            <TextBox x:Name="txtBarcode" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="290,151,0,0" Width="130" VerticalAlignment="Top" />
-            <TextBox x:Name="txtItemName" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="445,151,0,0" Width="135" VerticalAlignment="Top" />
-            <TextBox x:Name="txtQuantity" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="620,152,0,0" Width="135" VerticalAlignment="Top" />
-            <TextBox x:Name="txtSalePrice" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="799,152,0,0" Width="135" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtBarcode" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="290,151,0,0" Width="130" VerticalAlignment="Top" KeyDown="txtBarcode_KeyDown" />
+            <TextBox x:Name="txtItemName" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="445,151,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtItemName_KeyDown"/>
+            <TextBox x:Name="txtQuantity" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="620,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtQuantity_KeyDown"/>
+            <TextBox x:Name="txtSalePrice" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="799,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtSalePrice_KeyDown"/>
 
 
-            <ComboBox x:Name="cmbProvince" SelectedIndex="0" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="130" FontSize="12" Height="34" Margin="995,147,0,517" >
+            <ComboBox x:Name="cmbProvince" SelectedIndex="0" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="130" FontSize="12" Height="34" Margin="995,147,0,517" KeyDown="cmbProvince_KeyDown">
                 <ComboBox.ItemsSource>
                     <CompositeCollection>
                         <ComboBoxItem Visibility="Visible" Content="--Select Province--"/>

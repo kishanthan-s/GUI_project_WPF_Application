@@ -23,6 +23,7 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             load();
+            txtBarcode.Focus();
         }
 
         public void load()
@@ -163,10 +164,8 @@ namespace Online_Food_Order_Software
             RetriveSuplier();
 
         }
-
-
-
-        public void RetriveSuplier()
+     
+            public void RetriveSuplier()
         {
             Suplier SelPat = CartGrid.SelectedItem as Suplier;
             if (SelPat == null) return;
@@ -187,6 +186,120 @@ namespace Online_Food_Order_Software
 
 
             }
+        }
+        
+        private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtItemName.Focus();
+            }
+
+            switch (e.Key)
+            {
+
+
+
+                case Key.F5:
+                    add();
+                    break;
+
+
+                case Key.F9:
+                    clear();
+                    //  PaymentBtn();
+                    break;
+
+
+            }
+
+        }
+
+        private void txtItemName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                txtQuantity.Focus();
+            }
+
+            switch (e.Key)
+            {
+
+
+
+                case Key.F5:
+                    add();
+                    break;
+
+
+                case Key.F9:
+                    clear();
+                    //  PaymentBtn();
+                    break;
+
+
+            }
+
+        }
+
+        private void txtQuantity_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                 txtSalePrice.Focus();
+            }
+
+            switch (e.Key)
+            {
+
+
+
+                case Key.F5:
+                    add();
+                    break;
+
+
+                case Key.F9:
+                    clear();
+                    //  PaymentBtn();
+                    break;
+
+
+            }
+
+
+        }
+
+        private void txtSalePrice_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                 cmbProvince.Focus();
+            }
+
+            switch (e.Key)
+            {
+
+
+
+                case Key.F5:
+                    add();
+                    break;
+
+
+                case Key.F9:
+                    clear();
+                    break;
+
+
+            }
+
+
+        }
+
+        private void cmbProvince_KeyDown(object sender, KeyEventArgs e)
+        {
+            add();
         }
     }
 }
