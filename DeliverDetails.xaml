@@ -1,0 +1,151 @@
+﻿<Window x:Class="Online_Food_Order_Software.DeliverDetails"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Online_Food_Order_Software"
+        mc:Ignorable="d"
+        Title="DeliverDetails" Height="760" Width="1349" Background="LightCyan" WindowStartupLocation="CenterScreen"  WindowState="Maximized" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="258*"/>
+            <ColumnDefinition Width="142*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="13*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1220*"/>
+                <ColumnDefinition Width="121*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images\Background\bg1.jpg" ></ImageBrush>
+            </Grid.Background>
+
+            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="65" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,14" Click="Button_Click_3" Grid.Column="1" >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+
+            </Button>
+
+
+
+
+
+
+
+
+            <Button  Content="Back" FontSize="22" FontWeight="Bold" Margin="10,0,0,0" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="75" Click="Button_Click_5" >
+
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"></Setter>
+                    </Style>
+                </Button.Resources>
+                <Button.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="#b4fefc" Offset="0.4"/>
+                        <GradientStop Color="#76d5fc" Offset="1"/>
+                    </RadialGradientBrush>
+                </Button.Background>
+            </Button>
+
+
+
+
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="0,0,10,0">
+
+
+            <Grid.Background >
+                <ImageBrush ImageSource="Images\Background\bg2.jpg " ></ImageBrush>
+            </Grid.Background>
+
+            <Label x:Name="lblBarcode" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="481,99,0,0" Width="84"/>
+            <Label x:Name="lblItemName" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Contact No" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="620,102,0,0" Width="115" RenderTransformOrigin="1,0.471"/>
+            <Label x:Name="lblQty" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Vehical No" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="819,102,0,0" Width="115" RenderTransformOrigin="0.217,0.56"/>
+            <Label x:Name="lblISalePrice" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Province" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="1010,102,0,0" Width="115"/>
+            <Label x:Name="lblTotal" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Suplier ID" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="295,95,0,0" Width="115"/>
+
+            <TextBox x:Name="txtBarcode" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="290,151,0,0" Width="130" VerticalAlignment="Top" />
+            <TextBox x:Name="txtItemName" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="445,151,0,0" Width="135" VerticalAlignment="Top" />
+            <TextBox x:Name="txtQuantity" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="620,152,0,0" Width="135" VerticalAlignment="Top" />
+            <TextBox x:Name="txtSalePrice" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="799,152,0,0" Width="135" VerticalAlignment="Top"/>
+
+
+            <ComboBox x:Name="cmbProvince" SelectedIndex="0" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="130" FontSize="12" Height="34" Margin="995,147,0,517" >
+                <ComboBox.ItemsSource>
+                    <CompositeCollection>
+                        <ComboBoxItem Visibility="Visible" Content="--Select Province--"/>
+                        <ComboBoxItem Content="Sabaragamuwa"/>
+                        <ComboBoxItem Content="Southern"/>
+                        <ComboBoxItem Content="Western"/>
+                        <ComboBoxItem Content="Uva"/>
+                        <ComboBoxItem Content="Central"/>
+                        <ComboBoxItem Content="Eastern"/>
+                        <ComboBoxItem Content="North Western"/>
+                        <ComboBoxItem Content="North Central"/>
+                        <ComboBoxItem Content="Northern"/>
+                    </CompositeCollection>
+                </ComboBox.ItemsSource>
+
+
+            </ComboBox>
+
+
+            <Button x:Name="Add" Content="Add" HorizontalAlignment="Left" FontSize="19" FontWeight="Bold" Background="White" Foreground="#0B4F67" Margin="544,222,0,440" Width="96" BorderBrush="#0B4F67" Height="36" BorderThickness="4" Click="Add_Click" />
+            <Button x:Name="Cancel"  Content="Clear" HorizontalAlignment="Left" FontSize="19" FontWeight="Bold" Background="White" Foreground="#0B4F67" Margin="689,222,0,440" Width="96" BorderBrush="#0B4F67" Height="36" BorderThickness="4" Click="Clear_Click" />
+
+            <Label x:Name="lbladdprevcancel" Visibility="Hidden" Foreground="Black" Background="LightBlue" FontSize="25" FontWeight="Medium" Content="Cancel" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="43" Margin="485,156,0,0" Width="85"/>
+            <Label x:Name="lbladdprev" Visibility="Hidden" Foreground="Black" Background="LightBlue" FontSize="25" FontWeight="Medium" Content="Added" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="43" Margin="485,156,0,0" Width="85"/>
+
+            <Label x:Name="lblDelete" Visibility="Hidden" Foreground="Black" Background="LightBlue" FontSize="25" FontWeight="Medium" Content="Deleted" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="43" Margin="485,156,0,0" Width="85"/>
+
+
+
+            <Label Content="Suplier Details " Foreground="Black"  VerticalAlignment="Top" Height="45" BorderThickness="0" FontSize="30" FontWeight="Bold" Margin="590,0,221,0" />
+
+
+
+            <DataGrid BorderBrush="#0B4F67"  IsReadOnly="True" Opacity="0.9" Background="#c2d6d6" BorderThickness="3" x:Name="CartGrid" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Visible"  VerticalAlignment="Center"  Margin="405,296,341,132" Height="270"  AutoGenerateColumns="False" SelectionChanged="CartGrid_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="SuplierID" Width="100" Binding="{Binding Suplier_ID}" Header = " Suplier ID" FontWeight="Black" />
+                    <DataGridTextColumn x:Name="SuplierName" Width="120" Binding="{Binding Name}" Header = "Name" FontWeight="Black" />
+                    <DataGridTextColumn x:Name="ContactNo" Width="100" Binding="{Binding Contact_No}" Header = "Contact No" />
+                    <DataGridTextColumn x:Name="VehicalNo" Binding="{Binding Vehical_No}" Width="100" Header = "Vehical No"  />
+                    <DataGridTextColumn x:Name="Province" Width="100" Binding="{Binding Province}" Header = "Province"  />
+
+
+
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Edit Item" Click="MenuItem_EditPat_Click" Background="LightGoldenrodYellow"/>
+                        <MenuItem Header="Delete Item" Click="MenuItem_DelPat_Click" Background="#FFD05B5B"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+
+
+
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>

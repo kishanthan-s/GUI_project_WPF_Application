@@ -95,6 +95,9 @@
       <DependentUpon>cus_feedback.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\DatabaseReposi.cs" />
+    <Compile Include="DeliverDetails.xaml.cs">
+      <DependentUpon>DeliverDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Drink.xaml.cs">
       <DependentUpon>Drink.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="cus_feedback.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeliverDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -550,3 +550,5 @@ C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_So
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.pdb
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations._new.resources
 C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\Online_Food_Order_Software.Migrations.all.resources
+C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\DeliverDetails.g.cs
+C:\Users\Isuru Lakshan\Desktop\Foodsystem\WPF-new\obj\Debug\DeliverDetails.baml
