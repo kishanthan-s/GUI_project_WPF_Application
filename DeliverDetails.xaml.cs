@@ -86,6 +86,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
+            Feedback_List feedback_List = new Feedback_List();
+            feedback_List.Show();
             this.Close();
         }
 
