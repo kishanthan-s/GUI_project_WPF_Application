@@ -117,7 +117,7 @@
 
 
 
-            <Label Content="Suplier Details " Foreground="Black"  VerticalAlignment="Top" Height="45" BorderThickness="0" FontSize="30" FontWeight="Bold" Margin="590,0,221,0" />
+            <Label Content="Supplier Details " Foreground="Black"  VerticalAlignment="Top" Height="71" BorderThickness="0" FontSize="35" FontWeight="Bold" Margin="565,0,481,0" />
 
 
 
