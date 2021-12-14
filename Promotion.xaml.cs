@@ -791,18 +791,24 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            Term_conditon term_condi_win = new Term_conditon();
+            term_condi_win.Show();
             this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            cus_feedback cusfeedback_win = new cus_feedback();
+            cusfeedback_win.Show();
             this.Close();
            
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            MainWindow Main_win = new MainWindow();
+            Main_win.Show();
+            this.Close();
         }
     }
 }

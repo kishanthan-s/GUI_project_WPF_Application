@@ -110,7 +110,7 @@
     
     StrokeThickness="0.5" Canvas.Left="187" Width="1269" Canvas.Top="44" />
             </Canvas>
-            <Button HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_2">
+            <Button HorizontalAlignment="Left" Margin="181,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_3">
                 <Button.Template>
                     <ControlTemplate>
                         <Border CornerRadius="10" Background="Black">
@@ -125,7 +125,7 @@
                 </Button.Template>
 
             </Button>
-            <Button HorizontalAlignment="Left" Margin="1293,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_2">
+            <Button HorizontalAlignment="Left" Margin="1293,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_4">
                 <Button.Template>
                     <ControlTemplate>
                         <Border CornerRadius="10" Background="Black">
@@ -141,7 +141,7 @@
 
             </Button>
 
-            <Button HorizontalAlignment="Left" Margin="763,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_2">
+            <Button HorizontalAlignment="Left" Margin="763,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_5">
                 <Button.Template>
                     <ControlTemplate>
                         <Border CornerRadius="10" Background="Black">
@@ -157,7 +157,7 @@
 
             </Button>
 
-            <Button HorizontalAlignment="Left" Margin="1019,10,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click_2">
+            <Button HorizontalAlignment="Left" Margin="1019,10,0,0" VerticalAlignment="Top" Width="135" Click="Button_Click_6">
                 <Button.Template>
                     <ControlTemplate>
                         <Border CornerRadius="10" Background="Black">
@@ -181,7 +181,7 @@
                     <GradientStop Color="Black" Offset=".95"/>
                 </LinearGradientBrush>
             </Grid.Background>
-            <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Click="Button_Click_3" Height="45"   >
+            <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Click="exit_Click_3" Height="45"   >
 
                 <Button.Template>
                     <ControlTemplate>

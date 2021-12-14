@@ -296,7 +296,7 @@
 
 
             <Grid HorizontalAlignment="Left" Height="36" Margin="84,12,0,0" VerticalAlignment="Top" Width="1428">
-                <Button Content="Home" HorizontalAlignment="Left" Margin="115,-2,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
+                <Button  HorizontalAlignment="Left" Margin="115,-2,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
                     <Button.Template>
                         <ControlTemplate>
                             <Border CornerRadius="10" Background="Black">
@@ -310,7 +310,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button Content="Home" HorizontalAlignment="Left" Margin="374,-2,0,0" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                <Button  HorizontalAlignment="Left" Margin="374,-2,0,0" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_2">
                     <Button.Template>
                         <ControlTemplate>
                             <Border CornerRadius="10" Background="Black">
@@ -324,7 +324,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button  HorizontalAlignment="Left" Margin="804,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                <Button  HorizontalAlignment="Left" Margin="804,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_3">
                     <Button.Template>
                         <ControlTemplate>
                             <Border CornerRadius="10" Background="Black">
