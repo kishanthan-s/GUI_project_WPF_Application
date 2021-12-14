@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow"  WindowState="Maximized"    ResizeMode="NoResize"  WindowStyle="None"  >
     <Grid Margin="0,0,-837,-463.8"  >
-        <Grid HorizontalAlignment="Left" Width="300" Margin="0,0,0,167.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1603*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Width="300" Margin="0,0,0,167">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -19,16 +23,36 @@
             <Button Name="Login_butt"   Content="LOGIN"     HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Button_Click"/>
             <Button Name="Promotion_butt" Content="PROMOTIONS" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}"  Foreground="#FFF4E8E8" Click="Signup_butt_Click"  />
             <Button Name="Signup_butt"  Content="SIGN UP"   HorizontalAlignment="Left" Margin="0,230,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="Button_Click_1"/>
-            <Button Name="addmin"  Content="Addmin"   HorizontalAlignment="Left" Margin="-10,335,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="addmin_Click"/>
+            <Button Name="addmin"  Content="ADMIN"   HorizontalAlignment="Left" Margin="-10,335,0,0" VerticalAlignment="Top" Width="300" Height="50" Background="{x:Null}" FontSize="25" BorderBrush="{x:Null}" Foreground="#FFF4E8E8" Click="addmin_Click"/>
 
 
             <Image HorizontalAlignment="Left" Height="50"   Margin="10,130,0,0" VerticalAlignment="Top" Width="50" Source="Images/homepage.png" />
             <Image HorizontalAlignment="Left" Height="50"   Margin="10,180,0,0" VerticalAlignment="Top" Width="50" Source="Images/Login.png" />
             <Image HorizontalAlignment="Left" Height="50"   Margin="10,230,0,0" VerticalAlignment="Top" Width="50" Source="Images/Sign up.png" />
             <Image HorizontalAlignment="Left" Height="50"   Margin="10,280,0,0" VerticalAlignment="Top" Width="50" Source="Images/promotion.jpg" />
+            <Image HorizontalAlignment="Left" Height="50"   Margin="10,330,0,0" VerticalAlignment="Top" Width="50" Source="Images/admin2.jpg" />
 
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="50" Margin="300,0,0,0" VerticalAlignment="Top" Width="1302" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+
+
+
+        <Grid HorizontalAlignment="Left" Height="50" Margin="300,0,0,0" VerticalAlignment="Top" Width="1237" MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+            <Button  HorizontalAlignment="Right" Width="53" Click="exit"    >
+
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Red">
+                            <TextBlock Text="Exit" Foreground="White" 
+                                       HorizontalAlignment="Center"                                           
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="Black" Offset="0"/>
@@ -52,7 +76,7 @@
             <Image HorizontalAlignment="Left" Width="462" Margin="10,322,0,0" Source="Images/banner3.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Width="437" Margin="502,322,0,0" Source="Images/banner4.jpg" Stretch="Fill" />
         </Grid>
-        <Grid Margin="1239,55,0,0" HorizontalAlignment="Left" Width="369">
+        <Grid Margin="1239,55,-3,0" HorizontalAlignment="Left" Width="369" Grid.ColumnSpan="2">
 
             <Button  HorizontalAlignment="Center"  VerticalAlignment="Top" Margin="0,30,0,0" Width="171" Height="52" Click="Button_Click_1" Background="{x:Null}" BorderBrush="{x:Null}">
                 <Image HorizontalAlignment="Center"  VerticalAlignment="Top" Width="135"  Source="Images/facebook.jpg" />

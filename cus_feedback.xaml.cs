@@ -40,8 +40,24 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textEmail.Text.Length == 0)
+            if (textName.Text.Length == 0)
             {
+                errormessage2.Text = "Enter an  name.";
+                textName.Focus();
+                
+            }
+
+            else if (!Regex.IsMatch(textName.Text, @"^[a-zA-Z]+$"))
+            {
+
+                errormessage2.Text = "Enter a valid name.";
+                textName.Select(0, textName.Text.Length);
+                textName.Focus();
+            }
+
+            else if (textEmail.Text.Length == 0)
+            {
+                errormessage2.Text = "";
                 errormessage.Text = "Enter an email.";
                 textEmail.Focus();
             }
@@ -51,12 +67,26 @@ namespace Online_Food_Order_Software
                 textEmail.Select(0, textEmail.Text.Length);
                 textEmail.Focus();
             }
+
+
+            else if (textPhone_number.Text.Length == 0)
+            {
+                errormessage.Text = "";
+                errormessage1.Text = "Enter an Phone number.";
+                textPhone_number.Focus();
+            }
             else if (!Regex.IsMatch(textPhone_number.Text, "\\A[0-9]{10}\\z"))
             {
+                errormessage.Text = "";
                 errormessage1.Text = "Enter a valid phone number";
-
+                textPhone_number.Select(0, textPhone_number.Text.Length);
+                textPhone_number.Focus();
 
             }
+            /* else if (!Regex.IsMatch(textPhone_number.Text, "\\A[0-9]{10}\\z"))
+             {
+                 errormessage1.Text = "Enter a valid phone number";
+             }*/
             else
             {
                 using (DatabaseReposi reposit = new DatabaseReposi())

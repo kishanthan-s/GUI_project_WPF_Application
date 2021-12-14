@@ -77,8 +77,15 @@ namespace Homepage
 
         private void addmin_Click(object sender, RoutedEventArgs e)
         {
-            Admin_Login feedback_List = new Admin_Login();
-            feedback_List.Show();
+            Admin_Login Admincheck = new Admin_Login();
+            Admincheck.Show();
+            this.Close();
+        }
+
+        private void exit(object sender, RoutedEventArgs e)
+        {
+            SwichOff shutdown = new SwichOff();
+            shutdown.Show();
             this.Close();
         }
     }

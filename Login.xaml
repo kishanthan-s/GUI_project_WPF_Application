@@ -19,7 +19,11 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid  HorizontalAlignment="Right" Width="350" >
-        <Rectangle Height="280" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="207*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Height="280" VerticalAlignment="Top" Grid.ColumnSpan="2">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint=".5,1" StartPoint=".5,0" >
                     <GradientStop Color="#FF2281D1"></GradientStop>
@@ -28,10 +32,10 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
-        <Image Source="Images/download.jpg" Width="100" Height="100" VerticalAlignment="Top" Margin="50" ></Image>
+        <Image Source="Images/download.jpg" Width="100" Height="100" VerticalAlignment="Top" Margin="125,50,125,0" Grid.ColumnSpan="2" ></Image>
 
 
-        <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="45,0,33,105" HorizontalAlignment="Center">
+        <Grid Width="280" Height="240" VerticalAlignment="Bottom" Margin="41,0,29,105.2" HorizontalAlignment="Center" Grid.ColumnSpan="2">
             <Rectangle Width="280" Height="240" Fill="White"  VerticalAlignment="Bottom"  >
                 <Rectangle.Effect>
                     <DropShadowEffect Color="#FFBBBBBB" Direction="0" BlurRadius="15" RenderingBias="Quality" ShadowDepth="1"/>
@@ -46,12 +50,25 @@
             </StackPanel>
             <Button Content="Log In"   VerticalAlignment="Top" Width="106" Margin="87,198,87,0"  Background="#FF59565D" Click="Button_Click" />
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="124" Margin="0,460,-10,-48.8" VerticalAlignment="Top" Width="360">
+        <Grid HorizontalAlignment="Left" Height="124" Margin="0,460,-10,-48.8" VerticalAlignment="Top" Width="360" Grid.ColumnSpan="2">
             <Button Content="Create account" HorizontalAlignment="Left" Margin="90,73,0,0" VerticalAlignment="Top" Width="170" Background="#FF59565D" Click="Button_Click_2"/>
 
 
         </Grid>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="265,0,0,503.2" Width="75" Height="32" Click="Button_Click_3" VerticalAlignment="Bottom"/>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Left"  Width="53" Height="50" Click="Button_Click_3"  Grid.Column="1" RenderTransformOrigin="0.507,-0.444" Margin="89.8,0,0,475.2">
+
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="10" Background="Red">
+                        <TextBlock Text="Exit" Foreground="White" 
+                                       HorizontalAlignment="Center"                                           
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
     </Grid>
 
