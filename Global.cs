@@ -44,15 +44,30 @@ namespace Online_Food_Order_Software
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            //  this.close();
+            
         }
 
         public static void DirectToLogout()
         {
             Login login = new Login();
             login.Show();
-            //  this.close();
+            
         }
+        public static void DirectToCart()
+        {
+            Cart cart = new Cart();
+            cart.Show();
+
+        }
+
+
+        public static void DirectToMenu()
+        {
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
+
+        }
+
 
     }
 

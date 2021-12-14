@@ -740,8 +740,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            FoodWindow foodWindow = new FoodWindow();
-            foodWindow.Show();
+            Global.DirectToMenu();
             this.Close();
         }
 

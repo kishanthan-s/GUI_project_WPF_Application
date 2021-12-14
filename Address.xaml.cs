@@ -241,8 +241,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
+            Global.DirectToCart();
             this.Close();
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -253,8 +252,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            FoodWindow foodWindow = new FoodWindow();
-            foodWindow.Show();
+            Global.DirectToMenu();
             this.Close();
         }
 
