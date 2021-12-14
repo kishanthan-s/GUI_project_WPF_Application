@@ -215,8 +215,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            Promotion Promotion_win = new Promotion();
-            Promotion_win.Show();
+            Login Login_win = new Login();
+            Login_win.Show();
             this.Close();
         }
 

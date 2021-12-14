@@ -1,4 +1,5 @@
-﻿using Online_Food_Order_Software.Database;
+﻿using Homepage;
+using Online_Food_Order_Software.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -109,6 +110,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
             cus_feedback feedback = new cus_feedback();
             feedback.Show();
             this.Close();

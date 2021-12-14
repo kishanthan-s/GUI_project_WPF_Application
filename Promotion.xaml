@@ -267,7 +267,7 @@
             </Button>
         </Grid>
 
-        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="538" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,71,109,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="423" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,186,109,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"></Setter>
@@ -368,7 +368,7 @@
 
 
         </Grid>
-        <Label Content=""  x:Name="lbltotal"   HorizontalAlignment="Left" Margin="1149,555,0,0" VerticalAlignment="Top" Width="160"/>
+        <Label Content="" FontSize="30" x:Name="lbltotal" FontWeight="Bold"   HorizontalAlignment="Left" Margin="1112,136,0,0" VerticalAlignment="Top" Width="291"/>
 
 
 

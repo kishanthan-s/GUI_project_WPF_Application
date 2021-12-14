@@ -11,15 +11,13 @@
             <Border.Background>
                 <ImageBrush ImageSource="Images\feedback_res.jpg" ></ImageBrush>
             </Border.Background>
+            <DataGrid x:Name="dataGrid" FontSize="15" AutoGenerateColumns="True" AlternatingRowBackground="BurlyWood" AlternationCount="2" Opacity=".5" Margin="158,72,190.4,333" />
 
         </Border>
-        <DataGrid x:Name="dataGrid" FontSize="15" AutoGenerateColumns="True" AlternatingRowBackground="BurlyWood" AlternationCount="2" Opacity=".5" >
-
-        </DataGrid>
         <Button  HorizontalAlignment="Left" Margin="1233,0,0,0" VerticalAlignment="Top" Width="109" Content="Exit" FontSize="20" Height="38" Click="Button_Click"/>
 
         <Button  HorizontalAlignment="Left" Margin="1119,0,0,0" VerticalAlignment="Top" Width="109" Content="Shutdown" FontSize="20" Height="38" Click="Button_Click_1" />
-       
+
         <Button  HorizontalAlignment="Left" Margin="1005,0,0,0" VerticalAlignment="Top" Width="109" Content="Suplier" FontSize="20" Height="38" Click="Button_Click_2" />
 
     </Grid>

@@ -88,5 +88,11 @@ namespace Homepage
             Admincheck.Show();
             //this.Close();
         }
+
+        private void feedback_Click(object sender, RoutedEventArgs e)
+        {
+            cus_feedback feedback = new cus_feedback();
+            feedback.Show();
+        }
     }
 }
