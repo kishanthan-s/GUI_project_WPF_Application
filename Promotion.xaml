@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Online_Food_Order_Software"
         mc:Ignorable="d"
-        Title="Promotion" WindowState="Maximized" ResizeMode="NoResize" Width="1608" Height="900" WindowStyle="None" Background="#FF7D6868">
+        Title="Promotion" WindowState="Maximized" ResizeMode="NoResize" Width="1512" Height="865.2" WindowStyle="None" Background="#FF7D6868">
 
-    <Grid Margin="0,0,0,-64" >
+    <Grid Height="865" VerticalAlignment="Top" >
 
         <Grid.Background>
             <ImageBrush ImageSource="Images\promoback.jpg" ></ImageBrush>
         </Grid.Background>
 
-        <Grid  HorizontalAlignment="Left" Height="720" Margin="0,180,0,0" VerticalAlignment="Top" Width="1112">
+        <Grid  HorizontalAlignment="Left" Height="658" Margin="0,71,0,0" VerticalAlignment="Top" Width="1112">
             <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="20,7,0,0" Source="images/choclatepromo.jpg" Stretch="Fill" />
             <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="380,7,0,0" Source="images/familypromo1.jpg"  Stretch="Fill"></Image>
             <Image HorizontalAlignment="Left"  VerticalAlignment="Top" Height="250" Width="300" Margin="740,7,0,0" Source="images/pizza promotion1.jpg"  Stretch="Fill"></Image>
@@ -235,7 +235,8 @@
 
 
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1608">
+        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1512">
+
             <TextBlock HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="90" FontSize="40" Width="1123" FontFamily="Curlz MT" FontWeight="Bold" FontStyle="Italic" TextDecorations="{x:Null}" Opacity="1.5" Foreground="#FFFDFAFA" >
 
                 <TextBlock.Effect>
@@ -249,9 +250,24 @@
     </Run.Foreground>
         </Run><InlineUIContainer>  
                 </InlineUIContainer></TextBlock>
+            <Button  HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Click="Button_Click_3" Height="45" Margin="0,0,96,0"   >
+
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Red">
+                            <TextBlock Text="Exit" Foreground="White" 
+                                       HorizontalAlignment="Center"                                           
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
         </Grid>
 
-        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="710" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,180,97,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="710" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,119,95,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"></Setter>
@@ -268,29 +284,34 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Grid HorizontalAlignment="Left" Height="118" Margin="0,846,0,-64" VerticalAlignment="Top" Width="1608">
+        <Grid Height="125" Margin="0,740,-62,0" VerticalAlignment="Top">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="white" Offset="0"/>
-                    <GradientStop Color="Black" Offset=".95"/>
+                    <GradientStop Color="Black" />
                 </LinearGradientBrush>
             </Grid.Background>
-            <TextBlock HorizontalAlignment="Center" Margin="10,24,0,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="65" FontFamily="Agency FB"  ><Run Text="&gt;A well-known quote, contained in a blockquote element."/></TextBlock>
-            <TextBlock HorizontalAlignment="Center" Margin="10,53,0,0" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="65" FontFamily="Agency FB"  />
-            <Button Content="Menu" Margin="-2,0,1535,80" RenderTransformOrigin="0.528,0.01" Click="Button_Click_3"/>
-            <Button Content="Home" HorizontalAlignment="Left" Margin="73,0,0,0" VerticalAlignment="Top" Width="71" Height="38" RenderTransformOrigin="1.187,0.221" Click="Button_Click_1"/>
-            <Button Content="Logout" Margin="144,0,1389,80" Click="Button_Click_2"/>
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="52,56,10,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="1512" Height="35" FontFamily="Agency FB"  ><Run Text="&gt;A well-known quote, contained in a blockquote element."/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="62,91,30,-18" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="20" Width="1482" FontFamily="Agency FB"  />
 
-        </Grid>
-
-        <Grid Height="177" VerticalAlignment="Top" Margin="1128,-2,139,0" >
-            <Button Margin="0,10,0,0" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="167" HorizontalAlignment="Left" Width="304" Click="Button_Click_8">
-                <Image Height="135" Width="244" Source="Images/Feedback.jpg" Stretch="Fill"/>
-
+            <Button Content="Home" HorizontalAlignment="Left" Margin="221,10,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Black">
+                            <TextBlock Text="HOME" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
             </Button>
 
 
         </Grid>
+
 
 
 

@@ -25,8 +25,8 @@ namespace Online_Food_Order_Software
         public Promotion()
         {
             InitializeComponent();
-            CheckID();
-            load();
+           // CheckID();
+          //  load();
         }
 ///load data
         public void load()
