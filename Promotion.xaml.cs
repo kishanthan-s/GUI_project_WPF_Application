@@ -741,7 +741,7 @@ namespace Online_Food_Order_Software
                   quantity = int.Parse(taBR.Text);
                   totalPrice = ItemPrize * quantity;
                   Global.PromoTotalBill += totalPrice;*/
-                Functocaltotal(1500, taR.Text); 
+                Functocaltotal(2500, taR.Text); 
 
 
 
