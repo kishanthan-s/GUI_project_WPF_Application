@@ -30,8 +30,8 @@ namespace Online_Food_Order_Software
 
             add();
             initFunc();
-          
-            sell.Text = Convert.ToString(Global.PromoTotalBill);
+
+            //  sell.Text = Convert.ToString(Global.PromoTotalBill2);
             total();
         }
         public void initFunc()
@@ -40,7 +40,7 @@ namespace Online_Food_Order_Software
             {
 
 
-                var cartList = repository.promotion.Where(b => b.Customer_ID == Global.CustomerID && b.BuyScussess ==1).ToList();
+                var cartList = repository.promotion.Where(b => b.Customer_ID == Global.CustomerID && b.BuyScussess == 1).ToList();
                 CartGrid_pro.ItemsSource = cartList;
 
             }
@@ -95,34 +95,34 @@ namespace Online_Food_Order_Software
                 name.Text = v.ToString();
                 Global.cartlBill += v;
             }
-            
 
-           /*  using (DatabaseReposi repository = new DatabaseReposi())
+
+            using (DatabaseReposi repository = new DatabaseReposi())
             {
-                Global.PromoTotalBill = 0;
+                Global.PromoTotalBill2 = 0;
 
                 int v = 0, x = CartGrid4.Items.Count;
                 for (int r = 1; r < x; r++)
                 {
-                   
+
 
                     var cartList1 = repository.promotion.Find(r);
-                  
-                        if (cartList1.Customer_ID == Global.CustomerID && cartList1.BuyScussess == 1)
 
-                        {
-                           // MessageBox.Show("ok");
-                            v = v + cartList1.Total_prize;
-                            break;
-                        };
+                    if (cartList1.Customer_ID == Global.CustomerID && cartList1.BuyScussess == 1)
 
-                    
-                  }
+                    {
+                        // MessageBox.Show("ok");
+                        v = v + cartList1.Total_prize;
+
+                    };
+
+
+                }
 
                 sell.Text = v.ToString();
-                Global.PromoTotalBill += v;
+                Global.PromoTotalBill2 += v;
             }
-           */
+
 
 
 
@@ -136,7 +136,7 @@ namespace Online_Food_Order_Software
 
         public void total()
         {
-            Global.totalBill = Global.PromoTotalBill + Global.cartlBill;
+            Global.totalBill = Global.PromoTotalBill2 + Global.cartlBill;
             totalBill.Text = Convert.ToString(Global.totalBill);
         }
 
@@ -189,7 +189,7 @@ namespace Online_Food_Order_Software
         {
             DatabaseReposi repository1 = new DatabaseReposi();
 
-         if ( repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == Global.addressMethod))).FirstOrDefault() != null)
+            if (repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == Global.addressMethod))).FirstOrDefault() != null)
             {
                 var detais = repository1.deliveries_set.Where(a => ((a.User_name == UsN)) && ((a.Place == Global.addressMethod))).FirstOrDefault();
 
@@ -198,7 +198,7 @@ namespace Online_Food_Order_Software
                 Global.CustomerName = detais.Customer_Name;
                 Global.CustomerProvince = detais.Province;
 
-               
+
             }
         }
 
@@ -304,7 +304,7 @@ namespace Online_Food_Order_Software
                         }
 
 
-                      
+
 
 
 
@@ -342,8 +342,8 @@ namespace Online_Food_Order_Software
                             /*
                             FinalWindow final = new FinalWindow(pr);
                             final.Show();*/
-                            Global.totalBill = 0;
-                            Global.PromoTotalBill = 0;
+                            //  Global.totalBill = 0;
+                            Global.PromoTotalBill2 = 0;
                             Global.cartlBill = 0;
                             addCompletePromo();
                             setDeliveryDetails();
@@ -354,7 +354,7 @@ namespace Online_Food_Order_Software
 
                         }
 
-                
+
                     }
                     else
                     {
@@ -742,7 +742,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            Global.DirectToMenu();
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
             this.Close();
         }
 
@@ -844,7 +845,7 @@ namespace Online_Food_Order_Software
                 {
                     var check = QueryDelitem.promotion.Find(SelPat.PromoId);
                     int debill = check.Total_prize;
-                    Global.PromoTotalBill = Global.PromoTotalBill - debill;
+                    Global.PromoTotalBill2 = Global.PromoTotalBill2 - debill;
                     //cancel
                     check.BuyScussess = 0;
                     QueryDelitem.SaveChanges();

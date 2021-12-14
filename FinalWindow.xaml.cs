@@ -29,7 +29,6 @@ namespace Online_Food_Order_Software
             imagedisplayAsync();
 
         }
-        //
 
         public async Task imagedisplayAsync()
         {
@@ -42,16 +41,16 @@ namespace Online_Food_Order_Software
                 await Task.Delay(2000);
                 img2.Visibility = Visibility.Hidden;
 
-                img3.Visibility = Visibility.Visible;
-                await Task.Delay(2000);
-                img3.Visibility = Visibility.Hidden;
+                //  img3.Visibility = Visibility.Visible;
+                // await Task.Delay(2000);
+                // img3.Visibility = Visibility.Hidden;
                 img4.Visibility = Visibility.Visible;
                 await Task.Delay(2000);
                 img4.Visibility = Visibility.Hidden;
 
-                img5.Visibility = Visibility.Visible;
-                await Task.Delay(2000);
-                img5.Visibility = Visibility.Hidden;
+                //  img5.Visibility = Visibility.Visible;
+                //  await Task.Delay(2000);
+                //  img5.Visibility = Visibility.Hidden;
                 img6.Visibility = Visibility.Visible;
                 await Task.Delay(2000);
                 img6.Visibility = Visibility.Hidden;
@@ -69,7 +68,7 @@ namespace Online_Food_Order_Software
 
             DatabaseReposi repository = new DatabaseReposi();
 
-            string   pr = Global.CustomerProvince;
+            string pr = Global.CustomerProvince;
             var supliyDelails = repository.supliers_set.Where(a => ((a.Province == pr))).FirstOrDefault();
 
 
@@ -100,7 +99,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Global.DirectToMenu();
+            FoodWindow food = new FoodWindow();
+            food.Show();
             this.Close();
 
         }
@@ -120,7 +120,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Global.DirectToCart();
+            Cart cart = new Cart();
+            cart.Show();
             this.Close();
         }
 
