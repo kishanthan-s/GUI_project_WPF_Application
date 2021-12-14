@@ -26,8 +26,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string addminEmail = "a";
-            string password = "a";
+            string addminEmail = "kishanthan@gmail.com";
+            string password = "admin";
 
             if(addminEmail== textBoxEmail.Text && password == passwordBox1.Password)
             {
