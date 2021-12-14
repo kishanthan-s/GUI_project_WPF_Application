@@ -31,7 +31,7 @@ namespace Online_Food_Order_Software
             add();
             initFunc();
           
-          //  sell.Text = Convert.ToString(Global.PromoTotalBill2);
+            sell.Text = Convert.ToString(Global.PromoTotalBill);
             total();
         }
         public void initFunc()
@@ -97,9 +97,9 @@ namespace Online_Food_Order_Software
             }
             
 
-             using (DatabaseReposi repository = new DatabaseReposi())
+           /*  using (DatabaseReposi repository = new DatabaseReposi())
             {
-                Global.PromoTotalBill2 = 0;
+                Global.PromoTotalBill = 0;
 
                 int v = 0, x = CartGrid4.Items.Count;
                 for (int r = 1; r < x; r++)
@@ -113,16 +113,16 @@ namespace Online_Food_Order_Software
                         {
                            // MessageBox.Show("ok");
                             v = v + cartList1.Total_prize;
-                            
+                            break;
                         };
 
                     
                   }
 
                 sell.Text = v.ToString();
-                Global.PromoTotalBill2 += v;
+                Global.PromoTotalBill += v;
             }
-           
+           */
 
 
 
@@ -136,7 +136,7 @@ namespace Online_Food_Order_Software
 
         public void total()
         {
-            Global.totalBill = Global.PromoTotalBill2 + Global.cartlBill;
+            Global.totalBill = Global.PromoTotalBill + Global.cartlBill;
             totalBill.Text = Convert.ToString(Global.totalBill);
         }
 
@@ -342,8 +342,8 @@ namespace Online_Food_Order_Software
                             /*
                             FinalWindow final = new FinalWindow(pr);
                             final.Show();*/
-                          //  Global.totalBill = 0;
-                            Global.PromoTotalBill2 = 0;
+                            Global.totalBill = 0;
+                            Global.PromoTotalBill = 0;
                             Global.cartlBill = 0;
                             addCompletePromo();
                             setDeliveryDetails();
@@ -844,7 +844,7 @@ namespace Online_Food_Order_Software
                 {
                     var check = QueryDelitem.promotion.Find(SelPat.PromoId);
                     int debill = check.Total_prize;
-                    Global.PromoTotalBill2 = Global.PromoTotalBill2 - debill;
+                    Global.PromoTotalBill = Global.PromoTotalBill - debill;
                     //cancel
                     check.BuyScussess = 0;
                     QueryDelitem.SaveChanges();

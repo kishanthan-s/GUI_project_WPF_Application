@@ -34,7 +34,7 @@ namespace Homepage
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            
             Login Login_Win = new Login();
             Login_Win.Show();
             
@@ -79,14 +79,14 @@ namespace Homepage
         {
             Admin_Login Admincheck = new Admin_Login();
             Admincheck.Show();
-            this.Close();
+           // this.Close();
         }
 
         private void exit(object sender, RoutedEventArgs e)
         {
-            SwichOff shutdown = new SwichOff();
-            shutdown.Show();
-            this.Close();
+            Admin_Login Admincheck = new Admin_Login();
+            Admincheck.Show();
+            //this.Close();
         }
     }
 }

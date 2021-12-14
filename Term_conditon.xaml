@@ -7,17 +7,6 @@
         mc:Ignorable="d"
          Title="Promotion" WindowState="Maximized" ResizeMode="NoResize" Width="1608" Height="900" WindowStyle="None" >
     <Grid>
-        <Grid HorizontalAlignment="Left" Height="128" Margin="0,772,0,0" VerticalAlignment="Top" Width="1608">
-            <Grid.Background>
-                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
-                    <GradientStop Color="white" Offset="0"/>
-                    <GradientStop Color="Black" Offset=".95"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-            <TextBlock HorizontalAlignment="Center" Margin="10,24,0,0" TextWrapping="Wrap" Text=">A well-known quote, contained in a blockquote element." TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="65" FontFamily="Agency FB"  />
-            <TextBlock HorizontalAlignment="Center" Margin="10,53,0,0" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="65" FontFamily="Agency FB"  />
-
-        </Grid>
         <Grid HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="1608">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -86,6 +75,90 @@
         </Grid>
         <Grid HorizontalAlignment="Left" Height="276" Margin="826,234,0,0" VerticalAlignment="Top" Width="695">
             <Image HorizontalAlignment="Left" Height="276" VerticalAlignment="Top" Width="694" Source="Images/sitting in resturent.jpg" Stretch="Fill"/>
+        </Grid>
+        <Grid Height="125" Margin="0,775,0,0" VerticalAlignment="Top">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
+                    <GradientStop Color="white" Offset="0"/>
+                    <GradientStop Color="Black" />
+                </LinearGradientBrush>
+            </Grid.Background>
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="52,56,10,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="1512" Height="35" FontFamily="Agency FB"  ><Run Text="&gt;A well-known quote, contained in a blockquote element."/></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="61,91,29,0" TextWrapping="Wrap" Text="&gt;Someone famous in Source Title" TextAlignment="Center" FontSize="20" Width="1482" FontFamily="Agency FB"  />
+
+
+            <Grid HorizontalAlignment="Left" Height="36" Margin="84,12,0,0" VerticalAlignment="Top" Width="1428">
+                <Button  HorizontalAlignment="Left" Margin="115,-2,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="HOME" Foreground="White" 
+                                        HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                        Margin="0,5,0,0"
+                                        Height="40"
+                                        FontSize="20"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  HorizontalAlignment="Left" Margin="804,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_3">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="FEEDBACK" Foreground="White" 
+                                        HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                        Margin="-70,2,-114.8,-3.6"
+                                        Height="40"
+                                        FontSize="20" Width="256"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  HorizontalAlignment="Left" Margin="1138,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="sinup_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="SIGNUP" Foreground="White" 
+                                        HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                        Margin="-70,2,-114.8,-3.6"
+                                        Height="40"
+                                        FontSize="20" Width="256"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Canvas Margin="0,0,0,-2">
+
+                    <!-- Draws a diagonal line from (10,10) to (50,50). -->
+                    <Line
+                            X1="0" Y1="0"
+                            X2="1400" Y2="0"
+                            Stroke="White"
+    
+                            StrokeThickness="0.5" Canvas.Left="32" Width="1269" Canvas.Top="36" />
+                    <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_2" Canvas.Left="450">
+                        <Button.Template>
+                            <ControlTemplate>
+                                <Border CornerRadius="10" Background="Black">
+                                    <TextBlock Text="LOGIN" Foreground="White" 
+                                        HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                        Margin="-70,2,-114.8,-3.6"
+                                        Height="40"
+                                        FontSize="20" Width="256"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Canvas>
+            </Grid>
+
+
+
         </Grid>
     </Grid>
 </Window>

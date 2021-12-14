@@ -34,8 +34,8 @@ namespace Online_Food_Order_Software
             }
             */
             CN.Text = Global.CustomerName;
-            cuml.Text = Global.CustomerEmail;
-            AP.Text = Convert.ToString(Global.totalBill);
+            cuml.Text = Global.CustomerEmail; 
+
 
         }
 
@@ -44,7 +44,7 @@ namespace Online_Food_Order_Software
 
 
             PT.Text = pt;
-           // AP.Text =Convert.ToString(Global.totalBill);
+            AP.Text =Convert.ToString( Global.totalBill);
           
 
             PD.Text = DateTime.Now.ToString("yyyy/MM/dd");
@@ -66,7 +66,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Global.totalBill = 0;
+
             FinalWindow finalWindow = new FinalWindow();
             finalWindow.Show();
             Global.province = "null";

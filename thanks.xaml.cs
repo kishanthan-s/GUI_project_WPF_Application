@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Homepage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,10 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+           MainWindow MainWindow_win = new MainWindow();
+            MainWindow_win.Show();
             this.Close();
+            
         }
     }
 }

@@ -128,6 +128,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
+            MainWindow Main_win = new MainWindow();
+            Main_win.Show();
             this.Close();
         }
 
