@@ -783,9 +783,9 @@ namespace Online_Food_Order_Software
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void food_Click_1(object sender, RoutedEventArgs e)
         {
-            MainWindow Main_win = new MainWindow();
+            FoodWindow Main_win = new FoodWindow();
             Main_win.Show();
         }
 

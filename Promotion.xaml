@@ -338,7 +338,7 @@
                         </ControlTemplate>
                     </Button.Template>
                 </Button>
-                <Button  HorizontalAlignment="Left" Margin="1138,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                <Button  HorizontalAlignment="Left" Margin="1138,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="food_Click_1">
                     <Button.Template>
                         <ControlTemplate>
                             <Border CornerRadius="10" Background="Black">
