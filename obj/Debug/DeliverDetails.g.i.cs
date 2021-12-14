@@ -83,7 +83,7 @@ namespace Online_Food_Order_Software {
         
         #line 84 "..\..\DeliverDetails.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtBarcode;
+        internal System.Windows.Controls.TextBox txtSuplierID;
         
         #line default
         #line hidden
@@ -99,7 +99,7 @@ namespace Online_Food_Order_Software {
         
         #line 86 "..\..\DeliverDetails.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtQuantity;
+        internal System.Windows.Controls.TextBox txtContactNo;
         
         #line default
         #line hidden
@@ -107,7 +107,7 @@ namespace Online_Food_Order_Software {
         
         #line 87 "..\..\DeliverDetails.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox txtSalePrice;
+        internal System.Windows.Controls.TextBox txtVehicalNo;
         
         #line default
         #line hidden
@@ -270,10 +270,10 @@ namespace Online_Food_Order_Software {
             this.lblTotal = ((System.Windows.Controls.Label)(target));
             return;
             case 8:
-            this.txtBarcode = ((System.Windows.Controls.TextBox)(target));
+            this.txtSuplierID = ((System.Windows.Controls.TextBox)(target));
             
             #line 84 "..\..\DeliverDetails.xaml"
-            this.txtBarcode.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtBarcode_KeyDown);
+            this.txtSuplierID.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtSuplierID_KeyDown);
             
             #line default
             #line hidden
@@ -288,19 +288,19 @@ namespace Online_Food_Order_Software {
             #line hidden
             return;
             case 10:
-            this.txtQuantity = ((System.Windows.Controls.TextBox)(target));
+            this.txtContactNo = ((System.Windows.Controls.TextBox)(target));
             
             #line 86 "..\..\DeliverDetails.xaml"
-            this.txtQuantity.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtQuantity_KeyDown);
+            this.txtContactNo.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtContactNo_KeyDown);
             
             #line default
             #line hidden
             return;
             case 11:
-            this.txtSalePrice = ((System.Windows.Controls.TextBox)(target));
+            this.txtVehicalNo = ((System.Windows.Controls.TextBox)(target));
             
             #line 87 "..\..\DeliverDetails.xaml"
-            this.txtSalePrice.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtSalePrice_KeyDown);
+            this.txtVehicalNo.KeyDown += new System.Windows.Input.KeyEventHandler(this.txtVehicalNo_KeyDown);
             
             #line default
             #line hidden

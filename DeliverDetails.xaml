@@ -27,7 +27,7 @@
                 <ImageBrush ImageSource="Images\Background\bg1.jpg" ></ImageBrush>
             </Grid.Background>
 
-            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="65" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,14" Click="Button_Click_3" Grid.Column="1" >
+            <Button   Content="Home" FontSize="22" FontWeight="Bold" Width="81" Height="40" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,14" Click="Button_Click_3" Grid.Column="1" >
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -81,10 +81,10 @@
             <Label x:Name="lblISalePrice" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Province" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="1010,102,0,0" Width="115"/>
             <Label x:Name="lblTotal" Foreground="Black" FontSize="20" FontWeight="Medium" Content="Suplier ID" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="34" Margin="295,95,0,0" Width="115"/>
 
-            <TextBox x:Name="txtBarcode" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="290,151,0,0" Width="130" VerticalAlignment="Top" KeyDown="txtBarcode_KeyDown" />
+            <TextBox x:Name="txtSuplierID" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="290,151,0,0" Width="130" VerticalAlignment="Top" KeyDown="txtSuplierID_KeyDown" />
             <TextBox x:Name="txtItemName" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="445,151,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtItemName_KeyDown"/>
-            <TextBox x:Name="txtQuantity" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="620,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtQuantity_KeyDown"/>
-            <TextBox x:Name="txtSalePrice" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="799,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtSalePrice_KeyDown"/>
+            <TextBox x:Name="txtContactNo" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="620,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtContactNo_KeyDown"/>
+            <TextBox x:Name="txtVehicalNo" VerticalContentAlignment="Center" FontWeight="Medium" Opacity="0.5" FontSize="15" Text="" HorizontalAlignment="Left" Height="34" Margin="799,152,0,0" Width="135" VerticalAlignment="Top" KeyDown="txtVehicalNo_KeyDown"/>
 
 
             <ComboBox x:Name="cmbProvince" SelectedIndex="0" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="130" FontSize="12" Height="34" Margin="995,147,0,517" KeyDown="cmbProvince_KeyDown">
@@ -117,7 +117,7 @@
 
 
 
-            <Label Content="Supplier Details " Foreground="Black"  VerticalAlignment="Top" Height="71" BorderThickness="0" FontSize="35" FontWeight="Bold" Margin="565,0,481,0" />
+            <Label Content="Supplier Details " Foreground="Black"  VerticalAlignment="Top" Height="71" BorderThickness="0" FontSize="35" FontWeight="Bold" Margin="544,10,502,0" />
 
 
 

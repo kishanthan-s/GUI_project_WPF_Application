@@ -23,7 +23,7 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             load();
-            txtBarcode.Focus();
+            txtSuplierID.Focus();
         }
 
         public void load()
@@ -105,10 +105,10 @@ namespace Online_Food_Order_Software
             Suplier suplier = new Suplier()
             {
 
-                Suplier_ID = Convert.ToInt32(txtBarcode.Text),
+                Suplier_ID = Convert.ToInt32(txtSuplierID.Text),
                 Name = txtItemName.Text,
-                Contact_No = txtQuantity.Text,
-                Vehical_No = txtSalePrice.Text,
+                Contact_No = txtContactNo.Text,
+                Vehical_No = txtVehicalNo.Text,
                 Province = cmbProvince.Text,
 
 
@@ -119,10 +119,10 @@ namespace Online_Food_Order_Software
         }
         public void clear()
         {
-            txtBarcode.Text = "";
+            txtSuplierID.Text = "";
             txtItemName.Text = "";
-            txtQuantity.Text = "";
-            txtSalePrice.Text = "";
+            txtContactNo.Text = "";
+            txtVehicalNo.Text = "";
             cmbProvince.Text = "";
 
 
@@ -136,10 +136,10 @@ namespace Online_Food_Order_Software
 
 
 
-            PatUpdate.Suplier_ID =Convert.ToInt32( txtBarcode.Text);
+            PatUpdate.Suplier_ID =Convert.ToInt32( txtSuplierID.Text);
             PatUpdate.Name = txtItemName.Text;
-            PatUpdate.Contact_No = txtQuantity.Text;
-            PatUpdate.Vehical_No = txtSalePrice.Text;
+            PatUpdate.Contact_No = txtContactNo.Text;
+            PatUpdate.Vehical_No = txtVehicalNo.Text;
            // PatUpdate.Province = cmbProvince.Text;
             
 
@@ -149,7 +149,7 @@ namespace Online_Food_Order_Software
 
         public void add()
         {
-            if (txtBarcode.Text != "" && txtItemName.Text != "" && txtQuantity.Text != "" && txtSalePrice.Text != "")
+            if (txtSuplierID.Text != "" && txtItemName.Text != "" && txtContactNo.Text != "" && txtVehicalNo.Text != "")
             {
                 cmbProvince.IsEnabled = true;
 
@@ -199,10 +199,10 @@ namespace Online_Food_Order_Software
                 var Pat = QueryDel.supliers_set.Find(SelPat.Province);
 
 
-                txtBarcode.Text = Convert.ToString(Pat.Suplier_ID);
+                txtSuplierID.Text = Convert.ToString(Pat.Suplier_ID);
                 txtItemName.Text = Pat.Name;
-                txtQuantity.Text = Pat.Contact_No;
-                txtSalePrice.Text = Pat.Vehical_No;
+                txtContactNo.Text = Pat.Contact_No;
+                txtVehicalNo.Text = Pat.Vehical_No;
                 cmbProvince.Text = Pat.Province;
 
                 cmbProvince.IsEnabled = false;
@@ -211,7 +211,7 @@ namespace Online_Food_Order_Software
             }
         }
         
-        private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
+        private void txtSuplierID_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
@@ -242,7 +242,7 @@ namespace Online_Food_Order_Software
         {
             if (e.Key == Key.Enter)
             {
-                txtQuantity.Focus();
+                txtContactNo.Focus();
             }
 
             switch (e.Key)
@@ -265,11 +265,11 @@ namespace Online_Food_Order_Software
 
         }
 
-        private void txtQuantity_KeyDown(object sender, KeyEventArgs e)
+        private void txtContactNo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
-                 txtSalePrice.Focus();
+                 txtVehicalNo.Focus();
             }
 
             switch (e.Key)
@@ -293,7 +293,7 @@ namespace Online_Food_Order_Software
 
         }
 
-        private void txtSalePrice_KeyDown(object sender, KeyEventArgs e)
+        private void txtVehicalNo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
