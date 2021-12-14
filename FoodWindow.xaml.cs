@@ -27,9 +27,7 @@ namespace Online_Food_Order_Software
 
             myFood.Content = new Food(UsN);
 
-            ////////////////////////
-            ///
-
+        
 
 
 
