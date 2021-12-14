@@ -41,7 +41,7 @@
                 </Border>
                 <Border Opacity="0.8" BorderBrush="Black" Background="LightBlue" BorderThickness="0" Margin="55,97,207,67" CornerRadius="15"/>
                 <StackPanel>
-                    <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="14" Foreground="Blue"  Content="Order Details" Margin="145,130,272,0"  />
+                    <Label  FontWeight="Bold" Height="27"  VerticalAlignment="Top" FontSize="16" Foreground="black"  Content="Order Details" Margin="145,130,277,0"  />
                     <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="12"  Content="Customer Name :" Margin="90,10,357,0"  />
                     <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="12"  Content="Payment Type     :" Margin="90,10,357,0"  />
                     <Label  FontWeight="Medium" Height="27"  VerticalAlignment="Top" FontSize="12"  Content="Amount Of Pay   :" Margin="90,10,352,0"  />

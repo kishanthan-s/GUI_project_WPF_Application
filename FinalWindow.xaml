@@ -115,7 +115,7 @@
                 <Border Opacity="0.6" Background="LightGray" CornerRadius="0,0,30,30"></Border>
                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Width="485" Height="45" Margin="76,7,39,0" FontSize="15" Text="If you want to contact your supplier , here is the contact details  " Padding="10"></TextBlock>
 
-                <Button  Content="Customer FeedBack" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" BorderThickness="2" Margin="287,0,94,47" VerticalAlignment="Bottom" Width="219" Click="Button_Click_2">
+                <Button  Content="Customer FeedBack" FontSize="22" FontWeight="Bold" HorizontalAlignment="Center" BorderThickness="2" Margin="191,0,190,57" VerticalAlignment="Bottom" Width="219" Click="Button_Click_2">
                     <Button.Resources>
                         <Style TargetType="{x:Type Border}">
                             <Setter Property="CornerRadius" Value="5"></Setter>

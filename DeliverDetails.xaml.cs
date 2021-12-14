@@ -123,7 +123,7 @@ namespace Online_Food_Order_Software
             txtContactNo.Text = "";
             txtVehicalNo.Text = "";
             cmbProvince.Text = "";
-
+            cmbProvince.IsEditable = false;
 
         }
 
@@ -143,6 +143,7 @@ namespace Online_Food_Order_Software
             
 
             repository.SaveChanges();
+            clear();
             MessageBox.Show("Successfully Updated!!");
         }
 
@@ -158,7 +159,7 @@ namespace Online_Food_Order_Software
                 {
                     update();
                     load();
-                    clear();
+                    
                 }
                 else
                 {
@@ -187,8 +188,8 @@ namespace Online_Food_Order_Software
 
         }
      
-            public void RetriveSuplier()
-        {
+        public void RetriveSuplier()
+          {
             Suplier SelPat = CartGrid.SelectedItem as Suplier;
             if (SelPat == null) return;
 
@@ -206,7 +207,7 @@ namespace Online_Food_Order_Software
 
                 cmbProvince.IsEnabled = false;
 
-
+                txtSuplierID.Focus();
             }
         }
         
