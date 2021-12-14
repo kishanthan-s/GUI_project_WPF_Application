@@ -33,7 +33,6 @@
                     </LinearGradientBrush>
                 </TextBlock.Foreground>
             </TextBlock>
-            <Button Content="Home" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="302" Margin="0,132,0,0" VerticalAlignment="Top" Width="821">
             <TextBlock HorizontalAlignment="Left" Height="50" TextWrapping="Wrap" Text="Terms and Conditions" VerticalAlignment="Top" Width="673" FontFamily="Verdana" FontSize="25"/>
