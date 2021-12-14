@@ -277,7 +277,7 @@
 
 
 
-        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="155" Height="440" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,65,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="155" Height="440" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,65,0,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" SelectionChanged="newCart_SelectionChanged">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"></Setter>

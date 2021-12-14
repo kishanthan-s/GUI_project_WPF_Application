@@ -704,6 +704,11 @@ namespace Online_Food_Order_Software
             newCart.ItemsSource = cartListF1;
 
         }
+
+        private void newCart_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
 

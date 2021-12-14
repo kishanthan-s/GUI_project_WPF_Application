@@ -26,26 +26,26 @@ namespace Online_Food_Order_Software
         {
             InitializeComponent();
             CheckID();
-          //  load();
+            //  load();
         }
-///load data
+        ///load data
         public void load()
         {
 
             DatabaseReposi repository1 = new DatabaseReposi();
-            var cartListF1 = repository1.promotion.Where(b => (b.Customer_ID ==Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+            var cartListF1 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
             newCart.ItemsSource = cartListF1;
         }
         // using (DatabaseReposi repositio = new DatabaseReposi())
         //promo promotions = new promo()
-        public void Functocaltotal ( int ItemPrize, string quantity )
+        public void Functocaltotal(int ItemPrize, string quantity)
         {
             int totalPrice;
             int item = ItemPrize;
-            int  quantity1 = int.Parse(quantity);
+            int quantity1 = int.Parse(quantity);
             totalPrice = item * quantity1;
             Global.PromoTotalBill += totalPrice;
-            lbltotal.Content ="promotion bill="+ Convert.ToString(Global.PromoTotalBill);
+            lbltotal.Content = "promotion bill=" + Convert.ToString(Global.PromoTotalBill);
 
         }
 
@@ -85,21 +85,21 @@ namespace Online_Food_Order_Software
 
 
 
-       /* private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
+        /* private void Button_Click_1(object sender, RoutedEventArgs e)
+         {
 
-            button2.Visibility = Visibility.Collapsed;
-            cmdUp.Visibility = Visibility.Collapsed;
-            cmdDown.Visibility = Visibility.Collapsed;
-            ta.Visibility = Visibility.Collapsed;
-            oa.Visibility = Visibility.Collapsed;
-            if (button1.Visibility == Visibility.Collapsed)
-            {
-                button1.Visibility = Visibility.Visible;
-            }
-            ta.Text = numValue.ToString();
+             button2.Visibility = Visibility.Collapsed;
+             cmdUp.Visibility = Visibility.Collapsed;
+             cmdDown.Visibility = Visibility.Collapsed;
+             ta.Visibility = Visibility.Collapsed;
+             oa.Visibility = Visibility.Collapsed;
+             if (button1.Visibility == Visibility.Collapsed)
+             {
+                 button1.Visibility = Visibility.Visible;
+             }
+             ta.Text = numValue.ToString();
 
-        }*/
+         }*/
 
         private void CmdUp_Click(object sender, RoutedEventArgs e)
         {
@@ -146,7 +146,7 @@ namespace Online_Food_Order_Software
                     Quantity = int.Parse(ta.Text),
                     Total_prize = int.Parse(ta.Text) * 400,
                     BuyScussess = 1,
-                   
+
                 };
                 repository.promotion.Add(promotions);
                 repository.SaveChanges();
@@ -158,7 +158,7 @@ namespace Online_Food_Order_Software
                 quantity = int.Parse(ta.Text);
                 totalPrice = ItemPrize * quantity;
                 Global.PromoTotalBill += totalPrice;*/
-               Functocaltotal( 400, ta.Text);
+                Functocaltotal(400, ta.Text);
 
 
                 /////
@@ -176,7 +176,7 @@ namespace Online_Food_Order_Software
                 ta.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var ListF1 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) &&(b.BuyScussess==1)).ToList();
+                var ListF1 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
                 newCart.ItemsSource = ListF1;
 
 
@@ -275,11 +275,11 @@ namespace Online_Food_Order_Software
                 repository.SaveChanges();
 
                 /////sending to global variable
-               /* int totalPrice, ItemPrize, quantity;
-                ItemPrize = 500;
-                quantity = int.Parse(taA.Text);
-                totalPrice = ItemPrize * quantity;
-                Global.PromoTotalBill += totalPrice;*/
+                /* int totalPrice, ItemPrize, quantity;
+                 ItemPrize = 500;
+                 quantity = int.Parse(taA.Text);
+                 totalPrice = ItemPrize * quantity;
+                 Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(500, taA.Text);
 
 
@@ -393,12 +393,12 @@ namespace Online_Food_Order_Software
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
                 /////sending to global variable
-               /* int totalPrice, ItemPrize, quantity;
-                ItemPrize = 600;
-                quantity = int.Parse(taB.Text);
-                totalPrice = ItemPrize * quantity;
-                Global.PromoTotalBill += totalPrice;*/
-               Functocaltotal(600, taB.Text);
+                /* int totalPrice, ItemPrize, quantity;
+                 ItemPrize = 600;
+                 quantity = int.Parse(taB.Text);
+                 totalPrice = ItemPrize * quantity;
+                 Global.PromoTotalBill += totalPrice;*/
+                Functocaltotal(600, taB.Text);
 
 
 
@@ -415,7 +415,7 @@ namespace Online_Food_Order_Software
 
                 DatabaseReposi repository1 = new DatabaseReposi();
                 var ListF3 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource =ListF3;
+                newCart.ItemsSource = ListF3;
 
 
 
@@ -507,11 +507,11 @@ namespace Online_Food_Order_Software
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
                 /////sending to global variable
-               /* int totalPrice, ItemPrize, quantity;
-                ItemPrize = 800;
-                quantity = int.Parse(taR.Text);
-                totalPrice = ItemPrize * quantity;
-                Global.PromoTotalBill += totalPrice;*/
+                /* int totalPrice, ItemPrize, quantity;
+                 ItemPrize = 800;
+                 quantity = int.Parse(taR.Text);
+                 totalPrice = ItemPrize * quantity;
+                 Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(800, taR.Text);
 
 
@@ -622,11 +622,11 @@ namespace Online_Food_Order_Software
                 repository.SaveChanges();
 
                 /////sending to global variable
-               /* int totalPrice, ItemPrize, quantity;
-                ItemPrize = 1500;
-                quantity = int.Parse(taAR.Text);
-                totalPrice = ItemPrize * quantity;
-                Global.PromoTotalBill += totalPrice;*/
+                /* int totalPrice, ItemPrize, quantity;
+                 ItemPrize = 1500;
+                 quantity = int.Parse(taAR.Text);
+                 totalPrice = ItemPrize * quantity;
+                 Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(1500, taAR.Text);
 
 
@@ -644,7 +644,7 @@ namespace Online_Food_Order_Software
 
                 DatabaseReposi repository1 = new DatabaseReposi();
                 var ListF5 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource =ListF5;
+                newCart.ItemsSource = ListF5;
 
 
 
@@ -741,12 +741,12 @@ namespace Online_Food_Order_Software
                   quantity = int.Parse(taBR.Text);
                   totalPrice = ItemPrize * quantity;
                   Global.PromoTotalBill += totalPrice;*/
-                Functocaltotal(1500, taR.Text); 
+                Functocaltotal(2500, taR.Text);
 
 
 
 
-                 button2BR.Visibility = Visibility.Collapsed;
+                button2BR.Visibility = Visibility.Collapsed;
                 cmdUpBR.Visibility = Visibility.Collapsed;
                 cmdDownBR.Visibility = Visibility.Collapsed;
                 taBR.Visibility = Visibility.Collapsed;

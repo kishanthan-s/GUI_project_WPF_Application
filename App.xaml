@@ -1,16 +1,14 @@
-﻿<Application x:Class="Online_Food_Order_Software.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Online_Food_Order_Software"
-             StartupUri="Mainwindow.xaml">
+﻿ Krishanthan... e, [12/14/2021 8:03 PM]<Application x:Class="Online_Food_Order_Software.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:local="clr-namespace:Online_Food_Order_Software" 
+             StartupUri="Term_conditon.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-               
+
             </ResourceDictionary.MergedDictionaries>
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
-    
-    

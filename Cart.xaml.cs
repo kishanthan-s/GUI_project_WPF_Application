@@ -29,10 +29,10 @@ namespace Online_Food_Order_Software
 
 
             add();
-            sell.Text = Convert.ToString(Global.PromoTotalBill);
             initFunc();
+          
+            sell.Text = Convert.ToString(Global.PromoTotalBill);
             total();
-
         }
         public void initFunc()
         {
@@ -76,6 +76,7 @@ namespace Online_Food_Order_Software
 
             using (DatabaseReposi repository = new DatabaseReposi())
             {
+                Global.cartlBill = 0;
                 int v = 0, x = CartGrid3.Items.Count;
                 for (int r = 1; r < x; r++)
                 {
@@ -96,8 +97,10 @@ namespace Online_Food_Order_Software
             }
             
 
-            using (DatabaseReposi repository = new DatabaseReposi())
+           /*  using (DatabaseReposi repository = new DatabaseReposi())
             {
+                Global.PromoTotalBill = 0;
+
                 int v = 0, x = CartGrid4.Items.Count;
                 for (int r = 1; r < x; r++)
                 {
@@ -114,13 +117,12 @@ namespace Online_Food_Order_Software
                         };
 
                     
+                  }
 
-
-                }
                 sell.Text = v.ToString();
                 Global.PromoTotalBill += v;
             }
-
+           */
 
 
 

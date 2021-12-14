@@ -138,7 +138,7 @@
 
                         </DataGrid.Columns>
                         <DataGrid.ContextMenu>
-                            <ContextMenu IsEnabled="False">
+                            <ContextMenu IsEnabled="True">
                                 <MenuItem Header="Delete Item" Click="MenuItem_DelPat_Click" Background="#FFD05B5B"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>
