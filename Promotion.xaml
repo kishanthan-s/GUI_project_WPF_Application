@@ -368,6 +368,7 @@
 
 
         </Grid>
+        <Label Content=""  x:Name="lbltotal"   HorizontalAlignment="Left" Margin="1149,555,0,0" VerticalAlignment="Top" Width="160"/>
 
 
 

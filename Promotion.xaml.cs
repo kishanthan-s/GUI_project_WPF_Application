@@ -45,6 +45,7 @@ namespace Online_Food_Order_Software
             int  quantity1 = int.Parse(quantity);
             totalPrice = item * quantity1;
             Global.PromoTotalBill += totalPrice;
+            lbltotal.Content ="promotion bill="+ Convert.ToString(Global.PromoTotalBill);
 
         }
 
@@ -152,12 +153,12 @@ namespace Online_Food_Order_Software
 
 
                 /////sending to global variable
-               // int totalPrice,ItemPrize,quantity;
-               // ItemPrize = 400;
-                //quantity = int.Parse(ta.Text);
-                //totalPrice = ItemPrize * quantity;
-               // Global.PromoTotalBill += totalPrice;
-                Functocaltotal( 400, ta.Text);
+                /*int totalPrice,ItemPrize,quantity;
+                ItemPrize = 400;
+                quantity = int.Parse(ta.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;*/
+               Functocaltotal( 400, ta.Text);
 
 
                 /////
@@ -272,6 +273,13 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+
+                /////sending to global variable
+               /* int totalPrice, ItemPrize, quantity;
+                ItemPrize = 500;
+                quantity = int.Parse(taA.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(500, taA.Text);
 
 
@@ -384,7 +392,13 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
-                Functocaltotal(600, taB.Text);
+                /////sending to global variable
+               /* int totalPrice, ItemPrize, quantity;
+                ItemPrize = 600;
+                quantity = int.Parse(taB.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;*/
+               Functocaltotal(600, taB.Text);
 
 
 
@@ -492,6 +506,12 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                /////sending to global variable
+               /* int totalPrice, ItemPrize, quantity;
+                ItemPrize = 800;
+                quantity = int.Parse(taR.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(800, taR.Text);
 
 
@@ -600,6 +620,13 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+
+                /////sending to global variable
+               /* int totalPrice, ItemPrize, quantity;
+                ItemPrize = 1500;
+                quantity = int.Parse(taAR.Text);
+                totalPrice = ItemPrize * quantity;
+                Global.PromoTotalBill += totalPrice;*/
                 Functocaltotal(1500, taAR.Text);
 
 
@@ -708,11 +735,18 @@ namespace Online_Food_Order_Software
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
-                Functocaltotal(1500, taR.Text);
+                /////sending to global variable
+                /*  int totalPrice, ItemPrize, quantity;
+                  ItemPrize = 2500;
+                  quantity = int.Parse(taBR.Text);
+                  totalPrice = ItemPrize * quantity;
+                  Global.PromoTotalBill += totalPrice;*/
+                Functocaltotal(1500, taR.Text); 
 
 
 
-                button2BR.Visibility = Visibility.Collapsed;
+
+                 button2BR.Visibility = Visibility.Collapsed;
                 cmdUpBR.Visibility = Visibility.Collapsed;
                 cmdDownBR.Visibility = Visibility.Collapsed;
                 taBR.Visibility = Visibility.Collapsed;
