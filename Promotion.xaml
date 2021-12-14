@@ -250,7 +250,7 @@
     </Run.Foreground>
         </Run><InlineUIContainer>  
                 </InlineUIContainer></TextBlock>
-            <Button  HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Click="Button_Click_3" Height="45" Margin="0,0,96,0"   >
+            <Button  HorizontalAlignment="Right" VerticalAlignment="Top" Width="53" Click="Button_Click_3" Height="45" Margin="0,0,36,0"   >
 
                 <Button.Template>
                     <ControlTemplate>
@@ -267,7 +267,7 @@
             </Button>
         </Grid>
 
-        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="710" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,119,95,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+        <DataGrid x:Name="newCart" Foreground="Black" HeadersVisibility="None" Background="Transparent" BorderThickness="0" RowBackground="Transparent"  FontSize="18" GridLinesVisibility="None" AutoGenerateColumns="False"  ItemsSource="{Binding}" Width="331" Height="538" HorizontalAlignment="Right" VerticalAlignment="Top"  Margin="0,71,109,0" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="Transparent"></Setter>
@@ -284,7 +284,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Grid Height="125" Margin="0,740,-62,0" VerticalAlignment="Top">
+        <Grid Height="125" Margin="0,740,0,0" VerticalAlignment="Top">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="white" Offset="0"/>
@@ -292,22 +292,79 @@
                 </LinearGradientBrush>
             </Grid.Background>
             <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="52,56,10,0" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="1512" Height="35" FontFamily="Agency FB"  ><Run Text="&gt;A well-known quote, contained in a blockquote element."/></TextBlock>
-            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="62,91,30,-18" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="20" Width="1482" FontFamily="Agency FB"  />
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="61,91,29,0" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="20" Width="1482" FontFamily="Agency FB"  />
 
-            <Button Content="Home" HorizontalAlignment="Left" Margin="221,10,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
-                <Button.Template>
-                    <ControlTemplate>
-                        <Border CornerRadius="10" Background="Black">
-                            <TextBlock Text="HOME" Foreground="White" 
+
+            <Grid HorizontalAlignment="Left" Height="36" Margin="84,12,0,0" VerticalAlignment="Top" Width="1428">
+                <Button Content="Home" HorizontalAlignment="Left" Margin="115,-2,0,0" VerticalAlignment="Top" Width="71" Height="38"  Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="HOME" Foreground="White" 
                                        HorizontalAlignment="Center"  
                                         VerticalAlignment="Center"
                                        Margin="0,5,0,0"
                                        Height="40"
                                        FontSize="20"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-            </Button>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button Content="Home" HorizontalAlignment="Left" Margin="374,-2,0,0" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="TERM AND CONDITION" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="-70,2,-114.8,-3.6"
+                                       Height="40"
+                                       FontSize="20" Width="256"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  HorizontalAlignment="Left" Margin="804,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="FEEDBACK" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="-70,2,-114.8,-3.6"
+                                       Height="40"
+                                       FontSize="20" Width="256"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+                <Button  HorizontalAlignment="Left" Margin="1138,0,0,-2" VerticalAlignment="Top" Width="222" Height="38"  Click="Button_Click_1">
+                    <Button.Template>
+                        <ControlTemplate>
+                            <Border CornerRadius="10" Background="Black">
+                                <TextBlock Text="MENU" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="-70,2,-114.8,-3.6"
+                                       Height="40"
+                                       FontSize="20" Width="256"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
+
+                <Canvas Margin="0,0,0,-2">
+
+                    <!-- Draws a diagonal line from (10,10) to (50,50). -->
+                    <Line
+                 X1="0" Y1="0"
+                 X2="1400" Y2="0"
+                 Stroke="White"
+    
+                 StrokeThickness="0.5" Canvas.Left="32" Width="1269" Canvas.Top="36" />
+                </Canvas>
+            </Grid>
+
 
 
         </Grid>
