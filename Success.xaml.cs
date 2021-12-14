@@ -44,7 +44,7 @@ namespace Online_Food_Order_Software
 
 
             PT.Text = pt;
-            AP.Text =Convert.ToString( Global.totalBill);
+            AP.Text = AmP;
           
 
             PD.Text = DateTime.Now.ToString("yyyy/MM/dd");
