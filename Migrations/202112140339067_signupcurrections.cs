@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _new : DbMigration
+    public partial class signupcurrections : DbMigration
     {
         public override void Up()
         {
@@ -104,13 +104,13 @@
                 "dbo.Supliers",
                 c => new
                     {
+                        Province = c.String(nullable: false, maxLength: 128),
                         Suplier_ID = c.Int(nullable: false),
                         Name = c.String(),
                         Contact_No = c.String(),
                         Vehical_No = c.String(),
-                        Province = c.String(),
                     })
-                .PrimaryKey(t => t.Suplier_ID);
+                .PrimaryKey(t => t.Province);
             
         }
         

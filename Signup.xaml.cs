@@ -30,7 +30,32 @@ namespace Online_Food_Order_Software
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (textBoxEmail.Text.Length == 0)
+            if (textBoxFirstName.Text.Length == 0)
+            {
+                errormessage.Text = "Enter an First name.";
+                textBoxFirstName.Focus();
+            }
+
+            else if (!Regex.IsMatch(textBoxFirstName.Text, @"^[a-zA-Z]+$"))
+            {
+                errormessage.Text = "Enter a valid name.";
+                textBoxFirstName.Select(0, textBoxFirstName.Text.Length);
+                textBoxFirstName.Focus();
+            }
+
+            else if (textBoxLastName.Text.Length == 0)
+            {
+                errormessage.Text = "Enter an Last name.";
+                textBoxLastName.Focus();
+            }
+
+            else if (!Regex.IsMatch(textBoxLastName.Text, @"^[a-zA-Z]+$"))
+            {
+                errormessage.Text = "Enter a valid name.";
+                textBoxLastName.Select(0, textBoxLastName.Text.Length);
+                textBoxLastName.Focus();
+            }
+            else if (textBoxEmail.Text.Length == 0)
             {
                 errormessage.Text = "Enter an email.";
                 textBoxEmail.Focus();
@@ -41,14 +66,9 @@ namespace Online_Food_Order_Software
                 textBoxEmail.Select(0, textBoxEmail.Text.Length);
                 textBoxEmail.Focus();
             }
-            else
-            {
-                string firstname = textBoxFirstName.Text;
-                string lastname = textBoxLastName.Text;
-                string email = textBoxEmail.Text;
-                string password = passwordBox1.Password;
-                if (passwordBox1.Password.Length == 0)
-                {
+
+            else if (passwordBox1.Password.Length == 0)
+               {
                     errormessage.Text = "Enter password.";
                     passwordBox1.Focus();
                 }
@@ -60,6 +80,42 @@ namespace Online_Food_Order_Software
                 else if (passwordBox1.Password != passwordBoxConfirm.Password)
                 {
                     errormessage.Text = "Confirm password must be same as password.";
+                    passwordBoxConfirm.Password = "";
+                    passwordBoxConfirm.Focus();
+                }
+
+            else if (textBoxphone_num.Text.Length == 0)
+            {
+                errormessage.Text = "Enter an Phone number.";
+                textBoxphone_num.Focus();
+            }
+             else if (!Regex.IsMatch(textBoxphone_num.Text, "\\A[0-9]{10}\\z"))
+            {
+             errormessage.Text = "Enter a valid phone number";
+             textBoxphone_num.Select(0, textBoxphone_num.Text.Length);
+             textBoxphone_num.Focus();
+
+            }
+            else
+            {
+                string firstname = textBoxFirstName.Text;
+                string lastname = textBoxLastName.Text;
+                string email = textBoxEmail.Text;
+                string password = passwordBox1.Password;
+               /*  if (passwordBox1.Password.Length == 0)
+               {
+                    errormessage.Text = "Enter password.";
+                    passwordBox1.Focus();
+                }
+                else if (passwordBoxConfirm.Password.Length == 0)
+                {
+                    errormessage.Text = "Enter Confirm password.";
+                    passwordBoxConfirm.Focus();
+                }
+                else if (passwordBox1.Password != passwordBoxConfirm.Password)
+                {
+                    errormessage.Text = "Confirm password must be same as password.";
+                    passwordBoxConfirm.Password = "";
                     passwordBoxConfirm.Focus();
                 }
                 else if (!Regex.IsMatch(textBoxphone_num.Text, "\\A[0-9]{10}\\z"))
@@ -67,8 +123,8 @@ namespace Online_Food_Order_Software
                     errormessage.Text = "Enter a valid phone number";
 
 
-                }
-                else
+                }*/
+               // else
                 {
                     string emailcheck = textBoxEmail.Text;
                     using (DatabaseReposi reposi = new DatabaseReposi())
@@ -78,6 +134,8 @@ namespace Online_Food_Order_Software
                             if (users != null)
                             {
                                 errormessage.Text = "The email has been already taken";
+                                textBoxEmail.Select(0, textBoxEmail.Text.Length);
+                                textBoxEmail.Focus();
                             }
                             else
                             {
@@ -102,7 +160,7 @@ namespace Online_Food_Order_Software
 
 
                         }
-                    }
+                  }
 
 
 
@@ -124,6 +182,8 @@ namespace Online_Food_Order_Software
             passwordBox1.Password = "";
             passwordBoxConfirm.Password = "";
         }
+
+
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
