@@ -75,24 +75,94 @@
         <Grid HorizontalAlignment="Left" Height="152" Margin="0,408,0,0" VerticalAlignment="Top" Width="894">
             <Image HorizontalAlignment="Left"  Source="Images/banner8.jpg" Stretch="Fill"    />
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="158" Margin="0,742,0,0" VerticalAlignment="Top" Width="1592">
+        <Grid HorizontalAlignment="Left" Height="158" Margin="0,742,0,0" VerticalAlignment="Top" Width="1608">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,0">
                     <GradientStop Color="white" Offset="0"/>
-                    <GradientStop Color="Black" Offset=".95"/>
+                    <GradientStop Color="Black" />
                 </LinearGradientBrush>
             </Grid.Background>
-            <TextBlock HorizontalAlignment="Center" Margin="10,24,0,0" TextWrapping="Wrap" Text=">A well-known quote, contained in a blockquote element." TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="65" FontFamily="Agency FB"  />
-            <TextBlock HorizontalAlignment="Center" Margin="10,53,0,-27" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="30" VerticalAlignment="Top" Width="1582" Height="102" FontFamily="Agency FB"  />
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="26,61,0,0" TextWrapping="Wrap" Text=">A well-known quote, contained in a blockquote element." TextAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="1582" Height="20" FontFamily="Agency FB"  />
+            <TextBlock HorizontalAlignment="Center" Foreground="White" Margin="16,86,10,0" TextWrapping="Wrap" Text=">Someone famous in Source Title" TextAlignment="Center" FontSize="20" VerticalAlignment="Top" Width="1582" Height="31" FontFamily="Agency FB"  />
+            <Button HorizontalAlignment="Left" Margin="666,10,0,0" VerticalAlignment="Top" Width="262" Click="Button_Click_2">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Black">
+                            <TextBlock Text="TERMS AND CONDITIONS" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Canvas>
+
+                <!-- Draws a diagonal line from (10,10) to (50,50). -->
+                <Line
+    X1="0" Y1="0"
+    X2="1100" Y2="0"
+    Stroke="White"
+    
+    StrokeThickness="0.5" Canvas.Left="281" Width="1175" Canvas.Top="44" />
+            </Canvas>
+            <Button HorizontalAlignment="Left" Margin="277,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_2">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Black">
+                            <TextBlock Text="HOME" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
+            <Button HorizontalAlignment="Left" Margin="1255,10,0,0" VerticalAlignment="Top" Width="118" Click="Button_Click_2">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Black">
+                            <TextBlock Text="LOGIN" Foreground="White" 
+                                       HorizontalAlignment="Center"  
+                                        VerticalAlignment="Center"
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
 
         </Grid>
-        <Grid HorizontalAlignment="right" Width="53" Margin="0,0,0,0">
+        <Grid HorizontalAlignment="right" Width="53" Margin="0,0,0,113">
             <Grid.Background>
                 <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
                     <GradientStop Color="White" Offset="0"/>
                     <GradientStop Color="Black" Offset=".95"/>
                 </LinearGradientBrush>
             </Grid.Background>
+            <Button  HorizontalAlignment="Left" VerticalAlignment="Top" Width="53" Click="Button_Click_3" Height="45"   >
+
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border CornerRadius="10" Background="Red">
+                            <TextBlock Text="Exit" Foreground="White" 
+                                       HorizontalAlignment="Center"                                           
+                                       Margin="0,5,0,0"
+                                       Height="40"
+                                       FontSize="20"/>
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+
+            </Button>
 
         </Grid>
         <Grid HorizontalAlignment="Left" Height="167" Margin="0,565,0,0" VerticalAlignment="Top" Width="1549">
@@ -102,10 +172,8 @@
             <Image HorizontalAlignment="Left" Height="127" Margin="840,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/Positive.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="127" Margin="1075,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/food_is_ess.jpg" Stretch="Fill"/>
             <Image HorizontalAlignment="Left" Height="127" Margin="1310,20,0,0" VerticalAlignment="Top" Width="120" Source="Images/Food_bst_fnd.jpg" Stretch="Fill"/>
-           
+
         </Grid>
-        <Button Content="Home" HorizontalAlignment="Left" Margin="10,773,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
-        <Button Content="Cancel" HorizontalAlignment="Left" Margin="85,773,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_3"/>
 
 
     </Grid>
