@@ -44,16 +44,14 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            FoodWindow foodWindow = new FoodWindow();
-            foodWindow.Show();
+            Global.DirectToLogout();
             this.Close();
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
 
-            Cart cart = new Cart();
-            cart.Show();
+            Global.DirectToCart();
             this.Close();
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)

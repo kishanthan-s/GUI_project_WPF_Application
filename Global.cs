@@ -54,7 +54,19 @@ namespace Online_Food_Order_Software
             login.Show();
             //  this.close();
         }
+        public static void DirectToCart()
+        {
+            Cart cart = new Cart();
+            cart.Show();
+            //  this.close();
+        }
 
+        public static void DirectToMenu()
+        {
+           FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
+            //  this.close();
+        }
     }
 
 

@@ -256,8 +256,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Cart cart = new Cart();
-            cart.Show();
+            Global.DirectToCart();
             this.Close();
 
 

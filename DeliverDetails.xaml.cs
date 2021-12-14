@@ -80,8 +80,7 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
+            Global.DirectToHome();
             this.Close();
         }
 
