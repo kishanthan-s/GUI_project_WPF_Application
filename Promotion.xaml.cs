@@ -25,7 +25,7 @@ namespace Online_Food_Order_Software
         public Promotion()
         {
             InitializeComponent();
-           // CheckID();
+            CheckID();
           //  load();
         }
 ///load data
@@ -41,8 +41,9 @@ namespace Online_Food_Order_Software
         public void Functocaltotal ( int ItemPrize, string quantity )
         {
             int totalPrice;
+            int item = ItemPrize;
             int  quantity1 = int.Parse(quantity);
-            totalPrice = ItemPrize * quantity1;
+            totalPrice = item * quantity1;
             Global.PromoTotalBill += totalPrice;
 
         }
@@ -139,7 +140,7 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D1",
-                    Item_Name = "Red BUll Energy ",
+                    Item_Name = "Chochalate offers ",
                     Item_Prize = 400,
                     Quantity = int.Parse(ta.Text),
                     Total_prize = int.Parse(ta.Text) * 400,
@@ -174,8 +175,8 @@ namespace Online_Food_Order_Software
                 ta.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF1 = repository1.promotion.Where(b => (b.Item == "1D1")&&(b.BuyScussess==1)).ToList();
-                newCart.ItemsSource = cartListF1;
+                var ListF1 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) &&(b.BuyScussess==1)).ToList();
+                newCart.ItemsSource = ListF1;
 
 
 
@@ -261,7 +262,7 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D2",
-                    Item_Name = " Energy ",
+                    Item_Name = "Cocacola offer ",
                     Item_Prize = 500,
                     Quantity = int.Parse(taA.Text),
                     Total_prize = int.Parse(taA.Text) * 500,
@@ -287,8 +288,8 @@ namespace Online_Food_Order_Software
                 taA.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D2") && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource = cartListF2;
+                var ListF2 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+                newCart.ItemsSource = ListF2;
 
 
 
@@ -373,16 +374,17 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D3",
-                    Item_Name = " Energy ",
-                    Item_Prize = 500,
+                    Item_Name = "Pizza offer",
+                    Item_Prize = 600,
                     Quantity = int.Parse(taB.Text),
-                    Total_prize = int.Parse(taB.Text) * 500,
+                    Total_prize = int.Parse(taB.Text) * 600,
                     BuyScussess = 1,
 
 
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                Functocaltotal(600, taB.Text);
 
 
 
@@ -398,8 +400,8 @@ namespace Online_Food_Order_Software
                 taB.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D3") && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource = cartListF2;
+                var ListF3 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+                newCart.ItemsSource =ListF3;
 
 
 
@@ -480,16 +482,17 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D4",
-                    Item_Name = "Red BUll Energy ",
-                    Item_Prize = 400,
-                    Quantity = int.Parse(ta.Text),
-                    Total_prize = int.Parse(ta.Text) * 400,
+                    Item_Name = "Burgur offer",
+                    Item_Prize = 800,
+                    Quantity = int.Parse(taR.Text),
+                    Total_prize = int.Parse(taR.Text) * 800,
                     BuyScussess = 1,
 
 
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                Functocaltotal(800, taR.Text);
 
 
 
@@ -505,8 +508,8 @@ namespace Online_Food_Order_Software
                 taR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF1 = repository1.promotion.Where(b => (b.Item == "1D4") && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource = cartListF1;
+                var ListF4 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+                newCart.ItemsSource = ListF4;
 
 
 
@@ -587,16 +590,17 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D5",
-                    Item_Name = " Energy ",
-                    Item_Prize = 500,
+                    Item_Name = " Burgur offer double",
+                    Item_Prize = 1500,
                     Quantity = int.Parse(taAR.Text),
-                    Total_prize = int.Parse(taAR.Text) * 500,
+                    Total_prize = int.Parse(taAR.Text) * 1500,
                     BuyScussess = 1,
 
 
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                Functocaltotal(1500, taAR.Text);
 
 
 
@@ -612,8 +616,8 @@ namespace Online_Food_Order_Software
                 taAR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D5") && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource = cartListF2;
+                var ListF5 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+                newCart.ItemsSource =ListF5;
 
 
 
@@ -694,16 +698,17 @@ namespace Online_Food_Order_Software
 
                     Customer_ID = Global.CustomerID,
                     Item = "1D6",
-                    Item_Name = " Energy ",
-                    Item_Prize = 500,
+                    Item_Name = "Cake offer",
+                    Item_Prize = 2500,
                     Quantity = int.Parse(taBR.Text),
-                    Total_prize = int.Parse(taBR.Text) * 500,
+                    Total_prize = int.Parse(taBR.Text) * 2500,
                     BuyScussess = 1,
 
 
                 };
                 repository.promotion.Add(promotion);
                 repository.SaveChanges();
+                Functocaltotal(1500, taR.Text);
 
 
 
@@ -719,8 +724,8 @@ namespace Online_Food_Order_Software
                 taBR.Text = numValue.ToString();
 
                 DatabaseReposi repository1 = new DatabaseReposi();
-                var cartListF2 = repository1.promotion.Where(b => (b.Item == "1D6") && (b.BuyScussess == 1)).ToList();
-                newCart.ItemsSource = cartListF2;
+                var ListF6 = repository1.promotion.Where(b => (b.Customer_ID == Global.CustomerID) && (b.BuyScussess == 1)).ToList();
+                newCart.ItemsSource = ListF6;
 
 
 
