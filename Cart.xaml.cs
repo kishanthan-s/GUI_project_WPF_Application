@@ -95,7 +95,7 @@ namespace Online_Food_Order_Software
                 Global.cartlBill += v;
             }
             
-/*
+
             using (DatabaseReposi repository = new DatabaseReposi())
             {
                 int v = 0, x = CartGrid4.Items.Count;
@@ -119,13 +119,11 @@ namespace Online_Food_Order_Software
                 }
                 sell.Text = v.ToString();
                 Global.PromoTotalBill += v;
-
-
             }
 
 
 
-            */
+
 
 
 
