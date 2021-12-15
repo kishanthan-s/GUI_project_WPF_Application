@@ -31,6 +31,12 @@ namespace Online_Food_Order_Software
 
             if(addminEmail== textBoxEmail.Text && password == passwordBox1.Password)
             {
+                if (MessageBoxResult.Yes == MessageBox.Show("Are you sure want to Shutdown this Software?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning, MessageBoxResult.No))
+                {
+                    Application.Current.Shutdown();
+
+                }
+
                 Application.Current.Shutdown();
 
             }

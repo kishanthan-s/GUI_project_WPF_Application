@@ -148,7 +148,7 @@
                     <TextBox x:Name="Apartment_Name" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,20,0,0" KeyDown="Apartment_Name_KeyDown"/>
                     <TextBox  x:Name="Street_Name" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,15,0,0" KeyDown="Street_Name_KeyDown"/>
                     <TextBox x:Name="Landmark" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,16,0,0" TextChanged="Landmark_TextChanged" KeyDown="Landmark_KeyDown"/>
-                    <TextBox x:Name="City" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="10"  Margin="710,15,0,0" KeyDown="City_KeyDown"/>
+                    <TextBox x:Name="City" Height="25" FontWeight="Bold" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,15,0,0" KeyDown="City_KeyDown"/>
                     <ComboBox x:Name="Province" SelectedIndex="0" FontWeight="Bold" Height="23" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12"  Margin="710,13,0,0" SelectionChanged="Province_SelectionChanged">
                         <ComboBox.ItemsSource>
                             <CompositeCollection>
