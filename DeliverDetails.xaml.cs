@@ -151,26 +151,34 @@ namespace Online_Food_Order_Software
         {
             if (txtSuplierID.Text != "" && txtItemName.Text != "" && txtContactNo.Text != "" && txtVehicalNo.Text != "")
             {
-                cmbProvince.IsEnabled = true;
-
-                DatabaseReposi strock = new DatabaseReposi();
-
-                if (strock.supliers_set.Where(a => (a.Province == cmbProvince.Text)).FirstOrDefault() != null)
+                if(double.TryParse(txtSuplierID.Text, out double value1))
                 {
-                    update();
-                    load();
-                    
+                    cmbProvince.IsEnabled = true;
+
+                    DatabaseReposi strock = new DatabaseReposi();
+
+                    if (strock.supliers_set.Where(a => (a.Province == cmbProvince.Text)).FirstOrDefault() != null)
+                    {
+                        update();
+                        load();
+
+                    }
+                    else
+                    {
+
+
+                        addSuplier();
+                        load();
+                        clear();
+                        MessageBox.Show("Successfully added!!");
+
+                    }
                 }
                 else
                 {
-
-
-                    addSuplier();
-                    load();
-                    clear();
-                    MessageBox.Show("Successfully added!!");
-
+                    MessageBox.Show("Please Add the Integer Value!!");
                 }
+
             }
             else
             {
