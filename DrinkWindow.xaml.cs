@@ -44,7 +44,8 @@ namespace Online_Food_Order_Software
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            Global.DirectToLogout();
+            FoodWindow foodWindow = new FoodWindow();
+            foodWindow.Show();
             this.Close();
         }
 
